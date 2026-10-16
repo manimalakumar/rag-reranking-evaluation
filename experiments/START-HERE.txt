@@ -1,0 +1,1 @@
+See ../README.md for Qwen/OpenRouter setup and offline verification before rebuilding results.

@@ -1,0 +1,1 @@
+Read README.md. Select Python 3.14.6. Run .venv/bin/python tools/verify_offline.py before any hosted work. Results are pending; configure OPENROUTER_API_KEY only when ready to rebuild.

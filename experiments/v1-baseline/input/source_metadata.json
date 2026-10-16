@@ -1,0 +1,19 @@
+{
+  "Dataset": "microsoft/ms_marco",
+  "Config": "v2.1",
+  "Split": "validation",
+  "Source revision": "a47ee7aae8d7d466ba15f9f0bfac3b3681087b3a",
+  "Source URL": "https://huggingface.co/datasets/microsoft/ms_marco/tree/a47ee7aae8d7d466ba15f9f0bfac3b3681087b3a/v2.1",
+  "Exported UTC": "2026-10-01T02:16:54.928648+00:00",
+  "Rows scanned": 101093,
+  "Matching rows": 3136,
+  "Required filter": "Distinct selected passages > 1",
+  "DESCRIPTION only": false,
+  "Exclude yes/no": false,
+  "Row id": "Zero-based validation row index, in sorted Parquet shard order",
+  "Answer": "Original answers list encoded as JSON",
+  "Related passages": "Distinct is_selected=1 passages and URLs; casefold/outer-whitespace deduplication",
+  "Multi-hop": "Multiple selected passages are a proxy, not verified multi-hop reasoning",
+  "Long text": "Cells over Excel's limit are stored completely in numbered Long text chunks",
+  "Text escaping": "XML-incompatible characters are escaped as literal \\uXXXX"
+}

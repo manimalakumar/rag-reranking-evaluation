@@ -1,0 +1,56 @@
+[
+  {
+    "notebook": "demos/00-rag-with-and-without-reranking/RAG-Retriever-Embedding-Reranker.ipynb",
+    "state": "complete",
+    "mode": "execute",
+    "new_model_calls_enabled": true,
+    "executed_code_cells": 13,
+    "total_code_cells": 13,
+    "reason": null
+  },
+  {
+    "notebook": "experiments/v1-baseline/Experiment-1-Baseline.ipynb",
+    "state": "complete",
+    "mode": "execute",
+    "new_model_calls_enabled": true,
+    "executed_code_cells": 23,
+    "total_code_cells": 23,
+    "reason": null
+  },
+  {
+    "notebook": "diagnosis-retrieval-opportunity/Diagnosis-Retrieval-Opportunity.ipynb",
+    "state": "complete",
+    "mode": "execute",
+    "new_model_calls_enabled": true,
+    "executed_code_cells": 7,
+    "total_code_cells": 7,
+    "reason": null
+  },
+  {
+    "notebook": "experiments/v2-targeted-reranking/Experiment-2-Targeted-Reranking.ipynb",
+    "state": "complete",
+    "mode": "execute",
+    "new_model_calls_enabled": true,
+    "executed_code_cells": 15,
+    "total_code_cells": 15,
+    "reason": null
+  },
+  {
+    "notebook": "experiments/v3-answer-quality/Experiment-3-Answer-Quality.ipynb",
+    "state": "complete",
+    "mode": "execute",
+    "new_model_calls_enabled": true,
+    "executed_code_cells": 15,
+    "total_code_cells": 15,
+    "reason": null
+  },
+  {
+    "notebook": "experiments/v4-latency-tradeoff/Experiment-4-Latency-Tradeoff.ipynb",
+    "state": "complete",
+    "mode": "execute",
+    "new_model_calls_enabled": true,
+    "executed_code_cells": 17,
+    "total_code_cells": 17,
+    "reason": null
+  }
+]

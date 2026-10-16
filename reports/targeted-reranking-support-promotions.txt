@@ -1,0 +1,1181 @@
+Targeted reranking: annotated support promoted from embedding ranks 6–30 into reranker top five
+
+292 questions; 297 promoted supporting passages.
+Baseline here means embedding-only ranking of the same frozen top 30 from the 152,576-passage corpus.
+Source cohort: 500 opportunities + 200 controls. Separate diagnostic excluded.
+Includes every question with at least one promoted support, even if another support was lost.
+Dataset annotations define support; this is not a human relevance assessment.
+
+1028831 — what is vrbo booking fee
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ad5d42ea1fc05472f7ac: embedding rank 9 → reranker rank 4
+
+1029139 — what is universal value
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_371222e6de0b03366e24: embedding rank 11 → reranker rank 1
+
+1029659 — what is tia updater
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_98bd94bd302cb4716874: embedding rank 19 → reranker rank 5
+
+1030903 — what is the tropic of orange about?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6245243f489440db7e5f: embedding rank 9 → reranker rank 3
+
+1030915 — what is the transpiration stream
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_61c7e87624f966ac9f0c: embedding rank 6 → reranker rank 2
+
+1031655 — what is the synonym of insomnia
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f09bad2044496c69914a: embedding rank 8 → reranker rank 4
+
+1031684 — what is the suprachiasmatic nucleus and what is its function?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_31b7c7c501fd2725e617: embedding rank 6 → reranker rank 4
+
+1032278 — what is the significance of serial dilution?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_475217da1207455ec9d7: embedding rank 6 → reranker rank 2
+
+1032735 — what is the route for the pgh st. patrick day parade
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_693ccc9faa28ae0acb54: embedding rank 12 → reranker rank 5
+
+1032758 — what is the root of all evil
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_055d470c05513eb18830: embedding rank 6 → reranker rank 5
+
+1032803 — what is the role of the citizen as defined in the social contract theory?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_dae8c4347e16d344b723: embedding rank 8 → reranker rank 5
+
+1032902 — what is the rockwell, nc city tax
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_2dd7716878602b047b0c: embedding rank 6 → reranker rank 2
+
+1033088 — what is the republic of salo
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_140596f8a3230356ba5a: embedding rank 6 → reranker rank 1
+
+1033096 — what is the redemption period in foreclosure
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_24dd6aaf0fa9e1343431: embedding rank 7 → reranker rank 3
+
+1033172 — what is the rash with scarlet fever called
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_61084b5a052dce568066: embedding rank 10 → reranker rank 5
+
+1033276 — current silver ounce price
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_cd0bb645fc86b6b9a117: embedding rank 6 → reranker rank 2
+
+1033723 — what is the purpose of fire extinguisher maintenance
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_5f5721b7ffa116853ecb: embedding rank 6 → reranker rank 2
+
+1035207 — what is the noble research institute
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b11953086e531f0422e9: embedding rank 8 → reranker rank 2
+
+1035402 — what is the name of the writing system used by the ancient mesopotamians?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f01e49d1dee3def18092: embedding rank 6 → reranker rank 2
+
+1035503 — what is the name of the movie with morgan freeman
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_86db795a7ef30bea6a23: embedding rank 10 → reranker rank 3
+
+1035629 — csme define
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_08b21bff70c538c77e4c: embedding rank 7 → reranker rank 1
+
+1036149 — what is the milky way made out of
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_9badb0ddacc5438f0f91: embedding rank 11 → reranker rank 4
+
+1036452 — what is the meaning of second
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_509a0e69427736ece28b: embedding rank 6 → reranker rank 1
+
+1037915 — what is the j code for reclast
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_db530cdbf1286b47685d: embedding rank 8 → reranker rank 4
+
+1038242 — what is the humidity for sulcata tortoise
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4a8da246e0ad6b57e200: embedding rank 8 → reranker rank 3
+
+1039482 — what is the fools function in king lear
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1dcc3a5d6c388feb5673: embedding rank 7 → reranker rank 2
+
+1040087 — what is the effect of bleach and vinegar on plants
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_94beb71aac7265c6bd98: embedding rank 6 → reranker rank 3
+
+1040090 — what is the education in netherlands
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_0dbfa00f6c752e68494a: embedding rank 7 → reranker rank 3
+
+1040288 — what is the dish of the day
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c1f1111b612882abd0cd: embedding rank 6 → reranker rank 2
+
+1040290 — what is the disease that you get when your body starts shaking your head your arms and your legs what is that called
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_273dd8d9f2315b34ce40: embedding rank 9 → reranker rank 2
+
+1040485 — what is the difference between subsidy and mezzanine
+  Cohort: opportunity; net Recall@5 outcome: unchanged; Recall@5: 0.5 → 0.5
+  p_9e05d3ec50bc17ab7502: embedding rank 6 → reranker rank 3
+
+1040764 — what is the difference between dual federalism and the new deal type of federalism?
+  Cohort: opportunity; net Recall@5 outcome: unchanged; Recall@5: 0.5 → 0.5
+  p_64807a03499540695e8e: embedding rank 8 → reranker rank 1
+
+1040853 — what is the difference between a shrew. and a vole?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_362f5cb33d85caf25916: embedding rank 6 → reranker rank 3
+
+1040959 — what is the difference between a narrow spectrum antibiotic and a broad spectrum antibiotic
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.666667 → 1
+  p_696a62bcff7a6eb4e250: embedding rank 8 → reranker rank 5
+
+1041533 — what is the definition of manual handling
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_9c7293ea27c93f8afcbf: embedding rank 6 → reranker rank 5
+
+1042752 — what is the colorless, gaseous element that makes up four-fifths of the air
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_3b4f8d9aade2bf01f068: embedding rank 7 → reranker rank 2
+
+1043562 — what is the bsl
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_cea6ad97965a6e52d8f3: embedding rank 11 → reranker rank 3
+
+1043876 — what is the biggest bill in the usa
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_5facdc1d87f0e4c0d8a1: embedding rank 6 → reranker rank 1
+
+1043995 — what is the best merv rating for filters?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_089c7ba0323434359254: embedding rank 6 → reranker rank 3
+
+1044424 — what is the average hiking pace?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8882aa022d03cd80dab9: embedding rank 9 → reranker rank 5
+
+1044523 — what is the average age of peak onset of symptoms of schizophrenia
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f3458d6c9aa54cb1dc31: embedding rank 6 → reranker rank 4
+
+1045238 — what is tenochte
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_676df2c899cab25852d4: embedding rank 16 → reranker rank 1
+
+1045419 — what is synthetic form
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ed40c074d630271d611b: embedding rank 10 → reranker rank 2
+
+1045541 — what is supply chain management and optimization
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4b515a3a72b121e7122a: embedding rank 8 → reranker rank 3
+
+1045874 — cost of shipping a memorial wreath
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ca13aee99198a53e33a9: embedding rank 14 → reranker rank 1
+
+1046123 — what is smiling spring an example of?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_86c84ed362afa2905a3d: embedding rank 7 → reranker rank 1
+
+1047146 — what is responsible for the uneven heating of the earth's atmosphere
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_cefd2de0951393acde23: embedding rank 6 → reranker rank 1
+
+1047708 — what is proprietary asset management
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_282ba060aabe138b7e64: embedding rank 16 → reranker rank 1
+
+1048360 — what is photosynthesis what organisms perform this reaction and what is the importance of the reaction
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_18c2def741aea396d187: embedding rank 8 → reranker rank 5
+
+1049610 — what is normal psa for prostate in m
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4f6d637332832ea2e576: embedding rank 7 → reranker rank 3
+
+1050318 — what is mypcbackup
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_760f65c2570163b854c0: embedding rank 8 → reranker rank 2
+
+1050417 — what is mutual plan
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_3d956d47e47624f77f19: embedding rank 7 → reranker rank 3
+
+1051108 — what is methylphenidate generic for
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_31e572d906a01336a758: embedding rank 7 → reranker rank 5
+
+1051115 — what is metabolic panel comprehensive
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_5d36c368fad47e4262ed: embedding rank 9 → reranker rank 3
+
+1051635 — what is made in minnesota
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_2e1538084e6dfda5ed41: embedding rank 14 → reranker rank 3
+
+1052087 — what is lexora leader publication
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4420c6e4b192221d4e1d: embedding rank 16 → reranker rank 2
+
+1052646 — age requirement for reserve commission
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c3cba1bced9c53d12bb1: embedding rank 8 → reranker rank 4
+
+1053253 — what is institutional discrimination?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1de983190398c9cbd4e8: embedding rank 6 → reranker rank 2
+
+1053571 — what is in building solution
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_292d29b08226ed412a56: embedding rank 29 → reranker rank 1
+
+1053665 — what is imei and where do i find it
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_71838a0d93f9593a28b4: embedding rank 6 → reranker rank 3
+
+1053715 — what is ic ranitidine for
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6614fee75eb4ace8d16b: embedding rank 6 → reranker rank 5
+
+1053719 — what is ibbi
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_3b171b824cc453c3e2b3: embedding rank 28 → reranker rank 4
+
+1054114 — what is heritage?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_739a8fc3b8bf01cd2a23: embedding rank 8 → reranker rank 4
+
+1054455 — what is gradual meaning
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_d5ed08fccbabc7567403: embedding rank 7 → reranker rank 2
+
+1054999 — what is framework in information
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_0118dee2d195dc36a0e3: embedding rank 8 → reranker rank 5
+
+1055304 — what is fdns
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_89739d35f0b07304164d: embedding rank 13 → reranker rank 2
+
+1055461 — what is event tourism
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_33cb2b752d4fa6d52764: embedding rank 7 → reranker rank 4
+
+1056160 — what is early childhood studies
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_969957530fed6cabaa41: embedding rank 8 → reranker rank 2
+
+1056986 — what is defined as addiction
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6652b50e36b13f2c1814: embedding rank 7 → reranker rank 5
+
+1056988 — what is deer
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_32c0739269d1e8c51fa8: embedding rank 12 → reranker rank 4
+
+1057088 — what is deactivated yeast
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_21b1ee329063e9e74ed2: embedding rank 6 → reranker rank 4
+
+1057154 — what is das for
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_855bcd26e7320b49cfdc: embedding rank 11 → reranker rank 4
+
+1057415 — what is cuba's currency
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8eb50f028f40fd037c69: embedding rank 8 → reranker rank 2
+
+1057594 — what is creatine in the kidneys
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_fdfc775d5d67ffa80f76: embedding rank 9 → reranker rank 2
+
+1058146 — what is congenital deficiency
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_31f4ff465ad36b76a16a: embedding rank 6 → reranker rank 2
+
+1058352 — what is cocktail attire for evening wedding
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_008dfa9d8671b6d5b4e4: embedding rank 6 → reranker rank 3
+
+1058371 — what is coa in housing
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8a3ed20234b540943536: embedding rank 6 → reranker rank 2
+
+1058686 — what is chieta
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_9b57f5abe5bb1dfcebfb: embedding rank 6 → reranker rank 4
+
+1058697 — what is chica
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_d17d55a06713b41ec980: embedding rank 10 → reranker rank 4
+
+1058830 — what is celebrated in april
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.4 → 0.6
+  p_76db6a2000d34bb8a07e: embedding rank 29 → reranker rank 1
+  p_b3c1fa2a739ebf3e12b5: embedding rank 21 → reranker rank 3
+
+1059287 — what is bst in
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_870c6e69d51ded9b0570: embedding rank 8 → reranker rank 3
+
+1059496 — what is blue ice in a lake
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_dc681ca4869942a4e501: embedding rank 8 → reranker rank 4
+
+1059569 — what is bloomington in zip code
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_59135f461610923aaa69: embedding rank 14 → reranker rank 5
+
+1060558 — what is bacl
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_856828c7ccc4f05d3a0f: embedding rank 6 → reranker rank 5
+
+1060647 — what is b vitamin injection purpose for dogs
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_180bb38dee6b445a0454: embedding rank 7 → reranker rank 4
+
+1061167 — what is at the base of the aorta
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6f196815f2584fca85ed: embedding rank 11 → reranker rank 4
+
+1061194 — what is asthma causes
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e28265142a916cbbd529: embedding rank 9 → reranker rank 5
+
+1062174 — what is another name for manatee
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_72ef2d0e65f2da9244ad: embedding rank 11 → reranker rank 4
+
+1062609 — what is an nm hida scan
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a0ea53dd0d669f54a1a0: embedding rank 6 → reranker rank 4
+
+1062919 — what is an exeval
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a24886a863727e8cd36b: embedding rank 8 → reranker rank 1
+
+1063091 — what is an epidermal autograft
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_01e57a2536dbaa4bffe4: embedding rank 6 → reranker rank 2
+
+1063469 — what is an ash meadow?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_26f7c68951812d201076: embedding rank 11 → reranker rank 5
+
+1063517 — what is an antiepileptic
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_9fbe3965ba005d702cde: embedding rank 9 → reranker rank 3
+
+1063697 — what is an aed class
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_142cf7546d1f3cdb4188: embedding rank 8 → reranker rank 5
+
+1063715 — what is an advantage of authoritarian leaders
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 0.5
+  p_91a0d15373a8b7c38cc2: embedding rank 6 → reranker rank 4
+
+1065279 — what is a wealth
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_bccf012b9abda8b9a1fa: embedding rank 7 → reranker rank 4
+
+1065290 — what is a washi sheet used for in cricut
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1819c69538ec2262893e: embedding rank 6 → reranker rank 5
+
+1065291 — coldest place during august
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a1ab208d21b37898d477: embedding rank 7 → reranker rank 1
+
+1065832 — what is a tunica
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_d500f35976c3c68a86d1: embedding rank 10 → reranker rank 3
+
+1065965 — what is a transgender lady
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_33a5db4820b9de964eba: embedding rank 6 → reranker rank 4
+
+1067030 — what is a struck by hazard
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_151f31bcd6286358cfac: embedding rank 7 → reranker rank 2
+
+1068853 — what is a process that occurs at mid-ocean ridges, where new oceanic crust is formed through volcanic activity and gradually moves away from the ridge.
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1f6e90d48d2b3f86390e: embedding rank 6 → reranker rank 2
+
+1069659 — what is a organic compound needed in only small amounts in the diet to help regulate
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_728ab2a1acfce4f708dc: embedding rank 6 → reranker rank 1
+
+1069922 — what is a negative demand shock
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4cde5a553497ab88a265: embedding rank 6 → reranker rank 2
+
+1071765 — what is a jpeg file used for
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_80c275d5831c07f96755: embedding rank 6 → reranker rank 3
+
+1071992 — what is a illusionist
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_32137784de10096bd35f: embedding rank 6 → reranker rank 2
+
+1072210 — what is a hollow chamber that amplifies sound when air inside vibrates
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c9be3b939c8e7bd23213: embedding rank 6 → reranker rank 2
+
+1073039 — what is a gem report?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_bbf7a1c6a4924703f6ee: embedding rank 6 → reranker rank 1
+
+1074175 — what is a drill in slalom
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6b4717ba2bc24cab865e: embedding rank 8 → reranker rank 1
+
+1075322 — what is a congenital disorder of one
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4053b7edef090f0803ed: embedding rank 6 → reranker rank 5
+
+1075969 — what is a bullying policy
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_9a87f31a0c52d0a80ebd: embedding rank 11 → reranker rank 3
+
+1076808 — what is a apma
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_aaee722513c6d73c59aa: embedding rank 8 → reranker rank 5
+
+1078600 — what hormone does pituitary gland release during fight or flight
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e53e185326164432aef6: embedding rank 20 → reranker rank 1
+
+1078780 — what helps get rid of mucus
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_44797c0eb9e23bf85e51: embedding rank 14 → reranker rank 1
+
+1078906 — what has the study of fossils allowed scientist to do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4b5155839ab2709de3e0: embedding rank 6 → reranker rank 3
+
+1079050 — what happens when electrons are passed down the electron transport chain?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_2f8c6a7bcaac64006546: embedding rank 6 → reranker rank 3
+
+1079106 — what happens when an organism is removed from a food chain?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b346a7a0d4f13d39b57c: embedding rank 6 → reranker rank 2
+
+1079429 — what happened to storm chaser joel taylor
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_95373dadfdc7b3a2bb46: embedding rank 9 → reranker rank 4
+
+1079477 — what gulf is located north of libya
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_0f846fdaf7d9eea4cb69: embedding rank 6 → reranker rank 4
+
+1079814 — chest fullness symptom
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e4b62577b48c86d8d37d: embedding rank 24 → reranker rank 2
+
+1079989 — what generation is the surface book
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1d6d481f3fc6c3523358: embedding rank 10 → reranker rank 4
+
+1079992 — what gender is the name efe
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_1226af86115e4ff585df: embedding rank 6 → reranker rank 2
+
+1080092 — what function schema
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8826d83d1a1b99647ecf: embedding rank 6 → reranker rank 1
+
+1080985 — what food is lower nutrient dense
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_97bf507e3e06ab7cdb75: embedding rank 6 → reranker rank 5
+
+1081946 — what exercise work out the triceps
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_75619925cee63e2c5ad6: embedding rank 8 → reranker rank 1
+
+1082238 — what enzyme relaxes dna
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_2d11c8b7b689c067900d: embedding rank 11 → reranker rank 4
+
+1082256 — what engineering degree pays the most
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_25edf1dab3dc308a94af: embedding rank 7 → reranker rank 4
+
+1082344 — what drives the flow of water through the xylem?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f59922807dec9ba27848: embedding rank 9 → reranker rank 3
+
+1082347 — what draft pick was donovan mitchell?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f309277077b4fb7b33ab: embedding rank 10 → reranker rank 3
+
+1082391 — certificate of deposit types
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_e6a6af1cd69270053a1d: embedding rank 7 → reranker rank 3
+
+1082397 — what does washington dc dc means
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_77dd7159cecc14b23a8a: embedding rank 8 → reranker rank 4
+
+1082418 — what does venn diagram mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_46f95f83534b506cf6ee: embedding rank 7 → reranker rank 2
+
+1082463 — what does ubiqu
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_87285fbc2b791e14d394: embedding rank 6 → reranker rank 1
+
+1082480 — what does totemic mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_28fa83c62430fcbcddc4: embedding rank 8 → reranker rank 3
+
+1082501 — what does this file may be corrupted mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_705707237cf48306510f: embedding rank 6 → reranker rank 5
+
+1082575 — what does the u mean in statistics
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_0fc8a54bd6a40bf58c7c: embedding rank 7 → reranker rank 4
+
+1082615 — what does the skull represent in lof
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_70e34d47694d935095dd: embedding rank 6 → reranker rank 3
+
+1082623 — celebrities who attended clark atlanta university
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1291c397d8d3f120dce2: embedding rank 7 → reranker rank 1
+  p_4b3c4258c1e136b5f31e: embedding rank 8 → reranker rank 2
+
+1082679 — what does the papyrus plant used for
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b8011bb6dae842e62f75: embedding rank 6 → reranker rank 4
+
+1082806 — what does the electoral college compromise do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_7efd1905cb99c1da5afb: embedding rank 7 → reranker rank 5
+
+1082837 — what does the bloodstream consist of
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_41e91b9adcb732228e50: embedding rank 6 → reranker rank 2
+
+1082840 — what does the bank for international settlements help
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e206b60db5514ff2ece9: embedding rank 7 → reranker rank 1
+
+1082918 — what does sudden shortness of breath means
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a202069abfb21fee82f0: embedding rank 10 → reranker rank 3
+
+1082980 — what does sonic blast do to people
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_da10174c681c641f32fd: embedding rank 6 → reranker rank 1
+
+1083020 — what does show me state mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e4f2d41cf28dbbee150b: embedding rank 7 → reranker rank 4
+
+1083061 — what does sba stand for in sba communications
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_fa00eee62bc183efe60e: embedding rank 9 → reranker rank 4
+
+1083095 — causes of shaking and blurred vision
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.333333 → 0.666667
+  p_7076215d46b2b5b8e8af: embedding rank 9 → reranker rank 4
+
+1083120 — what does restore to its factory settings mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_17940cfbeaaec887c496: embedding rank 6 → reranker rank 5
+
+1083349 — what does nortriptyline treat
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_669212d5e39c12e17b1f: embedding rank 6 → reranker rank 1
+
+1083427 — what does mgu stand for
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a387a9a7f7c658c74163: embedding rank 7 → reranker rank 2
+
+1083581 — what does it mean to be radical
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_802f77fc2e6b014f6cf2: embedding rank 9 → reranker rank 2
+
+1083690 — what does hispanic mean?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6236f67f4a7476093229: embedding rank 10 → reranker rank 5
+
+1083727 — what does gyrene mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_7b4125b3930def8bae19: embedding rank 6 → reranker rank 4
+
+1083792 — what does freeball mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_320bcd32b8780dbee954: embedding rank 6 → reranker rank 3
+
+1084031 — what does constructivist structuralist mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ff2003c8d23ce9345e94: embedding rank 7 → reranker rank 4
+
+1084038 — what does conservatorship mean in real estate?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_9b1da5f89d359f76301e: embedding rank 8 → reranker rank 3
+
+1084066 — what does cm@risk mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_2e9c9150e6187892c153: embedding rank 10 → reranker rank 5
+
+1084072 — what does cithara mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ebac051d881126285c2e: embedding rank 6 → reranker rank 4
+
+1084129 — what does brushing your lips do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_21245fa6d75f893f021c: embedding rank 13 → reranker rank 1
+
+1084133 — what does bpa mean in football
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_44df5b4cf2eb8bc2c8f0: embedding rank 7 → reranker rank 2
+
+1084140 — what does book mean for utilities
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b014e7769d3c45338e45: embedding rank 8 → reranker rank 2
+
+1084166 — what does bc stand for on contacts
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_690e00975f9280519461: embedding rank 9 → reranker rank 3
+
+1084192 — what does aus
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b94e62f3732128ed827d: embedding rank 9 → reranker rank 5
+
+1084200 — what does at most mean
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8d745be2587202cc26d3: embedding rank 6 → reranker rank 2
+
+1084297 — what does allusion examples
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_fe02884170b263c5fdf6: embedding rank 7 → reranker rank 1
+
+1084363 — what does a white house calligrapher do?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ed7edc80e513aa7cbc95: embedding rank 7 → reranker rank 3
+
+1084401 — what does a ring on the small finger signify
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8c6a4044780dec95de4b: embedding rank 10 → reranker rank 3
+
+1084431 — what does a occupational therapist do they help with gross motor as well
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_437f2b2ca2e33ab7fcad: embedding rank 6 → reranker rank 4
+
+1084463 — what does a interventional radiologist md do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_87b7c58e3b1220ff4df9: embedding rank 8 → reranker rank 5
+
+1084476 — what does a fretter do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8bfd0f4ed62e4f322983: embedding rank 10 → reranker rank 1
+
+1084491 — what does a dri
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 0.5
+  p_40bf1e7a34822b15d40a: embedding rank 20 → reranker rank 5
+
+1084516 — what does a common cold remedies do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a090a7a5caac4532381d: embedding rank 9 → reranker rank 1
+
+1084697 — cast of suburgatory
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_cd873743d3d32236182f: embedding rank 8 → reranker rank 2
+
+1084726 — what do project management executive sponsors do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_59ff4367366c9e9f63bf: embedding rank 6 → reranker rank 3
+
+1084743 — what do physical therapists do on the job
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_cc40a1a43d14b4bd3833: embedding rank 15 → reranker rank 4
+
+1084795 — what do i need in order to register for my tax number? sars
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6daebf0038fdf1a7bfe8: embedding rank 6 → reranker rank 4
+
+1084898 — what dissolves plaque on teeth
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.333333 → 1
+  p_59c1064dfe87e7c232f2: embedding rank 8 → reranker rank 3
+  p_20f8fdc92e5dc5ec1d54: embedding rank 7 → reranker rank 5
+
+1084912 — what disease causes falling forward when walking?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_60f253cc3cc5bfc7d043: embedding rank 7 → reranker rank 1
+
+1084957 — what did the poor vikings wear
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_a4dedd852cba6f0cd244: embedding rank 7 → reranker rank 4
+
+1084972 — what did the first plants evolve from
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b4780c527425d1b010e2: embedding rank 10 → reranker rank 1
+
+1084989 — what did roosevelt's new deal do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_5fae0ad2ae9f0a18e21f: embedding rank 6 → reranker rank 5
+
+1085109 — what deficiency causes thin nails
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1d76cf76dc25de1f3877: embedding rank 6 → reranker rank 2
+
+1085202 — what courses must you take to become a vet
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b65a706a310f7280c099: embedding rank 10 → reranker rank 3
+
+1085221 — what county is woodbridge, va in
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_496366139091f1006b87: embedding rank 8 → reranker rank 2
+
+1085299 — what county is sauk centre in?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_bb3456bbf98ed16cb684: embedding rank 8 → reranker rank 2
+
+1085366 — what county is phelps in
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_aa4a2de24f4df83bedf0: embedding rank 7 → reranker rank 4
+
+1085511 — what county is huntington, in located in
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_71a4767ed4bf7f17a4f2: embedding rank 7 → reranker rank 1
+
+1085560 — what county is farmingdale in ny?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4c51ac997bacfe16b690: embedding rank 8 → reranker rank 4
+
+1085611 — what county is clayton, al in
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_fe2ac69418fa18a030bd: embedding rank 7 → reranker rank 2
+
+1085727 — what counts as liquids for tsa
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_11e35a831f83675b128f: embedding rank 11 → reranker rank 2
+
+1085762 — what contains capsaicin
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_fd36208e6a4b70bcb2ef: embedding rank 7 → reranker rank 2
+
+1085861 — what color is escherichia gram stain
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f3e65661b8fe402d6321: embedding rank 7 → reranker rank 3
+
+1085865 — what color is associated to anger
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e8f8a9b5a4087f220aa8: embedding rank 6 → reranker rank 1
+
+1086021 — what causes white foamy mucus
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_217120b6cfbfbab88c54: embedding rank 6 → reranker rank 3
+
+1086068 — what causes swelling of leg and sharp pain in calf
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_2df25b34826e2da7aa40: embedding rank 9 → reranker rank 5
+
+1086088 — what causes rocks to change
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8d6e68bb8c6e8387c292: embedding rank 7 → reranker rank 3
+
+1086145 — what causes hormonal bleeding
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_7a28770f3b36ab0f0342: embedding rank 7 → reranker rank 4
+
+1086199 — what causes crazing in tiles
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a1bb88846f0945e5bcd8: embedding rank 6 → reranker rank 2
+
+1086324 — what can you amortize
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_2a42725d29db4cdbb1a8: embedding rank 13 → reranker rank 1
+
+1086348 — what can i do to improve my kidneys
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 0.5
+  p_b7d279db58f05a3752ac: embedding rank 11 → reranker rank 2
+
+1086490 — what bank is starbucks reward visa?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_0a67cc0821319eb46ff1: embedding rank 6 → reranker rank 5
+
+1086586 — what are virgos known for
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1d918a4442ace8abe851: embedding rank 15 → reranker rank 1
+
+1086672 — what are three delegated powers?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1d9453fe9b9d20f03dc2: embedding rank 6 → reranker rank 5
+
+1086742 — what are the three main sections of narrative writing
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_69674df1a95bf6b1e89a: embedding rank 6 → reranker rank 3
+
+1086884 — what are the products of the calvin-benson cycle
+  Cohort: opportunity; net Recall@5 outcome: unchanged; Recall@5: 0.666667 → 0.666667
+  p_b348c1d7c99bc36b0d22: embedding rank 7 → reranker rank 2
+
+1086911 — what are the oldest dog breeds in the world
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_4f8fbd319205c5bc9ba6: embedding rank 9 → reranker rank 2
+
+1087012 — what are the healthy benefits from eating hard boiled eggs
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_bbbfe52050089856b337: embedding rank 6 → reranker rank 4
+
+1087017 — what are the goals of sociology question
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_6f0901516411ab46502e: embedding rank 9 → reranker rank 4
+  p_fac87d720ed3191eb3d8: embedding rank 14 → reranker rank 5
+
+1087018 — what are the gif
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c9f69b0853a8e40381b6: embedding rank 8 → reranker rank 5
+
+1087025 — what are the free point foods on weight watchers
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1fbea3c295909f5b3b20: embedding rank 11 → reranker rank 4
+
+1087048 — what are the first names of the everly brothers
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ec1afd393fe7c370a308: embedding rank 8 → reranker rank 2
+
+1087085 — what are the desert planets
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_fa34f92f94c9a95aa6f1: embedding rank 6 → reranker rank 3
+
+1087107 — what are the consequences of loss of genetic variability
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_02ebc5b03d05ea2b64f5: embedding rank 20 → reranker rank 3
+
+1087119 — what are the colors of the visible spectrum longest to shortest
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_92488a7b7b4e91143739: embedding rank 7 → reranker rank 1
+
+1087267 — what are some music venues in cleveland
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_37d043b90294be2eb350: embedding rank 6 → reranker rank 4
+
+1087416 — what are poor conductors also known as
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1060005408d4d29b669d: embedding rank 6 → reranker rank 1
+
+1087496 — what are marshmallows made from
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6a3fb06079e409ac5ae4: embedding rank 10 → reranker rank 3
+
+1087498 — what are mammals for kids
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_bb06788baa80da534024: embedding rank 6 → reranker rank 5
+
+1087589 — what are gases used in neon signs?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_7333fd01a600011db93e: embedding rank 8 → reranker rank 4
+
+1087591 — what are gas causing foods
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_1bfbf93aceaa7d345aa3: embedding rank 6 → reranker rank 2
+
+1087597 — what are for restarted
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b0323987cdd4e5305d1d: embedding rank 6 → reranker rank 4
+
+1087751 — what are barbell good mornings
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_688a9444f05e061649fa: embedding rank 10 → reranker rank 2
+
+1087807 — what another name for troy
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e772637bcd7e36fcc073: embedding rank 7 → reranker rank 4
+
+1087835 — what amendment is the right to carry out their arms
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_bf304005c9404a59046d: embedding rank 7 → reranker rank 4
+
+1087839 — what amendment gives the government right to collect taxes
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f9f60cbbbede788d71ce: embedding rank 11 → reranker rank 1
+
+1087934 — what adidas shoes are best for running
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_8a92f63c73238e8b96f1: embedding rank 7 → reranker rank 3
+
+1087942 — what actor kept his oscar for ordinary people in the fridge?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ad2f69567b2b74d2bff0: embedding rank 7 → reranker rank 1
+
+1088000 — westjet world elite mastercard
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ebac9505a83170cbcb9e: embedding rank 6 → reranker rank 3
+
+1088030 — weighted average remaining lease term
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ccf96ea76b91b5d9b296: embedding rank 7 → reranker rank 4
+
+1088074 — wedding venues in barcelona spain
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c8ea442567b87ed87344: embedding rank 6 → reranker rank 5
+
+1088167 — weather in warfordsburg pa
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.666667 → 1
+  p_90abf7f6c61dac45cd01: embedding rank 21 → reranker rank 3
+
+1088365 — weather in monticello, ca
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f70f4efdbb51f9e23466: embedding rank 11 → reranker rank 4
+
+1088386 — weather in marbella costa del sol spain
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_0765bd8dadc054ab1115: embedding rank 8 → reranker rank 5
+
+1088602 — weather in clinton mass
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_81593c431271a6b1efaf: embedding rank 7 → reranker rank 4
+
+1088771 — waterpark in wisconsin
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_2aa070d27632e90ebbc4: embedding rank 6 → reranker rank 4
+
+1089014 — venofer infusion
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c44771f6954560d0b39f: embedding rank 6 → reranker rank 5
+
+1089040 — vascular dementia symptoms associated with agent orange
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_90ca54f2a9fe4e301f60: embedding rank 6 → reranker rank 3
+
+1089066 — vacuole do
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_0d1109fcb9b0468e1eba: embedding rank 7 → reranker rank 1
+
+1089079 — usps first class envelope stamp price
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_382b4870fa0aa2b04303: embedding rank 6 → reranker rank 4
+
+1089288 — types of pencil
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_ac2e38881736f607358e: embedding rank 8 → reranker rank 4
+
+1089331 — types of energy production in washington state
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_dae5c55bc9f7e1d7d7b8: embedding rank 6 → reranker rank 3
+  p_70e7860d67db8ccb1437: embedding rank 7 → reranker rank 4
+
+1089469 — trailer hitches installed cost
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c13926a5c4fab0c9b078: embedding rank 7 → reranker rank 2
+
+1089566 — time zones sanford fleming
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4532a3ce9a433bcd9960: embedding rank 7 → reranker rank 5
+
+1089602 — time in pacific mo
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_79a49a2829713874b657: embedding rank 7 → reranker rank 3
+
+1089699 — the two types of flares used on brake lines are
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_516f0f64e03b1dd4340f: embedding rank 9 → reranker rank 5
+
+1089719 — the small intestine is small in what
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_9b2b01bb76101a296756: embedding rank 20 → reranker rank 4
+
+1089744 — the pigment chlorophyll is contained in _____.
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ff9ddc84db144ce53e24: embedding rank 11 → reranker rank 2
+
+1089786 — the meaning of hold
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_974099569edae4f50a2e: embedding rank 6 → reranker rank 2
+
+1089923 — the benefits of globalization
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_23f1a5dedaa110f47db8: embedding rank 8 → reranker rank 2
+
+1089942 — the ____________ is the amount of air remaining in the lungs after a forced expiration.
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e8ca3abe2a46f6a97c9e: embedding rank 6 → reranker rank 2
+
+1089949 — the ________ gland is often referred to as the master gland of the endocrine system
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a40491a0a26158f09f69: embedding rank 6 → reranker rank 5
+
+1089950 — the ________ cartilages of the larynx play the most important part in sound production
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_10204a5a33a15d30a1aa: embedding rank 10 → reranker rank 2
+
+1090028 — temperature in clearwater, fl
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_3e1dc7309d989d9842d9: embedding rank 11 → reranker rank 4
+
+1090053 — temperature drop
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_8e7aba9693e11ebb6b6d: embedding rank 10 → reranker rank 3
+
+1090117 — tarsal tunnel in ankle symptoms
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_dae30c1c3886511c5b3c: embedding rank 6 → reranker rank 3
+
+1090121 — targetize app
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_3947ea076bbc4422eba4: embedding rank 6 → reranker rank 4
+
+1090136 — tamiflu generic name over counter
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_c750ae52f025323c2267: embedding rank 8 → reranker rank 5
+
+1090158 — synonyms of prominence
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_551329ca9cec3bd1b039: embedding rank 6 → reranker rank 3
+
+1090278 — symptoms of air pollution exposure
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_440ba4e1ac22094b3498: embedding rank 7 → reranker rank 5
+
+1099920 — highest recorded school shooting
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4a7c11aa14eeff767860: embedding rank 14 → reranker rank 3
+
+1099928 — highest range for a woman's voice
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4703ef52b52a48509d90: embedding rank 7 → reranker rank 5
+
+1099946 — are the spores produced by the fern sporophyte formed by meiosis or mitosis?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6cfed09558e45d56b4d3: embedding rank 6 → reranker rank 5
+
+1100088 — hawaii state fmla
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_98d64ae1402d348bbe6b: embedding rank 9 → reranker rank 5
+
+1100140 — hairy tongue causes treatment
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_607e611ed429efa88de5: embedding rank 6 → reranker rank 2
+
+1100382 — archimedes meaning
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_461d2ac0d32aea09b038: embedding rank 8 → reranker rank 5
+
+1100482 — foods that curb glucose
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 0.5
+  p_2894d3b7164b23ea0dbe: embedding rank 24 → reranker rank 4
+
+1100497 — foods bad for your cholesterol
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_3da966eebfc07c619f9a: embedding rank 7 → reranker rank 1
+
+1100498 — foods and supplements for energy
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_ef920af9d590707daecc: embedding rank 7 → reranker rank 2
+
+1100524 — florida shooting how many dead
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ccf17fc87bd3b9ba0f1e: embedding rank 8 → reranker rank 1
+
+1100543 — fissure causes seepage
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_5fac7d50b46c37cc9ce5: embedding rank 12 → reranker rank 2
+
+1100700 — explain what is a vrio framework and why it is used
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_4415969550c7d42f90a0: embedding rank 6 → reranker rank 4
+
+1100768 — essential oils, respiratory
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_e0093b9c52c501c2cebd: embedding rank 7 → reranker rank 3
+
+1100811 — enterocolitis definition
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a53615e56d77559148d0: embedding rank 6 → reranker rank 2
+
+1101016 — dry mouth can mean what
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 0.5
+  p_444ad820e8c4322fd587: embedding rank 6 → reranker rank 2
+
+1101148 — does your fps have to much your refresh rate
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_a6a15b7ae430eb39c6db: embedding rank 7 → reranker rank 3
+
+1101171 — does schizophrenia cause hallucinations
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_27be0b2bd15eeb797d94: embedding rank 7 → reranker rank 1
+
+1101229 — does boeing pay a dividend
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_b2404ede2cb6e4e11c7f: embedding rank 6 → reranker rank 3
+
+1101279 — do physicians pay for insurance from their salaries?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_d9f3a97f067a836c8e78: embedding rank 6 → reranker rank 1
+
+1102179 — why does water level go down in toilet tank
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f11f0357201a1fa7c3c6: embedding rank 9 → reranker rank 4
+
+1102255 — why does an enzyme cease to function when it has become denatured?
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_692794b08db338ba1e8b: embedding rank 6 → reranker rank 3
+
+1102275 — why do you enjoy writing
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_dd7c3173304c620d3e58: embedding rank 6 → reranker rank 3
+
+141216 — dependent care benefits taxes
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_f42e71dbf19e5a571c21: embedding rank 6 → reranker rank 1
+
+16973 — amlodipine besylate is used for what
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_472e1bd3f4009775de2c: embedding rank 7 → reranker rank 3
+
+201376 — here there be dragons comic
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ee87739a62ce6198e6c6: embedding rank 6 → reranker rank 2
+
+220115 — how do raid passes work
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_7915728b5fc348f01381: embedding rank 13 → reranker rank 1
+
+264835 — how long is the flight from dfw to punta cana
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_4a8e6b21325e2a684c02: embedding rank 7 → reranker rank 2
+
+319672 — how much food does a panda eat in a day
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_bf6f2c9736360fac81a1: embedding rank 7 → reranker rank 5
+
+345812 — how to begin writing a autobiography
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_2b34a3569ed1987f7622: embedding rank 6 → reranker rank 2
+
+36245 — average electricity usage in kw
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_ee4ecda40a065b9387fc: embedding rank 7 → reranker rank 1
+
+68536 — can i change pool light for inground pool
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_6b5e761b0250a5856bba: embedding rank 7 → reranker rank 2
+
+84339 — cause of gum recession
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0.5 → 1
+  p_540889411b5e439c1aba: embedding rank 7 → reranker rank 2
+
+95872 — common types of skin cancer
+  Cohort: opportunity; net Recall@5 outcome: gain; Recall@5: 0 → 1
+  p_105352ee0f76a23eb777: embedding rank 6 → reranker rank 3
+

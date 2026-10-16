@@ -1,0 +1,48 @@
+{
+  "runtime_directory": "../.cache/qwen-runs",
+  "dataset": {
+    "name": "microsoft/ms_marco",
+    "configuration": "v2.1",
+    "split": "validation",
+    "revision": "a47ee7aae8d7d466ba15f9f0bfac3b3681087b3a"
+  },
+  "retrieval": {
+    "credential_env": "OPENROUTER_API_KEY",
+    "api_base": "https://openrouter.ai/api/v1",
+    "embedding_model": "qwen/qwen3-embedding-4b",
+    "reranker_model": "qwen/qwen3-reranker-8b",
+    "reranker_url": "https://openrouter.ai/api/v1/rerank",
+    "dimensions": 2560,
+    "passage_char_budget": 1800,
+    "passage_batch_size": 1024,
+    "query_batch_size": 512,
+    "candidate_count": 30,
+    "context_count": 5,
+    "nlist": 4096,
+    "training_sample_size": 200000,
+    "index_add_batch_size": 50000,
+    "exhaustive_search": true,
+    "threads": 1,
+    "seed": 42,
+    "timeout_seconds": 120,
+    "max_attempts": 3,
+    "backoff_seconds": [
+      2,
+      5
+    ],
+    "query_instruction": "Given a web search query, retrieve relevant passages that answer the query"
+  },
+  "cohorts": {
+    "seed": 42,
+    "control_questions": 200,
+    "pilot_opportunities": 500,
+    "pilot_controls": 200,
+    "expansion_batches": 0,
+    "tolerance": 1e-12,
+    "opportunity_questions": 500
+  },
+  "diagnosis": {
+    "inspect_query_id": "325543"
+  },
+  "judge_policy": "explicit_only"
+}

@@ -1,0 +1,14 @@
+{
+  "mode": "checkpointed_passages",
+  "source_directory": "../.cache/qwen-runs/full-validation/9d5b5fc55d9fea605a3e",
+  "eligible_question_ids": "../reports/embedding-coverage-20261015T204959667725Z/fully-covered-question-ids.txt",
+  "coverage_file": "../reports/embedding-coverage-20261015T204959667725Z/question-coverage.jsonl",
+  "eligible_ids_sha256": "cfd29784dae3dfc6c14c1be0ef7600ef4921c0771d4b18cac7450473e102144e",
+  "coverage_sha256": "4cc0c24547dfea2ea7fbffd45215f33828b9a4d842064f0d192a7993001dc619",
+  "eligible_question_count": 15585,
+  "passage_count": 152576,
+  "passage_embedding_calls_allowed": false,
+  "baseline_questions": 31,
+  "baseline_seed": 42,
+  "baseline_diagnostic_questions": 1
+}

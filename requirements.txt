@@ -1,0 +1,21 @@
+# Direct dependencies; resolved, tested versions are saved in requirements-lock.txt.
+numpy>=2.5.3
+pandas>=3.0.6
+requests>=2.34.2
+httpx>=0.28.1
+openai>=2.6.0,<3
+instructor>=1.14.0
+ragas==0.4.3
+evaluate==0.4.6
+datasets>=5.1.0
+python-dotenv>=1.2.4
+ipython>=9.17.1
+ipykernel>=7.4.0
+nbformat>=5.11.1
+nbclient>=0.11.0
+nbconvert>=7.17.1
+# RAGAS 0.4.3 imports legacy LangChain modules removed in LangChain 1.x.
+langchain==0.3.27
+langchain-community==0.3.31
+langchain-core==0.3.86
+langchain-openai==0.3.35

@@ -1,0 +1,5 @@
+{
+  "max_total_requests": 10000,
+  "ledger_path": "../.cache/model-request-budget.sqlite",
+  "description": "Counts every outbound hosted attempt, including failures and retries, across restarts. Successful cache hits do not count."
+}

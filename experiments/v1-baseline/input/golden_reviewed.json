@@ -1,0 +1,281 @@
+[
+  {
+    "row id": 1,
+    "query id": 1102431,
+    "query": "why did rachel carson write an obligation to endure",
+    "answer": "[\"Rachel Carson writes The Obligation to Endure because believes that as man tries to eliminate unwanted insects and weeds, however he is actually causing more problems by polluting the environment.\"]",
+    "related passages": "Passage 1\nThe Obligation to Endure by Rachel Carson Rachel Carson's essay on The Obligation to Endure, is a very convincing argument about the harmful uses of chemicals, pesticides, herbicides, and fertilizers on the environment.\nSource: http://gbyoder.blogspot.com/2007/11/obligation-to-endure-by-rachel-carson.html\n\nPassage 2\nCarson believes that as man tries to eliminate unwanted insects and weeds, however he is actually causing more problems by polluting the environment with, for example, DDT and harming living things. Carson adds that the intensification of agriculture is causing other major problems, like newly developed or created insects and diseases.\nSource: http://www.markedbyteachers.com/university-degree/linguistics-classics-and-related-subjects/rachel-carson-the-author-of-obligation-to-endure-claims-that-man-isdestroying-the-earth-by-science-specifically-by-the-use-of-chemicals.html",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 2 directly supports the motive; passage 1 supplies essay context. Useful explanatory question. Interpretive secondary sources, so score the supplied evidence rather than presumed author intent."
+  },
+  {
+    "row id": 390,
+    "query id": 82895,
+    "query": "carpal tunnel syndrome meaning",
+    "answer": "[\"A painful disorder caused by compression of a nerve in the carpal tunnel; characterized by discomfort and weakness in the hands and fingers and by sensations of tingling, burning or numbness.\", \"A \u200bmedical \u200bcondition of \u200bpain and \u200bweakness in the \u200bhand, \u200bcaused by \u200brepeated \u200bpressure on a \u200bnerve in the \u200bwrist.\"]",
+    "related passages": "Passage 1\nThe noun CARPAL TUNNEL SYNDROME has 1 sense: 1. a painful disorder caused by compression of a nerve in the carpal tunnel; characterized by discomfort and weakness in the hands and fingers and by sensations of tingling, burning or numbness. Familiarity information: CARPAL TUNNEL SYNDROME used as a noun is very rare. Dictionary entry details.\nSource: http://www.audioenglish.org/dictionary/carpal_tunnel_syndrome.htm\n\nPassage 2\ncarpal tunnel syndrome noun [U]. \u203a a \u200bmedical \u200bcondition of \u200bpain and \u200bweakness in the \u200bhand, \u200bcaused by \u200brepeated \u200bpressure on a \u200bnerve in the \u200bwrist. (Definition of carpal tunnel syndrome from the Cambridge Advanced Learner\u2019s Dictionary & Thesaurus \u00a9 Cambridge University Press). See all translations.\nSource: http://dictionary.cambridge.org/dictionary/english/carpal-tunnel-syndrome",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both dictionary passages support the same core definition. Useful easy control; do not require every symptom listed in one alternative answer."
+  },
+  {
+    "row id": 685,
+    "query id": 200586,
+    "query": "hedis defined",
+    "answer": "[\"The Healthcare Effectiveness Data and Information Set is a widely used set of performance measures in the managed care industry, developed and maintained by the National Committee for Quality Assurance.\", \"The Healthcare Effectiveness Data and Information Set is a tool used by more than 90 percent of America's health plans to measure performance on important dimensions of care and service.\"]",
+    "related passages": "Passage 1\nHealthcare Effectiveness Data and Information Set. The Healthcare Effectiveness Data and Information Set (HEDIS) is a widely used set of performance measures in the managed care industry, developed and maintained by the National Committee for Quality Assurance (NCQA). HEDIS was designed to allow consumers to compare health plan performance to other plans and to national or regional benchmarks.\nSource: https://en.wikipedia.org/wiki/HEDIS\n\nPassage 2\nMeasuring Performance. The Healthcare Effectiveness Data and Information Set (HEDIS) is a tool used by more than 90 percent of America's health plans to measure performance on important dimensions of care and service. Altogether, HEDIS consists of 81 measures across 5 domains of care.\nSource: http://www.ncqa.org/HEDISQualityMeasurement.aspx",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 supports the expansion, purpose, and maintainer; passage 2 supports performance measurement. Score the stable definition; avoid making dated adoption counts or measure totals mandatory."
+  },
+  {
+    "row id": 1095,
+    "query id": 98469,
+    "query": "convert ft to mtr",
+    "answer": "[\"1 foot is equal to 0.3048 meters.\"]",
+    "related passages": "Passage 1\nFeet to meters conversion calculator. Enter the length in feet (ft) and press the Convert button: Meters to feet \u25ba. 1 foot is equal to 0.3048 meters: 1 ft = 0.3048 m. The distance d in meters (m) is equal to the distance d in feet (ft) times 0.3048: d(m) = d(ft) \u00d7 0.3048. Convert 2 feet to meters: d(m) = 2ft \u00d7 0.3048 = 0.6096m. Meters to feet \u25ba. Meters to feet conversion.\nSource: http://www.rapidtables.com/convert/length/feet-to-meter.htm\n\nPassage 2\nHow to convert feet to meters. 1 foot is equal to 0.3048 meters: 1 ft = 0.3048 m. The distance d in meters (m) is equal to the distance d in feet (ft) times 0.3048:\nSource: http://www.rapidtables.com/convert/length/feet-to-meter.htm",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both passages explicitly support 1 ft = 0.3048 m. Useful easy control, although the generator may already know the conversion."
+  },
+  {
+    "row id": 1579,
+    "query id": 1089772,
+    "query": "the meaning of the word iridescent example",
+    "answer": "[\"Iridescent means showing many bright colours that change with movement. Eexample is the hind wings are either a bright iridescent blue or an iridescent bluish-green.\"]",
+    "related passages": "Passage 1\nThe hind wings are either a bright iridescent blue or an iridescent bluish-green.\nSource: https://dictionary.cambridge.org/us/dictionary/english/iridescent\n\nPassage 2\niridescent meaning, definition, what is iridescent: showing many bright colours that change with movement: . Learn more.\nSource: https://dictionary.cambridge.org/dictionary/english/iridescent",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 2 provides the definition and passage 1 the example. Useful test of including both requested answer parts."
+  },
+  {
+    "row id": 2355,
+    "query id": 1088972,
+    "query": "viewpoint definition",
+    "answer": "[\"Viewpoint is defined as a way of thinking about a subject. Viewpoint can also be defined as a place affording a view of something position of observation.\"]",
+    "related passages": "Passage 1\n1 viewpoint (on something) a way of thinking about a subject synonym point of view Try looking at things from a different viewpoint. She will have her own viewpoint on the matter. From a practical viewpoint, I'd advise you not to go. Oxford Collocations Dictionary adjective alternative, different, differing, \u2026 verb + viewpoint have, hold, express, \u2026 preposition from a/ the viewpoint phrases from a purely\u2026 viewpoint See full entry\nSource: https://www.oxfordlearnersdictionaries.com/definition/english/viewpoint\n\nPassage 2\nViewpoint definition, a place affording a view of something; position of observation: to sketch a river from the viewpoint of a bluff. See more.\nSource: http://www.dictionary.com/browse/viewpoint\n\nPassage 3\nviewpoint noun [C] (SIGHT) \u203a UK US overlook a place from where a person can look at something, especially at an area of natural beauty: The viewpoint by the side of the road gave us a stunning panorama of the whole valley.\nSource: https://dictionary.cambridge.org/us/dictionary/english/viewpoint",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. The passages explicitly support both dictionary senses. Keep as a sense-coverage test and accept either sense only if your scoring rubric permits it."
+  },
+  {
+    "row id": 16698,
+    "query id": 1021101,
+    "query": "what sedimentary rocks composed of clay",
+    "answer": "[\"Mudrocks are sedimentary rocks composed of at least 50% silt- and clay-sized particles. A shale is composed of clay sized particles and is a rock that tends to break into thin flat fragments.\"]",
+    "related passages": "Passage 1\nMudrocks are sedimentary rocks composed of at least 50% silt- and clay-sized particles. These relatively fine-grained particles are commonly transported by turbulent flow in water or air, and deposited as the flow calms and the particles settle out of suspension.\nSource: https://en.wikipedia.org/wiki/Sedimentary_rock\n\nPassage 2\nSandstones are one of the most common types of sedimentary rocks. Mudrocks. Mudrocks are made of fine grained clasts (silt and clay sized) . A siltstone is one variety that consists of silt-sized fragments. A shale is composed of clay sized particles and is a rock that tends to break into thin flat fragments (See figure 7.6e in your text).\nSource: http://www.tulane.edu/~sanelson/eens1110/sedrx.htm",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 defines the broader mudrock category; passage 2 identifies shale as clay-sized material. Useful specificity test: answer shale with mudrock context rather than confuse the categories."
+  },
+  {
+    "row id": 23403,
+    "query id": 225861,
+    "query": "how does computer animation work",
+    "answer": "[\"Modern computer animation usually uses 3D computer graphics, although 2D computer graphics are still used for stylistic, low bandwidth and faster real-time renderings.\", \"It is the process of creating the illusion of motion and shape change by means of the rapid display of a sequence of static images that minimally differ from each other.\"]",
+    "related passages": "Passage 1\nModern computer animation usually uses 3D computer graphics, although 2D computer graphics are still used for stylistic, low bandwidth, and faster real-time renderings. Sometimes, the target of the animation is the computer itself, but sometimes the target is another medium, such as film.\nSource: https://en.wikipedia.org/wiki/Computer_animation\n\nPassage 2\nAnimation is the process of creating the illusion of motion and shape change by means of the rapid display of a sequence of static images that minimally differ from each other. The illusion\u2014as in motion pictures in general\u2014is thought to rely on the phi phenomenon.\nSource: https://en.wikipedia.org/wiki/Animation",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 2 explains the sequence-of-images mechanism; passage 1 adds 2D/3D context. Require the mechanism, not merely the statement that animation uses 3D graphics."
+  },
+  {
+    "row id": 23631,
+    "query id": 146233,
+    "query": "difference between a shake and a malt",
+    "answer": "[\"A malt is just a shake with malt powder (malted milk) added while shake is a frothy drink.\"]",
+    "related passages": "Passage 1\nRating Newest Oldest. Best Answer: It is true. A malt is just a shake with malt powder (malted milk) added. The malt was invented in 1922 by a soda jerk at a Walgreens drug store in Chicago(2). Jack White of the White Stripes on the Malt, including the making of a proper malt(1):\nSource: https://answers.yahoo.com/question/index?qid=1005122104542\n\nPassage 2\nShake and malt have similar ingredients. Malt can be considered as a shake but with addition to the usual ingredients, it includes a malt flavoring. Shake is a frothy drink which contains ingredients like milk and syrup or milk and ice creams with some additional flavoring if required.\nSource: http://www.differencebetween.info/difference-between-shake-and-malt",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both passages support malt as a shake with added malt flavoring. Clear comparison with a compact reference answer; useful easy control."
+  },
+  {
+    "row id": 27712,
+    "query id": 114685,
+    "query": "cyanide definition",
+    "answer": "[\"Cyanide, any compound containing the monovalent combining group CN. In inorganic cyanides, such as sodium cyanide (NaCN), this group is present as the negatively charged cyanide ion; \\nconsists of a carbon atom triple-bonded to a nitrogen atom.\"]",
+    "related passages": "Passage 1\nFreebase(0.00 / 0 votes)Rate this definition: Cyanide. A cyanide is any chemical compound that contains monovalent combining group CN. This group, known as the cyano group, consists of a carbon atom triple-bonded to a nitrogen atom.\nSource: http://www.definitions.net/definition/cyanide\n\nPassage 2\nCyanide, any compound containing the monovalent combining group CN. In inorganic cyanides, such as sodium cyanide (NaCN), this group is present as the negatively charged cyanide ion; these compounds, which are regarded as salts of hydrocyanic acid, are highly toxic.\nSource: https://www.britannica.com/science/cyanide",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both passages support the CN group; passage 1 adds the carbon-nitrogen bond and passage 2 the ionic example. Clear definition with complementary detail."
+  },
+  {
+    "row id": 28131,
+    "query id": 17046,
+    "query": "amoral vs immoral definition",
+    "answer": "[\"Amoral means motives or actions are outside of set pattern of thoughts and actions of any time or place. Immoral is a subjective determinant that the correct, upright, or truth has been breached in a particular time and place and system. Immoral things are bad, and amoral things are either neutral from a moral perspective or simply removed from moral considerations.\"]",
+    "related passages": "Passage 1\nMoral also means truth. Amoral is without moral meaning outside of moral standards or judgment. Amoral means motives or actions are outside of set pattern of thoughts and actions of any time or place. Immoral is a subjective determinant that the correct, upright, or truth has been breached in a particular time and place and system.\nSource: https://answers.yahoo.com/question/index?qid=20080918115520AAaDT9J\n\nPassage 2\nAmoral vs. immoral. The adjective immoral means contrary to established moral principles. Immoral actions are corrupt, unethical, sinful, or just wrong. Amoral means (1) neither moral nor immoral, or (2) lacking moral sensibility. So while immoral and amoral might share a little common ground, there is a clear distinction: immoral things are bad, and amoral things are either neutral from a moral perspective or simply removed from moral considerations.\nSource: http://grammarist.com/usage/amoral-immoral/",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 2 clearly states the amoral/immoral distinction. The reference includes awkward wording from passage 1; score the core distinction rather than exact wording."
+  },
+  {
+    "row id": 29809,
+    "query id": 82858,
+    "query": "carnivore scientific definition",
+    "answer": "[\"It is an animal that derives its energy and nutrient requirements from a diet consisting mainly or exclusively of animal tissue, whether through predation or scavenging.\", \"Any animal that eats meat as the main part of its diet.\"]",
+    "related passages": "Passage 1\nCarnivore. A carnivore meaning 'meat eater' is an animal that derives its energy and nutrient requirements from a diet consisting mainly or exclusively of animal tissue, whether through predation or scavenging.\nSource: http://www.definitions.net/definition/carnivore\n\nPassage 2\nWiktionary (1.00 / 1 vote) Rate this definition: carnivore (Noun). Any animal that eats meat as the main part of its diet. carnivore (Noun). A mammal belonging to the order Carnivora. Carnivore (ProperNoun). a computer system designed by the FBI to monitor e-mail and electronic communications.\nSource: http://www.definitions.net/definition/carnivore",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. The dietary definition is directly supported. Passage 2 also contains taxonomic and computing senses, making sense selection observable."
+  },
+  {
+    "row id": 32056,
+    "query id": 146244,
+    "query": "difference between a spruce and a fir tree",
+    "answer": "[\"1 Spruce tree needles are sharply pointed, square and easy to roll between your fingers while fir tree needles are softer, flat and cannot be rolled between your fingers.    2 When mature, the cones on a fir tree stand straight up while the mature cones on a spruce grow down towards the ground from the bottom side of the branch.\"]",
+    "related passages": "Passage 1\nThe way that I remember which grows up and which grows down is that I remember the s in spruce means that the cones spray the ground. One of the best and easiest ways to tell the difference between a true spruce and fir tree is to look at the tree's cones. When mature, the cones on a fir tree stand straight up (point towards the sky) while the mature cones on a spruce grow down towards the ground from the bottom side of the branch. The way that I remember which grows up and which grows down is that I remember the s in spruce means that the cones spray the ground.\nSource: http://www.answers.com/Q/What_is_the_difference_between_spruce_trees_and_fir_trees\n\nPassage 2\nThe leaves of conifers are of course their needles. On true pine trees, the needles are arranged and attached to the branches in clusters of two (red pine group), three (yellow pine group), or five (white pine group) needles per cluster. Spruce and fir trees have their needles attached individually to the branches. To tell spruce and fir trees apart, it helps to know that spruce needles are sharply pointed, square and easy to roll between your fingers. Fir needles, on the other hand, are softer, flat and cannot be rolled between your fingers. Spruce needles are attached to small, stalk-like woody projections. When needles are shed, these projections remain. As a result, the branches of spruce trees feel rough.\nSource: http://www.extension.iastate.edu/news/2005/nov/061401.htm",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 supports cone orientation; passage 2 supports needle shape and texture. Useful complementary-evidence comparison; require both distinguishing features."
+  },
+  {
+    "row id": 34472,
+    "query id": 146120,
+    "query": "difference between a chemical property and a physical property.",
+    "answer": "[\"The difference between physical and chemical properties: 1.Physical properties are those properties that can be observed or measured without; causing or resulting in a change in the matter, while chemical properties are only observed after a change in the matter has occurred. 2. With chemical properties the chemical identity of the substance is changed, this is not the case with physical properties. 3. With chemical properties the structure of the material changes, while the structure does not change in the case of physical properties. 4. A chemical reaction occurs before a chemical property becomes evident, while no chemical reaction is needed for a physical property to become visible. 5. Chemical properties, unlike physical properties, can be used to predict how substances will react. 6. A physical property is the freezing point of water is 0C a physical change is actual water freezing or ice melting a chemical property is that paper burns in the presence of oxygen and high enough temperatures, while a chemical change is actual paper burning and producing ash and other by products. 7. Physical properties can be observed and measured easily without altering the nature of the substance, while chemical properties are those that decide how the substance behaves in different circumstances and how it reacts with other substances.\"]",
+    "related passages": "Passage 1\nWhat is the difference between physical and chemical properties? Physical properties are those properties that can be observed or measured without; causing or resulting in a change in the matter, while chemical properties are only observed after a change in the matter has occurred.\nSource: http://www.differencebetween.net/science/chemistry-science/difference-between-physical-and-chemical-properties/\n\nPassage 2\nWith chemical properties the chemical identity of the substance is changed, this is not the case with physical properties. With chemical properties the structure of the material changes, while the structure does not change in the case of physical properties. A chemical reaction occurs before a chemical property becomes evident, while no chemical reaction is needed for a physical property to become visible. Chemical properties, unlike physical properties, can be used to predict how substances will react. Table comparing physical and chemical properties\nSource: http://www.differencebetween.net/science/chemistry-science/difference-between-physical-and-chemical-properties/\n\nPassage 3\na physical property is the freezing point of water is 0C a physical change is actual water freezing or ice melting a chemical property is that paper burns in the presence of oxygen and high enough temperatures, a chemical change is actual paper burning and producing ash and other by products.\nSource: https://answers.yahoo.com/question/index?qid=20080820190017AABGP7l\n\nPassage 4\n\u2022 The properties of a substance are classified into its physical properties and chemical properties. \u2022 While physical properties can be observed and measured easily without altering the nature of the substance chemical properties are those that decide how the substance behaves in different circumstances and how it reacts with other substances.\nSource: http://www.differencebetween.com/difference-between-chemical-and-vs-physical-properties/",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Multiple passages support the core chemical-identity distinction and examples. Use a concise semantic rubric; do not require every redundant sentence in the long reference."
+  },
+  {
+    "row id": 41038,
+    "query id": 389213,
+    "query": "hubble telescope definition",
+    "answer": "[\"A space telescope that was carried into orbit by a Space Shuttle in 1990 and remains in operation.\", \"A large astromical optical telescope placed into orbit around the earth.\"]",
+    "related passages": "Passage 1\nHubble Space Telescope (n.). A large astromical optical telescope placed into orbit around the earth, from which, in the absence of absorption and distortion by the earth's atmosphere, clear high-resolution images of astronomical objects can be obtained in the visible, infrared, and ultraviolet wavelengths.\nSource: http://www.definitions.net/definition/hubble%20space%20telescope\n\nPassage 2\nHubble Space Telescope. The Hubble Space Telescope is a space telescope that was carried into orbit by a Space Shuttle in 1990 and remains in operation. A 2.4-meter aperture telescope in low Earth orbit, Hubble's four main instruments observe in the near ultraviolet, visible, and near infrared.\nSource: http://www.definitions.net/definition/hubble%20space%20telescope",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both passages support the identity of Hubble as an orbiting astronomical telescope. Score its definition; do not require the time-sensitive phrase remains in operation."
+  },
+  {
+    "row id": 41492,
+    "query id": 147166,
+    "query": "difference between elastomer and polymer",
+    "answer": "[\"An elastomer is a polymer that shows elastic properties. Polymers are large molecules, which have the same structural unit repeating over and over.\", \"Elastomer is a polymer that shows elastic properties, elastomer are often used interchangeably while polymers are large molecules, which have the same structural unit repeating over and over.\"]",
+    "related passages": "Passage 1\nDifference Between Polymer and Plastic. Polymers are large molecules, which have the same structural unit repeating over and over. The repeating units are called monomers. These monomers are bonded to each other with covalent bonds to form a polymer. They have high molecular weight and consist over 10,000 atoms. In the synthesis process, which is known as polymerization, longer polymer chains are obtained. There are two main types of polymers depending on their synthesis methods.\nSource: http://www.differencebetween.com/difference-between-polymer-and-vs-plastic/\n\nPassage 2\nIn the past, \u201crubber\u201d was used to describe materials that occurred naturally in nature; and \u201celastomer\u201d was used for materials that were produced synthetically ... silicone elastomers, for example. An elastomer is a polymer that shows elastic properties. Since the terms rubber-like and elastomeric mean almost the same thing, the terms \u201crubber\u201d and \u201celastomer\u201d are often used interchangeably today to describe silicone elastomers. Using this website means you understand our Privacy Statement and agree to our Terms & Conditions.\nSource: http://www.dowcorning.com/content/discover/trivia-diff-elast-rubber.aspx",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 defines a polymer and passage 2 defines an elastomer as an elastic polymer. Useful subset-versus-category comparison; ignore boilerplate and corrupted alternative-answer wording."
+  },
+  {
+    "row id": 42022,
+    "query id": 478965,
+    "query": "potential and kinetic energy definition",
+    "answer": "[\"Kinetic energy is the energy an object possesses due to its motion. While potential energy exists in a stored form.\"]",
+    "related passages": "Passage 1\nKinetic energy is the energy of motion. An object that has motion - whether it is vertical or horizontal motion - has kinetic energy. There are many forms of kinetic energy - vibrational (the energy due to vibrational motion), rotational (the energy due to rotational motion), and translational (the energy due to motion from one location to another).\nSource: http://www.physicsclassroom.com/class/energy/Lesson-1/Kinetic-Energy\n\nPassage 2\nKinetic Energy Definition: Kinetic energy is the energy an object possesses due to its motion. An object of mass m moving at velocity v has a kinetic energy equal to \u00bdmv2. Example: \u200b. An example of kinetic energy is a swinging pendulum. Up Next. Up Next. Article.\nSource: https://www.thoughtco.com/definition-of-kinetic-energy-604552\n\nPassage 3\nQuick Answer. Kinetic energy is contained in a moving object, while potential energy exists in a stored form. Potential energy can be changed into kinetic energy. Potential energy is ready for release, while kinetic energy is already doing work. The property of a body determines the type of energy it contains.\nSource: https://www.reference.com/science/difference-between-kinetic-potential-energy-c7330d99f54782da",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passages 1 and 2 support motion-based energy; passage 3 contrasts stored potential energy. Both parts of the comparison have explicit support."
+  },
+  {
+    "row id": 44574,
+    "query id": 147176,
+    "query": "difference between elements, and atoms and compounds",
+    "answer": "[\"An element is made up of the same type of atoms, while a compound is made up of different types of elements in definite proportions and atoms can join with other atoms in various ways, thus form thousands of molecules and other compounds.\"]",
+    "related passages": "Passage 1\nAtoms are the tiny units, which collect up to form all the existing chemical substances. Atoms can join with other atoms in various ways, thus form thousands of molecules and other compounds. According to their electron donating or withdrawing abilities, they can form covalent bonds or ionic bonds. Sometimes there are very weak attractions between atoms.\nSource: http://www.differencebetween.com/difference-between-elements-and-vs-compounds/\n\nPassage 2\nAn element is made up of the same type of atoms, while a compound is made up of different types of elements in definite proportions. E.g Sodium (Na) and Chlorine (Cl) are elements. Together they form Sodium Chloride (NaCl), also known as Salt. First let's talk about separation techniques.\nSource: https://www.quora.com/What-are-the-differences-between-elements-compounds-and-mixtures",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 explains atoms and passage 2 distinguishes elements from compounds. Useful three-concept coverage test with complementary passages."
+  },
+  {
+    "row id": 55159,
+    "query id": 475629,
+    "query": "pixel density definition",
+    "answer": "[\"Pixels per inch is a measurement of the pixel density of an electronic image device, such as a computer monitor or television display, or image digitizing device such as a camera or image scanner.\"]",
+    "related passages": "Passage 1\nPixel density. Pixels per inch (PPI) or pixels per centimeter (PPCM) is a measurement of the pixel density (resolution) of an electronic image device, such as a computer monitor or television display, or image digitizing device such as a camera or image scanner.\nSource: https://en.wikipedia.org/wiki/Pixel_density\n\nPassage 2\nPixel Density. Fineness of a display is expressed by pixel density (ppi = pixels per inch). On a high pixel density (= high definition) display, the pixels constituting the display are not recognizable. Therefore, images look clear and characters look smooth. Comparison of picture quality (example)\nSource: http://www.j-display.com/english/technology/jdilcd/highreso.html",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both passages support pixels-per-inch as a density measure. Clear technical definition and useful easy control."
+  },
+  {
+    "row id": 55578,
+    "query id": 147695,
+    "query": "difference between jms and rmi",
+    "answer": "[\"JMS is a standard Java API to develop message based communication between hetrerognous systems using message. RMI is a Java application programming interface (API) which enables remote invocation of methods between Java programs.\"]",
+    "related passages": "Passage 1\nJMS is a standard Java API to develop message based communication between hetrerognous systems using message (could be a plain string or Java object). Reliablity of delivering the messages between endpoints.\nSource: https://www.quora.com/What-is-the-difference-between-JNDI-and-JMS\n\nPassage 2\n1 Answer 1. We're talking of two different technologies here, each with different usage scenarios. RMI is a Java application programming interface (API) which enables remote invocation of methods between Java programs, and its intended use is for building synchronous, distributed applications. RMI is the Java equivalent of remote procedure calls (RPC). On the other hand, ActiveMQ is a product, a message oriented middleware (MOM), useful for receiving and processing asynchronous messages (queues or topics), and Java applications would typically communicate with such a system by using the JMS API.\nSource: http://stackoverflow.com/questions/8108973/difference-between-rmi-and-activemq",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 supports JMS messaging; passage 2 supports RMI method invocation and contrasts synchronous calls with asynchronous messaging. Useful technical comparison."
+  },
+  {
+    "row id": 59237,
+    "query id": 453133,
+    "query": "metonymy synecdoche definition",
+    "answer": "[\"Metonymy is the substitution of a word referring to an attribute for the thing that is meant, as for example the use of the crown to refer to a monarch. Synecdoche is a trope or figure of speech in which a part of something is used to represent the whole  or the whole is used to represent a part.\"]",
+    "related passages": "Passage 1\nSynecdoche (pronounced si-NEK-di-key) is a trope or figure of speech in which a part of something is used to represent the whole (for example, ABCs for alphabet) or (less commonly) the whole is used to represent a part ( England won the World Cup in 1966). Adjective: synecdochic, synecdochical, or synecdochal.\nSource: http://grammar.about.com/od/rs/g/synecdocheterm.htm\n\nPassage 2\nmetonymy. n, pl-mies. 1. (Grammar) the substitution of a word referring to an attribute for the thing that is meant, as for example the use of the crown to refer to a monarch. Compare synecdoche.\nSource: http://www.thefreedictionary.com/metonymy",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 defines synecdoche and passage 2 defines metonymy. Both definitions are required; a good complementary-evidence question."
+  },
+  {
+    "row id": 62463,
+    "query id": 93823,
+    "query": "co-curricular vs extracurricular definition",
+    "answer": "[\"Co-curricular refers to activities, programs, and learning experiences that complement, in some way, what students are learning in school.Extracurricular activities or Extra Academic Activity (EAA) are those that fall outside the realm of the normal curriculum of school or university education, performed by students.\"]",
+    "related passages": "Passage 1\nCo-curricular refers to activities, programs, and learning experiences that complement, in some way, what students are learning in school\u2014i.e., experiences that are connected to or mirror the academic curriculum. Co-curricular activities are typically, but not always, defined by their separation from academic courses. For example, they are ungraded, they do not allow students to earn academic credit, they may take place outside of school or after regular school hours, and they may be operated by outside organizations.\nSource: http://edglossary.org/co-curricular/\n\nPassage 2\nFrom Wikipedia, the free encyclopedia. Extracurricular activities or Extra Academic Activity (EAA) are those that fall outside the realm of the normal curriculum of school or university education, performed by students. Extracurricular activities exist for all students. And generally, volunteer activities aren't always extracurricular activities.\nSource: https://en.wikipedia.org/wiki/Extracurricular_activity",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 describes curriculum-linked activities; passage 2 describes activities outside the regular curriculum. Score that distinction, not universal rules about grading or timing."
+  },
+  {
+    "row id": 68923,
+    "query id": 490967,
+    "query": "saas environment definition",
+    "answer": "[\"Software as a service (SaaS) as software that is owned, delivered and managed remotely by one or more providers.\", \"Software as a Service (SaaS) is a software distribution model in which applications are hosted by a vendor or service provider and made available to customers over a network, typically the Internet\"]",
+    "related passages": "Passage 1\nGartner defines software as a service (SaaS) as software that is owned, delivered and managed remotely by one or more providers.\nSource: http://www.gartner.com/it-glossary/software-as-a-service-saas/\n\nPassage 2\nPramati Technologies WaveMaker. Software as a Service (SaaS) is a software distribution model in which applications are hosted by a vendor or service provider and made available to customers over a network, typically the Internet. Download: How to ensure SaaS success.\nSource: http://searchcloudcomputing.techtarget.com/definition/Software-as-a-Service",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both passages support remotely managed, network-delivered software. Clear technical definition; useful control where reranking may add little answer value."
+  },
+  {
+    "row id": 70114,
+    "query id": 197883,
+    "query": "habit definition",
+    "answer": "[\"A usual way of behaving : something that a person does often in a regular and repeated way.\", \"Something that you do regularly or an addiction.\"]",
+    "related passages": "Passage 1\nSmoking is a bad habit. noun. The definition of habit is something that you do regularly, or an addiction. Brushing your teeth every morning and every night is an example of a good habit. Being addicted to heroin is an example of having a heroin habit. habit. habit.\nSource: http://www.yourdictionary.com/habit\n\nPassage 2\nLearner's definition of HABIT. 1. : a usual way of behaving : something that a person does often in a regular and repeated way. [count] It was his habit to take a nap after dinner every evening. It's important that parents teach their children good study/eating habits.\nSource: http://www.learnersdictionary.com/definition/habit",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. The dictionary passages support regular, repeated behavior. Use the first reference alternative as the core definition; addiction is an example/sense, not a requirement."
+  },
+  {
+    "row id": 72730,
+    "query id": 817885,
+    "query": "what is the difference between manner in manor",
+    "answer": "[\"Manner is a noun,It means a way of doing something.The noun manor refers to a mansion or a large house with land.\"]",
+    "related passages": "Passage 1\nThe words manner and manor are homophones: they sound alike but have different meanings. The noun manner means a customary or characteristic way of doing something or behaving. In the plural, manners (whether good or bad) usually refers to a person's habitual way of behaving in the company of others. The noun manor refers to a mansion or a large house with land.\nSource: http://grammar.about.com/od/alightersideofwriting/a/Manner-And-Manor.htm\n\nPassage 2\nManner is a noun. It means a way of doing something. Example. When used in the plural, manners often refers to etiquette or the prevailing customs, norms, or social conduct of a given culture. Example. Manor is also a noun. It refers to houses or land and can mean. an estate. the main house on an estate.\nSource: http://www.towson.edu/ows/manner_manor.htm",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Both passages clearly distinguish the homophones manner and manor. Treat in as a query typo; preserve the original query and accept the intended contrast."
+  },
+  {
+    "row id": 76391,
+    "query id": 818819,
+    "query": "what is the difference in coffee and espresso",
+    "answer": "[\"The difference between espresso and coffee beans is the brew method.Espresso is made by forcing very hot water under high pressure through finely ground, compacted coffee.\"]",
+    "related passages": "Passage 1\nEspresso is made by forcing very hot water under high pressure through finely ground, compacted coffee. Tamping down the coffee promotes the water's even penetration of the grounds. This process produces an almost syrupy beverage by extracting both solid and dissolved components.\nSource: https://en.wikipedia.org/wiki/Espresso\n\nPassage 2\nBrowsing the coffee wall, you might notice some bags are marked as espresso or drip coffee. That gets you thinking: \u201cWhat\u2019s the difference between espresso and coffee beans?\u201d Some people think the difference is a specific variety of bean, while others think that it's a particular roast. A coffee bean is a coffee bean. So, what is it then? The difference between espresso and coffee beans is the brew method. Labeling beans as espresso or drip is nothing more than a recommendation from the roaster on how to bring out the flavor of the beans.\nSource: https://www.seattlecoffeegear.com/blog/2012/02/29/espresso-vs-coffee-beans-is-there-a-difference/",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 explains pressurized brewing; passage 2 explains that the distinction is brewing method rather than a special bean. Useful misconception and explanation test."
+  },
+  {
+    "row id": 80049,
+    "query id": 1078187,
+    "query": "wind direction and speed definition",
+    "answer": "[\"Wind direction is reported by the direction from which it originates; and wind speed is the rate or movement of air flow as it travels from high to low pressure, in relation to the Earth.\"]",
+    "related passages": "Passage 1\nQuick Answer. Wind speed is the rate or movement of air flow as it travels from high to low pressure, in relation to the Earth. Warm air rises because it weighs less than cold air, and the cold air then moves in and replaces the warm air.\nSource: https://www.reference.com/science/wind-speed-7c5ae39ce5757970\n\nPassage 2\nWind direction. Wind direction is reported by the direction from which it originates. For example, a northerly wind blows from the north to the south.[1] Wind direction is usually reported in cardinal directions or in azimuth degrees. Wind direction is measured in degrees clockwise from due north and so a wind coming from the south has a wind direction of 180 degrees; one from the east is 90 degrees.\nSource: https://en.wikipedia.org/wiki/Wind_direction",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 1 defines speed and passage 2 defines direction of origin. Require both definitions; useful complementary-evidence example."
+  },
+  {
+    "row id": 86172,
+    "query id": 1091941,
+    "query": "osmosis can be defined as",
+    "answer": "[\"Osmosis is the spontaneous net movement of solvent molecules through a semi-permeable membrane into a region of higher solute concentration, in the direction that tends to equalize the solute concentrations on the two sides.\"]",
+    "related passages": "Passage 1\nOsmosis is the spontaneous net movement of solvent molecules through a semi-permeable membrane into a region of higher solute concentration, in the direction that tends to equalize the solute concentrations on the two sides. It may also be used to describe a physical process in which any solvent moves across a semipermeable membrane separating two solutions of different concentrations. Osmosis can be made to do work. Osmotic pressure is defined as the external pressure required to be applied so that there is no net movement of solvent across the membrane. Osmotic pressure is a colligative property, meaning that the osmotic pressure depends on the molar concentration of the solute but not on its identity.\nSource: https://en.wikipedia.org/wiki/Osmosis\n\nPassage 2\nOsmosis is the movement of a solvent across a semipermeable membrane toward a higher concentration of solute. In biological systems, the solvent is typically water, but osmosis can occur in other liquids, supercritical liquids, and even gases.\nSource: https://en.wikipedia.org/wiki/Osmosis\n\nPassage 3\nDefine osmosis: movement of a solvent (such as water) through a semipermeable membrane (as of a living cell) into a solution \u2026 \u2014 osmosis in a sentence movement of a solvent (such as water) through a semipermeable membrane (as of a living cell) into a solution of higher solute concentration that \u2026\nSource: https://www.merriam-webster.com/dictionary/osmosis",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. All three passages support solvent movement across a semipermeable membrane toward higher solute concentration. Clear definition with redundant support; useful easy control."
+  },
+  {
+    "row id": 94171,
+    "query id": 817543,
+    "query": "what is the difference between friction force and applied force",
+    "answer": "[\"The friction force is the force exerted by a surface as an object moves across it or makes an effort to move across it. An applied force is a force that is applied to an object by a person or another object.\"]",
+    "related passages": "Passage 1\nAn applied force is a force that is applied to an object by a person or another object. If a person is pushing a desk across the room, then there is an applied force acting upon the object. The applied force is the force exerted on the desk by the person.\nSource: http://www.physicsclassroom.com/Class/newtlaws/u2l2b.cfm\n\nPassage 2\nThe friction force is the force exerted by a surface as an object moves across it or makes an effort to move across it. There are at least two types of friction force - sliding and static friction. Though it is not always the case, the friction force often opposes the motion of an object. For example, if a book slides across the surface of a desk, then the desk exerts a friction force in the opposite direction of its motion.\nSource: http://www.physicsclassroom.com/Class/newtlaws/u2l2b.cfm",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Each passage directly defines one force and includes an example. Clear two-part comparison supported by the same educational source."
+  },
+  {
+    "row id": 97062,
+    "query id": 903342,
+    "query": "what the difference between a router and a switch?",
+    "answer": "[\"Router is a device to connect to differenct network while Switch and hub are devices used to connect many devices together on a computer network.\"]",
+    "related passages": "Passage 1\nSo getting back to your initial question. What is the difference between a switch and a router... A Switch functions by moving/forwarding data frames based on MAC address. This happens at that lower level of the network in what is known as Layer 2 (Data link layer) of the OSI Model.\nSource: https://www.quora.com/What-is-the-difference-between-switch-router\n\nPassage 2\nRouter is a device to connect to differenct network. Switch and hub are devices used to connect many devices together on a computer network. Difference between Switch and Hub. Switch first broad caste and store all the mac id's of that network devices and then unicaste. Hub.\nSource: https://www.bayt.com/en/specialties/q/53907/what-is-the-difference-between-a-router-amp-a-switch-or-hub/",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. Passage 2 supports the core network-connection distinction and passage 1 adds MAC-based switching. Score the router/switch comparison; do not require unrelated hub details."
+  },
+  {
+    "row id": 100180,
+    "query id": 148081,
+    "query": "difference between nitrogen and argon",
+    "answer": "[\"Argon is a noble gas that comprises 0.93% of the earth's atmosphere. Argon can provide an inert and clean environment free from nitrogen and oxygen for annealing and rolling metals and alloys. Nitrogen is a diatomic gas which comprises 78% of the earth's atmosphere. It exists as a nonflammable gas at atmospheric temperatures and pressures. Nitrogen is utilized as a purge gas with stainless steel tube welding.\"]",
+    "related passages": "Passage 1\nGENERAL FACTS: Colorless, odorless, tasteless and non-toxic, argon (Ar) is a noble gas that comprises 0.93% of the earth's atmosphere. Argon can provide an inert and clean environment free from nitrogen and oxygen for annealing and rolling metals and alloys.\nSource: http://advancedweldingsupply.com/gas%20guide.html\n\nPassage 2\nGENERAL FACTS: Nitrogen (N2) is a diatomic gas which comprises 78% of the earth's atmosphere. Colorless, odorless, tasteless, and nontoxic, nitrogen exists as a nonflammable gas at atmospheric temperatures and pressures. Nitrogen is utilized as a purge gas with stainless steel tube welding.\nSource: http://advancedweldingsupply.com/gas%20guide.html",
+    "decision": "keep",
+    "why": "Passage-reviewed candidate. One passage describes argon and the other nitrogen. Both support atmospheric abundance and welding uses. Score requested distinguishing properties rather than exhaustive paragraph reproduction."
+  }
+]

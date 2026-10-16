@@ -1,0 +1,47 @@
+{
+  "answers": [
+    "It is provides resident beds or residential units, supervisory care services, personal care service, directed care services or health-related services for persons who do not need inpatient nursing care."
+  ],
+  "passages": {
+    "is_selected": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "passage_text": [
+      "Adult day health care facility: A facility providing adult day health services during a portion of a continuous twenty-four hour period for compensation on a regular basis for five or more adults not related to the proprietor.",
+      "Residential treatment center. A residential treatment center (RTC), sometimes called a rehab, is a live-in health care facility providing therapy for substance abuse, mental illness, or other behavioral problems. Residential treatment may be considered the last-ditch approach to treating abnormal psychology or psychopathology.",
+      "However, residential treatment centers have continued to grow and today house over 50,000 children The number of residential treatment centers in the United States is currently estimated at 1,591 facilities.",
+      "Residential care institution: A health care institution other than a hospital or a nursing care institution which provides resident beds or residential units, supervisory care services, personal care service, directed care services or health-related services for persons who do not need inpatient nursing care.",
+      "The facility is within the. continuum of services provided and regulated by the Office of Mental Health. Residential treatment. facilities are less restrictive, unlocked and less intensively staffed than psychiatric centers and are. operated by non-profit agencies.",
+      "Residential treatment facilities (RTF) provide fully integrated mental health treatment services. to seriously emotionally disturbed (SED) youth between the ages of 5 and 18. The RTF admission is. voluntary on the part of the youth and family and cannot be court ordered.",
+      "The target population for residential treatment facilities is seriously emotionally disturbed. (SED) children and adolescents between the ages of five (5) and eighteen (18) who have an I.Q. greater than 51 and whose needs cannot be met in the community or a less restrictive setting other. than a hospital setting.",
+      "Respite care services: Services provided by a licensed health care institution to persons otherwise cared for in foster homes and in private homes to provide an interval of rest or relief of not more than thirty days to operators of foster homes or to family members.",
+      "Department, or Office of Children & Family Services; placed out of the state; over-served in the Office. of Mental Health psychiatric centers; or underserved. The establishment of residential treatment facilities has helped complete the continuum of services for. SED youth in New York State.",
+      "Assisted living facility: A residential care institution (see definition below), including adult foster care, that provides supervisory care services, personal care services or directed care services on a continuing basis."
+    ],
+    "url": [
+      "http://hsapps.azdhs.gov/ls/sod/ALProvTypes.aspx",
+      "https://en.wikipedia.org/wiki/Residential_treatment_center",
+      "https://en.wikipedia.org/wiki/Residential_treatment_center",
+      "http://hsapps.azdhs.gov/ls/sod/ALProvTypes.aspx",
+      "http://www2.erie.gov/mentalhealth/sites/www2.erie.gov.mentalhealth/files/uploads/pdfs/RTF%20Description%202011-July.pdf",
+      "http://www2.erie.gov/mentalhealth/sites/www2.erie.gov.mentalhealth/files/uploads/pdfs/RTF%20Description%202011-July.pdf",
+      "http://www2.erie.gov/mentalhealth/sites/www2.erie.gov.mentalhealth/files/uploads/pdfs/RTF%20Description%202011-July.pdf",
+      "http://hsapps.azdhs.gov/ls/sod/ALProvTypes.aspx",
+      "http://www2.erie.gov/mentalhealth/sites/www2.erie.gov.mentalhealth/files/uploads/pdfs/RTF%20Description%202011-July.pdf",
+      "http://hsapps.azdhs.gov/ls/sod/ALProvTypes.aspx"
+    ]
+  },
+  "query": "what is considered a residential facility",
+  "query_id": 733480,
+  "query_type": "DESCRIPTION",
+  "wellFormedAnswers": []
+}

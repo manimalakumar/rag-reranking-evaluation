@@ -1,0 +1,17 @@
+{
+  "snapshot_utc": "2026-10-15T20:49:59.667725+00:00",
+  "cache_directory": "/Users/manimalak/Documents/Codex/Evaluate-Retrieval-to-Generation/.cache/qwen-runs/full-validation/9d5b5fc55d9fea605a3e",
+  "report_directory": "/Users/manimalak/Documents/Codex/Evaluate-Retrieval-to-Generation/reports/embedding-coverage-20261015T204959667725Z",
+  "vector_file": "/Users/manimalak/Documents/Codex/Evaluate-Retrieval-to-Generation/.cache/qwen-runs/full-validation/9d5b5fc55d9fea605a3e/embeddings.npy",
+  "coverage_definition": "All nonempty associated passages in the source question have checkpointed embeddings; this does not indicate query embedding or downstream stage completion.",
+  "counts": {
+    "full_validation_document_embeddings": 152576,
+    "completed_batches": 149,
+    "total_corpus_passages": 980734,
+    "question_count": 101093,
+    "questions_with_any_embedded_passage": 21237,
+    "questions_with_all_associated_passages_embedded": 15585,
+    "questions_with_partial_associated_passage_coverage": 5652,
+    "questions_with_all_annotated_support_embedded": 10389
+  }
+}

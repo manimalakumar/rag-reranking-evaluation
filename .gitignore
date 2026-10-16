@@ -1,0 +1,38 @@
+.venv*/
+.env
+**/.env
+.env.*
+!.env.example
+**/__pycache__/
+*.py[cod]
+.cache/
+# Large local model/data artifacts; keep executed notebooks and study results.
+**/downloads/
+**/embedding_batches/
+**/embeddings.npy
+**/document_embeddings*.npy
+**/query_embeddings*.npy
+*.faiss
+**/.hf-cache/
+**/.jupyter/
+**/cache/
+**/evaluation_embeddings/
+retired/
+refactor-history/
+public-package/
+*.zip
+.DS_Store
+# Local inventory includes workstation paths and obsolete file listings.
+FILE-INVENTORY.txt
+.ipynb_checkpoints/
+*.sqlite-shm
+*.sqlite-wal
+experiments/v2-targeted-reranking/output/generation_attempts.sqlite*
+experiments/v2-targeted-reranking/output/standard_scoring/
+experiments/v1-baseline/cache/
+.python/
+requirements-lock.txt.tmp
+
+# Detailed generated embedding coverage records
+reports/embedding-coverage-*/embedded-passages.jsonl
+reports/embedding-coverage-*/question-coverage.jsonl

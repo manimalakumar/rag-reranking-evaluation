@@ -1,0 +1,37 @@
+{
+  "query_id": "1064000",
+  "question": "what is all considered an expense for a business",
+  "arm": "concise",
+  "path": "concise",
+  "subgroup": "opportunity_loss",
+  "answer": "All expenses considered for a business include ordinary, necessary, and reasonable costs incurred in carrying on a trade or business to earn income. These encompass operating expenses such as rent, equipment, inventory, marketing, payroll, insurance, research and development, employee salaries, utilities (e.g., electricity), office supplies (e.g., copy paper, toilet paper), corporate phone lines, high-speed Internet, and employee benefits like health insurance, retirement plans, company cars, and business-related travel, meals, and lodging. These expenses are deductible if the business operates to make a profit and are helpful and appropriate for the business [p_edf4a7913ad206610280][p_b31792453b8106db49b0][p_cecd688880789c8c8471][p_09732cff219a3e48a9c4][p_ce9d0d9ab51f633c6f2f].",
+  "context": "[p_edf4a7913ad206610280]\nTax deductible expenses are almost any ordinary, necessary, and reasonable expenses that help to earn business income. Deductible expenses are those that can be subtracted from a company's income before it is subject to taxation. When it comes to what exactly is meant by ordinary, necessary, and reasonable expenses, the Internal Revenue Service (IRS) has defined these as any expenses that are helpful and appropriate for a business.\n\n[p_b31792453b8106db49b0]\nBusiness expenses are the cost of carrying on a trade or business. These expenses are usually deductible if the business operates to make a profit.\n\n[p_cecd688880789c8c8471]\nWhat is an 'Operating Expense' An operating expense is an expense a business incurs through its normal business operations. Often abbreviated as OPEX, operating expenses include rent, equipment, inventory costs, marketing, payroll, insurance and funds allocated toward research and development. One of the typical responsibilities that management must contend with is determining how low operating expenses can be reduced without significantly affecting a firm's ability to compete with its competitors.\n\n[p_09732cff219a3e48a9c4]\nThere is a section of the income statement which focuses on the operating expenses that arise during the ordinary course of running a business. Operating expenses include everything from employee salaries to the toilet paper in the office restrooms; research and development to electricity bills; copy paper to corporate phone lines and high-speed Internet.\n\n[p_ce9d0d9ab51f633c6f2f]\nSome of the types of employee benefits that may be considered tax deductible business expenses include: retirement plans, health insurance, disability and life insurance, company cars, membership in clubs and athletic facilities, dependent care assistance, education assistance, employee discounts, and business meals, travel, and lodging.",
+  "retrieved_contexts": [
+    "[p_edf4a7913ad206610280]\nTax deductible expenses are almost any ordinary, necessary, and reasonable expenses that help to earn business income. Deductible expenses are those that can be subtracted from a company's income before it is subject to taxation. When it comes to what exactly is meant by ordinary, necessary, and reasonable expenses, the Internal Revenue Service (IRS) has defined these as any expenses that are helpful and appropriate for a business.",
+    "[p_b31792453b8106db49b0]\nBusiness expenses are the cost of carrying on a trade or business. These expenses are usually deductible if the business operates to make a profit.",
+    "[p_cecd688880789c8c8471]\nWhat is an 'Operating Expense' An operating expense is an expense a business incurs through its normal business operations. Often abbreviated as OPEX, operating expenses include rent, equipment, inventory costs, marketing, payroll, insurance and funds allocated toward research and development. One of the typical responsibilities that management must contend with is determining how low operating expenses can be reduced without significantly affecting a firm's ability to compete with its competitors.",
+    "[p_09732cff219a3e48a9c4]\nThere is a section of the income statement which focuses on the operating expenses that arise during the ordinary course of running a business. Operating expenses include everything from employee salaries to the toilet paper in the office restrooms; research and development to electricity bills; copy paper to corporate phone lines and high-speed Internet.",
+    "[p_ce9d0d9ab51f633c6f2f]\nSome of the types of employee benefits that may be considered tax deductible business expenses include: retirement plans, health insurance, disability and life insurance, company cars, membership in clubs and athletic facilities, dependent care assistance, education assistance, employee discounts, and business meals, travel, and lodging."
+  ],
+  "context_passage_ids": [
+    "p_edf4a7913ad206610280",
+    "p_b31792453b8106db49b0",
+    "p_cecd688880789c8c8471",
+    "p_09732cff219a3e48a9c4",
+    "p_ce9d0d9ab51f633c6f2f"
+  ],
+  "context_sha256": "f4e15c664f17f2c057a9bc8ee2bfa28fa00e15b50464e1b738224b3ae38e998d",
+  "reference_answers": [
+    "Bbusiness expenses for entertaining a client, customer or employee if it is directly related to your business or associated with your business, that is entertainment expense, a marketing expense, auto expenses and Expenses Provided by open Small Business Network SM. Every time you lick a stamp for your business, write a check for an insurance premium or buy a box of paper clips, you're incurring a legitimate business expense that may be tax deductible."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 0.0,
+  "existing_token_f1_0_1": 0.23529411764705882,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 92,
+  "completion_tokens": 225,
+  "request_sha256": "55481d9da99325a8839dc5abfa731859544c5e0ae670fa1291ada5c64f7cf153",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

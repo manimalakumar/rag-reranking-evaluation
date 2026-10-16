@@ -1,0 +1,37 @@
+{
+  "query_id": "1031584",
+  "question": "what is the technology behind spoofing apps",
+  "arm": "original",
+  "path": "original",
+  "subgroup": "control_all_support_already_present",
+  "answer": "The technology behind spoofing apps primarily involves VoIP (Voice-over-Internet-Protocol) technology, which enables voice communications over the internet rather than traditional phone lines or cell towers, allowing for Caller ID spoofing [p_d0692237237e214e45f6]. Additionally, less common methods include emulating the Bell 202 FSK signal (orange boxing) and accessing the SS7 network to make calls appear as if they originate from another number [p_cff38286a9d88db1a72f]. In app fraud, SDK spoofing or replay attacks are used, where malicious actors mimic communication from a legitimate app installation [p_949db4d42be13281e4ad].",
+  "context": "[p_d0692237237e214e45f6]\nCaller ID spoofing works in a few ways, the most popular being through VoIP (Voice-over-Internet-Protocol) technology. VoIP is the technology that allows for voice communications to be sent over an Internet connection rather than through a phone line or cell tower.\n\n[p_cff38286a9d88db1a72f]\nVOIP offers a great deal more opportunity for call spoofing than standard PSTN. Using this technology in order to participate in pranks is now breaking the law. However, call spoofing services themselves remain legal. The technology is allowed, it is the way in which it is used which can be prosecuted. Less common, but also available are call spoofing technologies that emulate the Bell 202 FSK signal (also referred to as orange boxing), as well as switch access to the SS7 network so that it appears - even to telephone company operators - that a call is being placed by another existing phone number.\n\n[p_949db4d42be13281e4ad]\nIt’s called SDK spoofing, or replay attacks. Adjust Fraud Specialist Andreas Naumann told me it’s the latest evolution in app install fraud. In an earlier iteration of this type of fraud, he said, bad actors would watch the communication from a newly installed app and then emulate it. Here’s how that worked.\n\n[p_fd238617f0ef3898014d]\nCaller ID spoofing has long been the domain of pranksters and scammers, but although the technology often is used unethically, there may be a few legitimate reasons why you would want to disguise your phone number's Caller ID, rather than just block it. Here are a few that come to mind and easy ways to masquerade as someone else.\n\n[p_85e8b1f1353bbd05ec7a]\nSpoofing takes on a whole new level of severity when multiple hosts are sending constant streams of packet to the DoS target. In that case, all the transmissions are generally spoofed, making it very difficult to track down the sources of the storm.",
+  "retrieved_contexts": [
+    "[p_d0692237237e214e45f6]\nCaller ID spoofing works in a few ways, the most popular being through VoIP (Voice-over-Internet-Protocol) technology. VoIP is the technology that allows for voice communications to be sent over an Internet connection rather than through a phone line or cell tower.",
+    "[p_cff38286a9d88db1a72f]\nVOIP offers a great deal more opportunity for call spoofing than standard PSTN. Using this technology in order to participate in pranks is now breaking the law. However, call spoofing services themselves remain legal. The technology is allowed, it is the way in which it is used which can be prosecuted. Less common, but also available are call spoofing technologies that emulate the Bell 202 FSK signal (also referred to as orange boxing), as well as switch access to the SS7 network so that it appears - even to telephone company operators - that a call is being placed by another existing phone number.",
+    "[p_949db4d42be13281e4ad]\nIt’s called SDK spoofing, or replay attacks. Adjust Fraud Specialist Andreas Naumann told me it’s the latest evolution in app install fraud. In an earlier iteration of this type of fraud, he said, bad actors would watch the communication from a newly installed app and then emulate it. Here’s how that worked.",
+    "[p_fd238617f0ef3898014d]\nCaller ID spoofing has long been the domain of pranksters and scammers, but although the technology often is used unethically, there may be a few legitimate reasons why you would want to disguise your phone number's Caller ID, rather than just block it. Here are a few that come to mind and easy ways to masquerade as someone else.",
+    "[p_85e8b1f1353bbd05ec7a]\nSpoofing takes on a whole new level of severity when multiple hosts are sending constant streams of packet to the DoS target. In that case, all the transmissions are generally spoofed, making it very difficult to track down the sources of the storm."
+  ],
+  "context_passage_ids": [
+    "p_d0692237237e214e45f6",
+    "p_cff38286a9d88db1a72f",
+    "p_949db4d42be13281e4ad",
+    "p_fd238617f0ef3898014d",
+    "p_85e8b1f1353bbd05ec7a"
+  ],
+  "context_sha256": "a572fcdc50c5a13bc9a7108e98b9d09e7e9cd015379373b6e77ee96148a4d276",
+  "reference_answers": [
+    "The technology behind spoofing apps is call spoofing technologies."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 1.0,
+  "existing_token_f1_0_1": 0.12195121951219512,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 82,
+  "completion_tokens": 169,
+  "request_sha256": "1f771c8d16c3ba7bf582962b046007e8708ea391e404de72597983f68353c0b9",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

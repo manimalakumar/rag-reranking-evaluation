@@ -1,0 +1,30 @@
+{
+  "title": "Can generation use the evidence better?",
+  "purpose": "Exploratory generation extension; preserve the original 79-pair study.",
+  "parent_run": "answer-quality/8d072cc0a7b92478a716",
+  "seed": 42,
+  "questions_per_subgroup": 3,
+  "required_query_id": "1053665",
+  "selection_policy": "Sort IDs within each populated subgroup, sample three with seed 42, replace the third opportunity-gain draw with IMEI if absent. Freeze before new generation.",
+  "query_ids_by_subgroup": {
+    "control_all_support_already_present": ["1055717", "1088380", "1031584"],
+    "opportunity_gain": ["1075969", "1087589", "1053665"],
+    "opportunity_loss": ["1079518", "205107", "1064000"],
+    "opportunity_unchanged": ["1084132", "1087577", "1035128"]
+  },
+  "context_arm": "reranked",
+  "regenerate_original": true,
+  "provider_routing": {"only": ["nebius/fp8"], "order": ["nebius/fp8"], "allow_fallbacks": false, "require_parameters": true},
+  "expected_serving_provider": "Nebius",
+  "provider_catalog": "https://openrouter.ai/api/v1/models/qwen/qwen3-30b-a3b-instruct-2507/endpoints",
+  "variants": {
+    "original": "",
+    "evidence_check": "Before answering, check each part of the question against the supplied passages. Answer each part only when supported by those passages. Explicitly identify requested information that the passages do not provide. Retain useful supported detail and do not fill gaps using outside knowledge.",
+    "concise": "Answer the question directly and concisely. Omit unrelated details. Cite each factual claim using the supplied passage IDs. Preserve the supported information needed to answer all parts of the question."
+  },
+  "generation_attempts": 1,
+  "generation_concurrency": 2,
+  "judge_metrics": ["faithfulness", "answer_relevancy"],
+  "examples_policy": "Show IMEI, then the largest observed faithfulness regression (or F1 regression if none), then the largest F1 improvement at a different question. Choose examples only after all outcomes are saved; never change frozen membership.",
+  "manual_review_policy": "Assistant qualitative review of displayed examples: evidence support, completeness of requested parts, and appropriate abstention. Not human labels or a population estimate."
+}

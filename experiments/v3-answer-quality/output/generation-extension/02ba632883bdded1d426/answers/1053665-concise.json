@@ -1,0 +1,37 @@
+{
+  "query_id": "1053665",
+  "question": "what is imei and where do i find it",
+  "arm": "concise",
+  "path": "concise",
+  "subgroup": "opportunity_gain",
+  "answer": "The IMEI (International Mobile Equipment Identity) is a globally unique 15-digit number assigned to all cellular devices to identify them within a mobile network [p_71838a0d93f9593a28b4]. You can find it in several places: on the original packaging of the device [p_ceb444d4a87718de91ee], on the back of the device (especially on iPhones, iPads, and iPod touches) [p_fbac8ec80aec14e774ec], under the battery (if removable) [p_f446bafbb6b1eedb4db9], or in the device settings under General > This Device on iPhones [p_16e01af39f1ab9cc5a66].",
+  "context": "[p_f446bafbb6b1eedb4db9]\nFind the IMEI/MEID number. The location of this will vary from phone to phone, but the IMEI/MEID number is usually printed on a sticker that is affixed to the phone underneath the battery. If the phone has an IMEI number but you are on a network that uses MEID numbers, ignore the last digit (IMEI is 15 digits, MEID is 14 digits). GSM networks like AT&T and T-Mobile use IMEI numbers. CDMA networks such as Sprint, Verizon, and US Cellular use MEID numbers.\n\n[p_ceb444d4a87718de91ee]\nIf this is the case, and you did not record the IMEI number beforehand, there are still a number of ways to retrieve the number: On your devices packaging The easiest way to find your IMEI number is by returning to your original phone packaging. 1  IMEI numbers are printed on the original packaging of your device. 2  Check the base and sides for your 15 digit IMEI number.\n\n[p_71838a0d93f9593a28b4]\nAn IMEI number is a globally unique 15 digit number assigned to all cellular devices, which identifies your device within the mobile network. We can use this number to block a mobile phone from being used by another person or phone company if it has been lost or stolen. Back to Top.\n\n[p_16e01af39f1ab9cc5a66]\nIMEI on iPhone and iPad. Enter the phone settings; Then select General In the filed This device  you will find the IMEI number. In models iPhone 3G, 3GS, 4 and 4S, you can check the IMEI number on the SIM card socket. In case of CDMA network there is also the MEID number.\n\n[p_fbac8ec80aec14e774ec]\nIf you have an original iPhone, find the serial number and IMEI engraved on the back. iPad and iPod touch Find the serial number for your iPad Pro, iPad, or iPod touch on the back of the device. On an iPad (cellular model), you'll also find the IMEI. The MEID is the first 14 digits of the IMEI.",
+  "retrieved_contexts": [
+    "[p_f446bafbb6b1eedb4db9]\nFind the IMEI/MEID number. The location of this will vary from phone to phone, but the IMEI/MEID number is usually printed on a sticker that is affixed to the phone underneath the battery. If the phone has an IMEI number but you are on a network that uses MEID numbers, ignore the last digit (IMEI is 15 digits, MEID is 14 digits). GSM networks like AT&T and T-Mobile use IMEI numbers. CDMA networks such as Sprint, Verizon, and US Cellular use MEID numbers.",
+    "[p_ceb444d4a87718de91ee]\nIf this is the case, and you did not record the IMEI number beforehand, there are still a number of ways to retrieve the number: On your devices packaging The easiest way to find your IMEI number is by returning to your original phone packaging. 1  IMEI numbers are printed on the original packaging of your device. 2  Check the base and sides for your 15 digit IMEI number.",
+    "[p_71838a0d93f9593a28b4]\nAn IMEI number is a globally unique 15 digit number assigned to all cellular devices, which identifies your device within the mobile network. We can use this number to block a mobile phone from being used by another person or phone company if it has been lost or stolen. Back to Top.",
+    "[p_16e01af39f1ab9cc5a66]\nIMEI on iPhone and iPad. Enter the phone settings; Then select General In the filed This device  you will find the IMEI number. In models iPhone 3G, 3GS, 4 and 4S, you can check the IMEI number on the SIM card socket. In case of CDMA network there is also the MEID number.",
+    "[p_fbac8ec80aec14e774ec]\nIf you have an original iPhone, find the serial number and IMEI engraved on the back. iPad and iPod touch Find the serial number for your iPad Pro, iPad, or iPod touch on the back of the device. On an iPad (cellular model), you'll also find the IMEI. The MEID is the first 14 digits of the IMEI."
+  ],
+  "context_passage_ids": [
+    "p_f446bafbb6b1eedb4db9",
+    "p_ceb444d4a87718de91ee",
+    "p_71838a0d93f9593a28b4",
+    "p_16e01af39f1ab9cc5a66",
+    "p_fbac8ec80aec14e774ec"
+  ],
+  "context_sha256": "9fcd5417f58f99979acb3a4bdc358694f98d2458690c804df0a3eed4bb5325e3",
+  "reference_answers": [
+    "An International Mobile Equipment Identity number is a globally unique 15 digit number assigned to all cellular devices, which identifies your device within the mobile network, printed on a sticker that is affixed to the phone underneath the battery."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 1.0,
+  "existing_token_f1_0_1": 0.43956043956043955,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 73,
+  "completion_tokens": 183,
+  "request_sha256": "c444faf63f3f68364ebc6bcc5f0601521b63f8a152f49ea5a974cb8588c3580a",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

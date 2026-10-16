@@ -1,0 +1,37 @@
+{
+  "query_id": "1084132",
+  "question": "what does bread for the world do",
+  "arm": "original",
+  "path": "original",
+  "subgroup": "opportunity_unchanged",
+  "answer": "Bread for the World – Protestant Development Service empowers the poor and marginalized in over 90 countries, primarily in the Global South, by supporting projects in close cooperation with local, often church-related partner organizations. They also send experienced specialists and young volunteers to work in these projects for a fixed term. The organization operates as a Christian movement, collaborating with various Christian churches and organizations, including the Catholic Bishops' Conference and 50 Protestant denominations [p_f50befb13500b0b29da7][p_57d89e1579f8f2166ead][p_edb8f717d338507bf466][p_0872415700039ea27be8].",
+  "context": "[p_f50befb13500b0b29da7]\nBread for the World – Protestant Development Service is the globally active development and relief agency of the Protestant Churches in Germany. In more than 90 countries all across the globe we empower the poor and marginalised to improve their living conditions.\n\n[p_57d89e1579f8f2166ead]\nThe work of Bread for the World – Protestant Development Service primarily focuses on the support of projects in the countries of the Global South. An essential feature of our projects is the close and continuous cooperation with local, often church-related partner organisations.\n\n[p_edb8f717d338507bf466]\nIn addition to its projects Bread for the World – Protestant Development Service also sends experienced specialists and young volunteers to the countries of the South. They work for a fixed term in the projects of the partner organisations.\n\n[p_0872415700039ea27be8]\nWhat the term “movement” says is that Bread for the World engages people in their role as part of the body politic. How does Bread for the World work as a Christian movement? Bread for the World has deep relations with an extraordinary range of Christian organizations and churches. We work closely with the Catholic Bishops' Conference and with the leadership of 50 protestant denominations, representing all theologies.\n\n[p_f30b52d172fa4428a219]\n“Sated is not enough!” is Bread for the World’s motto of the 56th, 57th and 58th annual campaigns respectively. Eating enough, eating healthily and having a balanced diet are God-given promises, great pleasures and essential prerequisites for human development.",
+  "retrieved_contexts": [
+    "[p_f50befb13500b0b29da7]\nBread for the World – Protestant Development Service is the globally active development and relief agency of the Protestant Churches in Germany. In more than 90 countries all across the globe we empower the poor and marginalised to improve their living conditions.",
+    "[p_57d89e1579f8f2166ead]\nThe work of Bread for the World – Protestant Development Service primarily focuses on the support of projects in the countries of the Global South. An essential feature of our projects is the close and continuous cooperation with local, often church-related partner organisations.",
+    "[p_edb8f717d338507bf466]\nIn addition to its projects Bread for the World – Protestant Development Service also sends experienced specialists and young volunteers to the countries of the South. They work for a fixed term in the projects of the partner organisations.",
+    "[p_0872415700039ea27be8]\nWhat the term “movement” says is that Bread for the World engages people in their role as part of the body politic. How does Bread for the World work as a Christian movement? Bread for the World has deep relations with an extraordinary range of Christian organizations and churches. We work closely with the Catholic Bishops' Conference and with the leadership of 50 protestant denominations, representing all theologies.",
+    "[p_f30b52d172fa4428a219]\n“Sated is not enough!” is Bread for the World’s motto of the 56th, 57th and 58th annual campaigns respectively. Eating enough, eating healthily and having a balanced diet are God-given promises, great pleasures and essential prerequisites for human development."
+  ],
+  "context_passage_ids": [
+    "p_f50befb13500b0b29da7",
+    "p_57d89e1579f8f2166ead",
+    "p_edb8f717d338507bf466",
+    "p_0872415700039ea27be8",
+    "p_f30b52d172fa4428a219"
+  ],
+  "context_sha256": "54706f3a17e4a8cb7a42327272af40ac3a5f6a7aae20b3739049f3f81ba68a1a",
+  "reference_answers": [
+    "Bread for the world reflects the broad-based interest in the issues."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 0.0,
+  "existing_token_f1_0_1": 0.10666666666666667,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 75,
+  "completion_tokens": 174,
+  "request_sha256": "d6b6ee970be46ed250222f886401d174eaeca77441bd79b29422774dec74b894",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

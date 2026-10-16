@@ -1,0 +1,37 @@
+{
+  "query_id": "1035128",
+  "question": "what is the normal range of a fasting blood sugar",
+  "arm": "concise",
+  "path": "concise",
+  "subgroup": "opportunity_unchanged",
+  "answer": "The normal range for fasting blood sugar is 70 to 100 mg/dL (3.9 to 5.5 mmol/L) [p_12bd2567d16a8e676115]. Some sources also state the range as 70 to 100 mg/dL (3.9 to 5.6 mmol/L) [p_c964bd30096e06adee7e], and one mentions 83 mg/dL (4.6 mmol/L) or less as normal [p_b86102bc8081fc75c91a], but the most consistent and widely cited range is 70–100 mg/dL.",
+  "context": "[p_12bd2567d16a8e676115]\nThe normal blood glucose level (tested while fasting) for non-diabetics, should be between 3.9 and 5.5 mmol/L (70 to 100 mg/dL). The mean normal blood glucose level in humans is about 5.5 mmol/L (100 mg/dL); however, this level fluctuates throughout the day. Blood sugar levels for those without diabetes and who are not fasting should be below 6.9 mmol/L (125 mg/dL).\n\n[p_c964bd30096e06adee7e]\nIf you had a fasting blood glucose test, a level between 70 and 100 mg/dL (3.9 and 5.6 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be below 125 mg/dL (6.9 mmol/L). The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories.\n\n[p_85d9d7afbb64bff7e76e]\nAnswer:Now, in a normal individual we measure blood sugar under different circumstances. What we call fasting blood sugar or blood glucose levels is usually done six to eight hours after the last meal. So it's most commonly done before breakfast in the morning; and the normal range there is 70 to 100 milligrams per deciliter. Now when you eat a meal, blood sugar generally rises and in a normal individual it usually does not get above a 135 to 140 milligrams per deciliter. So there is a fairly narrow range of blood sugar throughout the entire day.\n\n[p_b86102bc8081fc75c91a]\nA normal fasting blood sugar (which is also the blood sugar a normal person will see right before a meal) is: 83 mg/dl (4.6 mmol/L) or less. Many normal people have fasting blood sugars in the mid and high 70 mg/dl (3.9 mmol/L) range.\n\n[p_5fa0e59c682b65f25e05]\nAt present, the diagnosis of diabetes or prediabetes is based in an arbitrary cut-off point for a normal blood sugar level. A normal sugar level is currently considered to be less than 100 mg/dL when fasting and less than 140 mg/dL two hours after eating. But in most healthy people, sugar levels are even lower. During the day, blood glucose levels tend to be at their lowest just before meals.",
+  "retrieved_contexts": [
+    "[p_12bd2567d16a8e676115]\nThe normal blood glucose level (tested while fasting) for non-diabetics, should be between 3.9 and 5.5 mmol/L (70 to 100 mg/dL). The mean normal blood glucose level in humans is about 5.5 mmol/L (100 mg/dL); however, this level fluctuates throughout the day. Blood sugar levels for those without diabetes and who are not fasting should be below 6.9 mmol/L (125 mg/dL).",
+    "[p_c964bd30096e06adee7e]\nIf you had a fasting blood glucose test, a level between 70 and 100 mg/dL (3.9 and 5.6 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be below 125 mg/dL (6.9 mmol/L). The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories.",
+    "[p_85d9d7afbb64bff7e76e]\nAnswer:Now, in a normal individual we measure blood sugar under different circumstances. What we call fasting blood sugar or blood glucose levels is usually done six to eight hours after the last meal. So it's most commonly done before breakfast in the morning; and the normal range there is 70 to 100 milligrams per deciliter. Now when you eat a meal, blood sugar generally rises and in a normal individual it usually does not get above a 135 to 140 milligrams per deciliter. So there is a fairly narrow range of blood sugar throughout the entire day.",
+    "[p_b86102bc8081fc75c91a]\nA normal fasting blood sugar (which is also the blood sugar a normal person will see right before a meal) is: 83 mg/dl (4.6 mmol/L) or less. Many normal people have fasting blood sugars in the mid and high 70 mg/dl (3.9 mmol/L) range.",
+    "[p_5fa0e59c682b65f25e05]\nAt present, the diagnosis of diabetes or prediabetes is based in an arbitrary cut-off point for a normal blood sugar level. A normal sugar level is currently considered to be less than 100 mg/dL when fasting and less than 140 mg/dL two hours after eating. But in most healthy people, sugar levels are even lower. During the day, blood glucose levels tend to be at their lowest just before meals."
+  ],
+  "context_passage_ids": [
+    "p_12bd2567d16a8e676115",
+    "p_c964bd30096e06adee7e",
+    "p_85d9d7afbb64bff7e76e",
+    "p_b86102bc8081fc75c91a",
+    "p_5fa0e59c682b65f25e05"
+  ],
+  "context_sha256": "820c0db25770dcc0717b7e9b55eadec0c0c258e730f58e7e04fdb46ea19a9e57",
+  "reference_answers": [
+    "The normal range of a fasting blood sugar is from 70 to 130 mg/dl."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 0.0,
+  "existing_token_f1_0_1": 0.2903225806451613,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 56,
+  "completion_tokens": 169,
+  "request_sha256": "609f4c98d4eeb5ddb45a141364fddb31d17b05345bdc05fbf01aace2a5562d54",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

@@ -1,0 +1,37 @@
+{
+  "query_id": "1055717",
+  "question": "what is epic database for healthcare",
+  "arm": "evidence_check",
+  "path": "evidence_check",
+  "subgroup": "control_all_support_already_present",
+  "answer": "The Epic database for healthcare refers to the data warehouse and analytical tools used to store and retrieve large amounts of clinical data, enabling reporting to support care decisions, manage costs, and identify trends [p_fc869c9ba8be1489e12a]. It is part of Epic Systems Corp.'s integrated platform, which includes modules for various specialties and supports health information exchange through features like Care Everywhere, allowing patient records to be shared across different healthcare organizations using Epic [p_f4217bf4f23b5ad8ca25][p_3d02ccdcea0370c3d28f][p_bb55b846b07880eb028e].",
+  "context": "[p_fc869c9ba8be1489e12a]\nThis area of Epic refers to the data warehouse and analytical tools used to store and retrieve large amounts of clinical data. The data can be queried to provide all manner of reporting to support care decisions, manage costs, and identify trends 2.\n\n[p_f4217bf4f23b5ad8ca25]\nEpic Systems Corp. is one of the largest providers of health information technology, used primarily by large U.S. hospitals and health systems to access, organize, store and share patient medical records. Download this free guide.\n\n[p_3d02ccdcea0370c3d28f]\nEpic Care Everywhere Care Everywhere is the network by which patient records are shared between different Healthcare organizations that use Epic. If you receive care at an Epic hospital in say, New York for example, then move to another state or even another country, your new care providers can run a Care Everywhere query from their instance of Epic to pull in your records from your previous providers. Care Everywhere operates as a Health Information Exchange. Epic Cupid\n\n[p_ab9586ec911d24fe1d76]\nForbes has estimated that at least 40% of the U.S. population has medical data stored on an Epic electronic health record (EHR), and Epic's clients include some of the biggest names in healthcare. Due to its size, influence and -- in some cases, practices -- the company is often criticized.\n\n[p_bb55b846b07880eb028e]\nOne of the reasons why Epic Systems has become the technology leader in healthcare organizations is that they have built an integrated platform for almost all areas of care. When Epic sees the need to advance technology in a new specialty, let’s say Eye Care for example- they take the time to develop what they call “modules”, built on the same platform and data structure as all of their other products.",
+  "retrieved_contexts": [
+    "[p_fc869c9ba8be1489e12a]\nThis area of Epic refers to the data warehouse and analytical tools used to store and retrieve large amounts of clinical data. The data can be queried to provide all manner of reporting to support care decisions, manage costs, and identify trends 2.",
+    "[p_f4217bf4f23b5ad8ca25]\nEpic Systems Corp. is one of the largest providers of health information technology, used primarily by large U.S. hospitals and health systems to access, organize, store and share patient medical records. Download this free guide.",
+    "[p_3d02ccdcea0370c3d28f]\nEpic Care Everywhere Care Everywhere is the network by which patient records are shared between different Healthcare organizations that use Epic. If you receive care at an Epic hospital in say, New York for example, then move to another state or even another country, your new care providers can run a Care Everywhere query from their instance of Epic to pull in your records from your previous providers. Care Everywhere operates as a Health Information Exchange. Epic Cupid",
+    "[p_ab9586ec911d24fe1d76]\nForbes has estimated that at least 40% of the U.S. population has medical data stored on an Epic electronic health record (EHR), and Epic's clients include some of the biggest names in healthcare. Due to its size, influence and -- in some cases, practices -- the company is often criticized.",
+    "[p_bb55b846b07880eb028e]\nOne of the reasons why Epic Systems has become the technology leader in healthcare organizations is that they have built an integrated platform for almost all areas of care. When Epic sees the need to advance technology in a new specialty, let’s say Eye Care for example- they take the time to develop what they call “modules”, built on the same platform and data structure as all of their other products."
+  ],
+  "context_passage_ids": [
+    "p_fc869c9ba8be1489e12a",
+    "p_f4217bf4f23b5ad8ca25",
+    "p_3d02ccdcea0370c3d28f",
+    "p_ab9586ec911d24fe1d76",
+    "p_bb55b846b07880eb028e"
+  ],
+  "context_sha256": "4be1e389a516ce5cf4dd49197f33c3b0ddc1d16d3e6b5cb9657ca5d0b3244ca6",
+  "reference_answers": [
+    "Epic Systems Corp. is one of the largest providers of health information technology, used primarily by large U.S. hospitals and health systems to access, organize, store and share patient medical records."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 1.0,
+  "existing_token_f1_0_1": 0.30303030303030304,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 73,
+  "completion_tokens": 158,
+  "request_sha256": "7f6efe47911e55ad003c70fbed991cb106c9dd542627dc11bbc37bf5f28cc6ef",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

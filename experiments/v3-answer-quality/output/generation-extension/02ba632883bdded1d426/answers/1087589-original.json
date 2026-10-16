@@ -1,0 +1,37 @@
+{
+  "query_id": "1087589",
+  "question": "what are gases used in neon signs?",
+  "arm": "original",
+  "path": "original",
+  "subgroup": "opportunity_gain",
+  "answer": "The gases used in neon signs include neon and argon, which are the most common. Krypton, xenon, and helium are used for special purposes by artists but are not typically used alone in standard signs. Additionally, an argon/mercury mixture is used to produce ultraviolet light, which can excite phosphor coatings to emit various colors [p_e56d605fe94b68a12dc1][p_8d686fd12715e756d69f][p_e37c7ecaf557306d2aca][p_7333fd01a600011db93e][p_23bfd208b9752a37f24a].",
+  "context": "[p_e56d605fe94b68a12dc1]\nNeon or argon are the most common gases used; krypton, xenon, and helium are used by artists for special purposes but are not used alone in normal signs. A premixed combination of argon and helium is often used in lieu of pure argon when a tube is to be installed in a cold climate, since the helium increases voltage drop (and thus power dissipation), warming the tube to operating temperature faster.\n\n[p_8d686fd12715e756d69f]\nA neon sign is a lighting display made of glass tubes that have been filled with a gas and bent into the shape of letters or decorative designs. When a high-voltage electrical current is passed through the gas, the tubes emit light. Although neon gas was originally used in these signs, several other gases are also used. These gases, along with different tints and phosphor coatings for the glass tubes, produce a spectrum of over 50 brilliant colors.\n\n[p_e37c7ecaf557306d2aca]\nThe rare gases, neon, argon, helium, xenon and krypton, are ideally suited for use in signs. The two most common gases used in neon signs are neon and argon. While neon is very bright, argon's light is weak due to its low resistance. Neon gas give...\n\n[p_7333fd01a600011db93e]\nNeon signs that use an argon/mercury gas mixture emit a good deal of ultraviolet light. When this light is absorbed by a fluorescent coating, preferably inside the tube, the coating (called a phosphor) glows with its own color.\n\n[p_23bfd208b9752a37f24a]\nNeon lights glow because the high voltage ionizes the low-pressure gas, which in turn fluoresces with a color based on the gas used. Neon emits a signature red color, helium yellow, argon green and mercury vapor blue. Combining these and other gases creates a wide array of possible colors.",
+  "retrieved_contexts": [
+    "[p_e56d605fe94b68a12dc1]\nNeon or argon are the most common gases used; krypton, xenon, and helium are used by artists for special purposes but are not used alone in normal signs. A premixed combination of argon and helium is often used in lieu of pure argon when a tube is to be installed in a cold climate, since the helium increases voltage drop (and thus power dissipation), warming the tube to operating temperature faster.",
+    "[p_8d686fd12715e756d69f]\nA neon sign is a lighting display made of glass tubes that have been filled with a gas and bent into the shape of letters or decorative designs. When a high-voltage electrical current is passed through the gas, the tubes emit light. Although neon gas was originally used in these signs, several other gases are also used. These gases, along with different tints and phosphor coatings for the glass tubes, produce a spectrum of over 50 brilliant colors.",
+    "[p_e37c7ecaf557306d2aca]\nThe rare gases, neon, argon, helium, xenon and krypton, are ideally suited for use in signs. The two most common gases used in neon signs are neon and argon. While neon is very bright, argon's light is weak due to its low resistance. Neon gas give...",
+    "[p_7333fd01a600011db93e]\nNeon signs that use an argon/mercury gas mixture emit a good deal of ultraviolet light. When this light is absorbed by a fluorescent coating, preferably inside the tube, the coating (called a phosphor) glows with its own color.",
+    "[p_23bfd208b9752a37f24a]\nNeon lights glow because the high voltage ionizes the low-pressure gas, which in turn fluoresces with a color based on the gas used. Neon emits a signature red color, helium yellow, argon green and mercury vapor blue. Combining these and other gases creates a wide array of possible colors."
+  ],
+  "context_passage_ids": [
+    "p_e56d605fe94b68a12dc1",
+    "p_8d686fd12715e756d69f",
+    "p_e37c7ecaf557306d2aca",
+    "p_7333fd01a600011db93e",
+    "p_23bfd208b9752a37f24a"
+  ],
+  "context_sha256": "8dfd0618756967a2fd6a5ec68178bb5d8fb0b5a179faa2fa1202bb53cd34f7fb",
+  "reference_answers": [
+    "Neon, argon and mercury gases are used in neon signs."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 1.0,
+  "existing_token_f1_0_1": 0.29508196721311475,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 55,
+  "completion_tokens": 175,
+  "request_sha256": "579a2dcafcee69637c5bd2a5c3b1083ffa8f5c99e6cab48c8a92a8a74a176e0b",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

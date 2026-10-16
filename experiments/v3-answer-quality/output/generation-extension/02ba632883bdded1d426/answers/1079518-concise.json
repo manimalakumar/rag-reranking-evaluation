@@ -1,0 +1,37 @@
+{
+  "query_id": "1079518",
+  "question": "what groups benefit from social programs",
+  "arm": "concise",
+  "path": "concise",
+  "subgroup": "opportunity_loss",
+  "answer": "Social programs benefit the elderly or retired, the sick or invalid, dependent survivors, mothers, the unemployed, the work-injured, families, disabled persons, and individuals and families seeking economic independence and productivity [p_12321ecee006b7761efe][p_de0148ca9ad31df6bff7][p_f26208d87c141ad5405b][p_6cdc4f121914f0aa5d3c][p_4ed325014ad02d943523].",
+  "context": "[p_12321ecee006b7761efe]\nWritten By: Social welfare program, any of a variety of governmental programs designed to protect citizens from the economic risks and insecurities of life. The most common types of programs provide benefits to the elderly or retired, the sick or invalid, dependent survivors, mothers, the unemployed, the work-injured, and families.\n\n[p_de0148ca9ad31df6bff7]\nVarious federal, state and local government programs help raise people's standards of living because Certain groups of people have fewer opportunities to be productive Health insurance for the elderly, the poor, and Disabled is provided by\n\n[p_f26208d87c141ad5405b]\nSocial Security is the foundation of economic security for millions of Americans—retirees, disabled persons, and families of retired, disabled or deceased workers. About 169 million Americans pay Social Security taxes and 61 million collect monthly benefits. About one family in four receives income from Social Security. Social Security is largely a pay-as-you-go program. This means that today's workers pay Social Security taxes into the program and money flows back out as monthly income to beneficiaries. As a pay-as-you-go system, Social Security differs from company pensions, which are “pre-funded.”\n\n[p_6cdc4f121914f0aa5d3c]\nSocial Security is the foundation of economic security for millions of Americans—retirees, disabled persons, and families of retired, disabled or deceased workers. About 163 million Americans pay Social Security taxes and 59 million collect monthly benefits. About one family in four receives income from Social Security.\n\n[p_4ed325014ad02d943523]\nACF is responsible for federal programs that promote the economic and social well-being of families, children, individuals and communities. ACF programs aim to achieve the following: families and individuals empowered to increase their own economic independence and productivity; strong, healthy, supportive communities that have a positive impact on the quality of life and the development of children;",
+  "retrieved_contexts": [
+    "[p_12321ecee006b7761efe]\nWritten By: Social welfare program, any of a variety of governmental programs designed to protect citizens from the economic risks and insecurities of life. The most common types of programs provide benefits to the elderly or retired, the sick or invalid, dependent survivors, mothers, the unemployed, the work-injured, and families.",
+    "[p_de0148ca9ad31df6bff7]\nVarious federal, state and local government programs help raise people's standards of living because Certain groups of people have fewer opportunities to be productive Health insurance for the elderly, the poor, and Disabled is provided by",
+    "[p_f26208d87c141ad5405b]\nSocial Security is the foundation of economic security for millions of Americans—retirees, disabled persons, and families of retired, disabled or deceased workers. About 169 million Americans pay Social Security taxes and 61 million collect monthly benefits. About one family in four receives income from Social Security. Social Security is largely a pay-as-you-go program. This means that today's workers pay Social Security taxes into the program and money flows back out as monthly income to beneficiaries. As a pay-as-you-go system, Social Security differs from company pensions, which are “pre-funded.”",
+    "[p_6cdc4f121914f0aa5d3c]\nSocial Security is the foundation of economic security for millions of Americans—retirees, disabled persons, and families of retired, disabled or deceased workers. About 163 million Americans pay Social Security taxes and 59 million collect monthly benefits. About one family in four receives income from Social Security.",
+    "[p_4ed325014ad02d943523]\nACF is responsible for federal programs that promote the economic and social well-being of families, children, individuals and communities. ACF programs aim to achieve the following: families and individuals empowered to increase their own economic independence and productivity; strong, healthy, supportive communities that have a positive impact on the quality of life and the development of children;"
+  ],
+  "context_passage_ids": [
+    "p_12321ecee006b7761efe",
+    "p_de0148ca9ad31df6bff7",
+    "p_f26208d87c141ad5405b",
+    "p_6cdc4f121914f0aa5d3c",
+    "p_4ed325014ad02d943523"
+  ],
+  "context_sha256": "c830660d442f469808fdc3315f57dfc8d1949eea08a8d5a1cddff4f85e05a15a",
+  "reference_answers": [
+    "The Social Security Widow group benefits widow or widower and the Social Security Child group benefits children."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 0.0,
+  "existing_token_f1_0_1": 0.14634146341463414,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 31,
+  "completion_tokens": 139,
+  "request_sha256": "e9ca9f4c7732f20fb8ea29797d7c4f608b814e0969d64f3dfd44304630ab4b69",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

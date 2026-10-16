@@ -1,0 +1,37 @@
+{
+  "query_id": "1088380",
+  "question": "weather in merritt island",
+  "arm": "concise",
+  "path": "concise",
+  "subgroup": "control_all_support_already_present",
+  "answer": "The weather in Merritt Island, Florida, includes a highest monthly average temperature of 82 degrees in August and a lowest monthly average temperature of 63 degrees in February. The most monthly precipitation occurs in January, with 0 inches recorded. For the most accurate 10-day forecast, including highs, lows, and chance of precipitation, refer to The Weather Channel and Weather.com [p_1a7b53dcd51b314a029f]. Note that the local weather station in River Grove, South Merritt Island, is currently not updating due to a computer crash and a failed outdoor humidity sensor [p_c8feb500afe0a0f40c69].",
+  "context": "[p_7a9b94348c4f40651fa4]\nThe highest monthly average temperature in Merritt Island for August is 82 degrees. The lowest monthly average temperature in Merritt Island for February is 63 degrees. The most monthly precipitation in Merritt Island occurs in January with 0 inches. The air quality index in Merritt Island is 29% better than the national average.\n\n[p_1a7b53dcd51b314a029f]\nBe prepared with the most accurate 10-day forecast for Merritt Island, FL (32952) with highs, lows, chance of precipitation from The Weather Channel and Weather.com Be prepared with the most accurate 10-day forecast for Merritt Island, FL (32952) with highs, lows, chance of precipitation from The Weather Channel and Weather.com Scan for updated forecast Connection restored!\n\n[p_c8feb500afe0a0f40c69]\nWeather Station Located within River Grove, S. Merritt Island, Florida For Questions or Comments Please email: Click Here Note: The computer hosting the weather station and uploading of data has crashed which is why the weather station information is not updating. In my little spare time, I am working on restoring this (no ETA). Also, the outdoor humidity sensor on the station has failed and I will see about replacing that at some point.\n\n[p_d2ed31ab1bf2e79ce9e0]\nMerritt. Merritt is a city in the Nicola Valley of the south-central Interior of British Columbia, Canada. Situated at the confluence of the Nicola and Coldwater rivers, it is the first major community encountered after travelling along Phase One of the Coquihalla Highway and acts as the gateway to all other major highways to the B.C. Interior.\n\n[p_8c4816d63574381f0197]\nMerritt Merritt is a city in the Nicola Valley of the south-central Interior of British Columbia, Canada. Situated at the confluence of the Nicola and Coldwater rivers, it is the first major community encountered after travelling along Phase One of the Coquihalla Highway and acts as the gateway to all other major highways to the B.C. Interior.",
+  "retrieved_contexts": [
+    "[p_7a9b94348c4f40651fa4]\nThe highest monthly average temperature in Merritt Island for August is 82 degrees. The lowest monthly average temperature in Merritt Island for February is 63 degrees. The most monthly precipitation in Merritt Island occurs in January with 0 inches. The air quality index in Merritt Island is 29% better than the national average.",
+    "[p_1a7b53dcd51b314a029f]\nBe prepared with the most accurate 10-day forecast for Merritt Island, FL (32952) with highs, lows, chance of precipitation from The Weather Channel and Weather.com Be prepared with the most accurate 10-day forecast for Merritt Island, FL (32952) with highs, lows, chance of precipitation from The Weather Channel and Weather.com Scan for updated forecast Connection restored!",
+    "[p_c8feb500afe0a0f40c69]\nWeather Station Located within River Grove, S. Merritt Island, Florida For Questions or Comments Please email: Click Here Note: The computer hosting the weather station and uploading of data has crashed which is why the weather station information is not updating. In my little spare time, I am working on restoring this (no ETA). Also, the outdoor humidity sensor on the station has failed and I will see about replacing that at some point.",
+    "[p_d2ed31ab1bf2e79ce9e0]\nMerritt. Merritt is a city in the Nicola Valley of the south-central Interior of British Columbia, Canada. Situated at the confluence of the Nicola and Coldwater rivers, it is the first major community encountered after travelling along Phase One of the Coquihalla Highway and acts as the gateway to all other major highways to the B.C. Interior.",
+    "[p_8c4816d63574381f0197]\nMerritt Merritt is a city in the Nicola Valley of the south-central Interior of British Columbia, Canada. Situated at the confluence of the Nicola and Coldwater rivers, it is the first major community encountered after travelling along Phase One of the Coquihalla Highway and acts as the gateway to all other major highways to the B.C. Interior."
+  ],
+  "context_passage_ids": [
+    "p_7a9b94348c4f40651fa4",
+    "p_1a7b53dcd51b314a029f",
+    "p_c8feb500afe0a0f40c69",
+    "p_d2ed31ab1bf2e79ce9e0",
+    "p_8c4816d63574381f0197"
+  ],
+  "context_sha256": "18a536a1a7c98281d2998d21c9656341a0363fef8983e070dfcaf045f9397ad9",
+  "reference_answers": [
+    "The highest monthly average temperature in Merritt Island for August is 82 degrees and the lowest monthly average temperature for February is 63 degrees."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 1.0,
+  "existing_token_f1_0_1": 0.40404040404040403,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 88,
+  "completion_tokens": 151,
+  "request_sha256": "2c04698350f37830f92eb12aefce1ba0557030d7ca9fbdae5d174201cb7e0342",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

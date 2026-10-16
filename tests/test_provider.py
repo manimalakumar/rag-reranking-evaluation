@@ -97,7 +97,9 @@ class ProviderTests(unittest.TestCase):
                     source = ''.join(cell['source'])
                     self.assertNotIn('recorded_pairs =', source)
                     self.assertNotIn("'truncate': 'NONE'", source)
-            self.assertIn('Execution and replay', ''.join(nb['cells'][0]['source']))
+            introduction = ''.join(nb['cells'][0]['source'])
+            self.assertIn('NOTEBOOK_MODE=replay', introduction, str(path))
+            self.assertIn('NOTEBOOK_ALLOW_MODEL_CALLS', introduction, str(path))
 
     def test_real_ragas_components_construct_without_network(self):
         from openai import AsyncOpenAI

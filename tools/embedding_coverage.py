@@ -7,6 +7,7 @@ import argparse
 from collections import defaultdict
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 import sys
 
@@ -83,7 +84,7 @@ def main():
                 row['query_ids'] = associated
                 row['fully_covered_query_ids'] = [q for q in associated if q in fully_covered]
                 passages.write(json.dumps(row, ensure_ascii=False) + '\n')
-    summary = dict(snapshot_utc=now.isoformat(), cache_directory=str(cache), report_directory=str(output.resolve()), vector_file=str(cache / 'embeddings.npy'), coverage_definition='All nonempty associated passages in the source question have checkpointed embeddings; this does not indicate query embedding or downstream stage completion.', counts=dict(full_validation_document_embeddings=end, completed_batches=len(batches), total_corpus_passages=len(corpus), question_count=count, questions_with_any_embedded_passage=len(groups['any-covered']), questions_with_all_associated_passages_embedded=len(groups['fully-covered']), questions_with_partial_associated_passage_coverage=len(groups['partially-covered']), questions_with_all_annotated_support_embedded=len(groups['all-support-embedded'])))
+    summary = dict(snapshot_utc=now.isoformat(), cache_directory=os.path.relpath(cache, ROOT), report_directory=os.path.relpath(output.resolve(), ROOT), vector_file=os.path.relpath(cache / 'embeddings.npy', ROOT), coverage_definition='All nonempty associated passages in the source question have checkpointed embeddings; this does not indicate query embedding or downstream stage completion.', counts=dict(full_validation_document_embeddings=end, completed_batches=len(batches), total_corpus_passages=len(corpus), question_count=count, questions_with_any_embedded_passage=len(groups['any-covered']), questions_with_all_associated_passages_embedded=len(groups['fully-covered']), questions_with_partial_associated_passage_coverage=len(groups['partially-covered']), questions_with_all_annotated_support_embedded=len(groups['all-support-embedded'])))
     (output / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     print(json.dumps(summary, indent=2))
 

@@ -2,7 +2,7 @@
 
 Does better retrieval lead to better answers and what does reranking cost in latency? This project compares embedding-based RAG with embedding + reranking RAG, following evidence from retrieval into generated answers. Four experiments examine the baseline, where reranking can help, whether retrieval gains carry into answer quality, and the response-time tradeoff.
 
-The notebooks contain saved Qwen/OpenRouter executions. **You can read their recorded results without running any cells or making model calls.** See each folder's README and notebook for technical details.
+The notebooks contain saved Qwen/OpenRouter executions. A fresh clone supports reading saved notebook outputs, but not full offline replay. Reading the recorded results requires no cell execution or model calls; executing cells in replay mode additionally requires matching local artifacts that are excluded from Git. See each folder's README and notebook for technical details.
 
 ## Start here
 
@@ -45,7 +45,7 @@ Both answer-quality arms requested the same generator model and settings, but Op
 
 **To inspect the study:** open the notebooks and read their saved outputs. No rebuild, API key or notebook execution is required. Saved outputs preserve the recorded execution; a later replay may load matching artifacts instead of making the original calls.
 
-**To execute or rebuild:** install the pinned environment and provide the required data and artifacts. Large caches, indexes, downloads and hosted-run artifacts are excluded from Git. The repository therefore preserves readable notebook results, but a fresh clone does not contain every artifact needed for offline replay. Rebuilding missing artifacts can incur model-call costs and may produce different results.
+**To execute or rebuild:** install the pinned environment and provide the required data and artifacts. Large caches, indexes, downloads and hosted-run artifacts are excluded from Git. For full offline replay, restore the matching ignored artifacts from a separate backup; the committed notebooks and compact extension results alone are insufficient. Rebuilding missing artifacts with hosted calls explicitly enabled can incur model-call costs and may produce different results.
 
 The recorded environment uses Python **3.14.6**, Haystack **3.4.0**, OpenAI SDK **2.54.0** and RAGAS **0.4.3**. `requirements-lock.txt` records the tested macOS arm64 environment; `requirements-runtime.txt` lists direct runtime requirements. Other platforms may require dependency adjustments. This is a tested configuration, not a claim about the latest available versions.
 

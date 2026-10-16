@@ -28,7 +28,9 @@ def create_ragas_metrics(client, embeddings, settings):
     llm = llm_factory(settings['judge_model'], provider='openai', adapter='instructor', client=client,
         temperature=settings['judge_temperature'], top_p=settings['judge_top_p'], max_tokens=settings['judge_max_tokens'],
         seed=settings['judge_seed'], max_retries=settings.get('structured_output_max_attempts', 1),
-        system_prompt=settings['judge_system_prompt'])
+        system_prompt=settings['judge_system_prompt'],
+        **({'extra_body': {'provider': settings['judge_provider_routing']}}
+           if settings.get('judge_provider_routing') else {}))
     available = {'faithfulness': Faithfulness(llm=llm),
                  'answer_relevancy': AnswerRelevancy(llm=llm, embeddings=embeddings, strictness=settings['relevancy_strictness'])}
     unknown = set(settings['metrics']) - available.keys()
@@ -70,6 +72,8 @@ def _make_components(source_directory, run_id, output_directory, settings):
                     raise ValueError('Original query embeddings must be reused, never recomputed.')
             elif payload['model']!=CFG['judge_model']:
                 raise ValueError('Unexpected judge model in request.')
+            elif CFG.get('judge_provider_routing') and payload.get('provider')!=CFG['judge_provider_routing']:
+                raise ValueError('Exploratory judge request did not preserve pinned provider routing.')
             # RAGAS intentionally repeats some prompts (relevancy strictness).
             # Each invocation gets its own HTTP retry allowance; retries within
             # this transport loop keep the same persisted identity.

@@ -1,0 +1,37 @@
+{
+  "query_id": "1075969",
+  "question": "what is a bullying policy",
+  "arm": "concise",
+  "path": "concise",
+  "subgroup": "opportunity_gain",
+  "answer": "A bullying policy is a formal document that defines bullying and outlines procedures for preventing and responding to it within a school. It ensures a shared understanding of bullying among the school community, often based on a standardized definition such as the national definition for Australian schools. The policy typically includes the key components identified in guidance, such as defining bullying as repeated aggressive behavior involving a power imbalance, and addresses various forms like verbal, physical, social, or psychological aggression intended to cause harm or fear. These policies are essential for effective prevention and response, requiring collaboration and open communication across the school community [p_58baf7d680bec212a031][p_8a2d6c768e74f5c3b0fd][p_9a87f31a0c52d0a80ebd][p_7a926df67e43d0dbec52].",
+  "context": "[p_58baf7d680bec212a031]\nWhat is bullying? Bullying is a word that is used with a lot of meanings. Making sure everyone in your school shares the same definition of bullying is essential. Sometimes things that are called bullying are not really bullying at all. The national definition of bullying for Australian schools is the first place to look. Including the definition of bullying in the relevant school policy helps to ensure shared understanding within the whole school community.\n\n[p_8a2d6c768e74f5c3b0fd]\nPage Content. Bullying is repeated verbal, physical, social or psychological aggressive behaviour by a person or group directed towards a less powerful person or group that is intended to cause harm, distress or fear. Types of bullying behaviour. There are some specific types of bullying behaviour:\n\n[p_9a87f31a0c52d0a80ebd]\nBullying is the use of force, threat, or coercion to abuse, intimidate, or aggressively dominate others. The behavior is often repeated and habitual. One essential prerequisite is the perception, by the bully or by others, of an imbalance of social or physical power, which distinguishes bullying from conflict. Behaviors used to assert such domination can include verbal harassment or threat, physical assault or coercion, and such acts may be directed repeatedly towards particular targets. Rationa\n\n[p_e81117ca913ba73d84af]\nThe report sought to address the extent to which states' bullying laws and model policies contained the key components identified in the December guidance. A follow-up study will aim to identify how state laws translate into practice at the school level.\n\n[p_7a926df67e43d0dbec52]\nA shared understanding of bullying is the starting point for effectively preventing and responding to bullying in your school. Preventing bullying involves everyone talking together openly and respectfully.",
+  "retrieved_contexts": [
+    "[p_58baf7d680bec212a031]\nWhat is bullying? Bullying is a word that is used with a lot of meanings. Making sure everyone in your school shares the same definition of bullying is essential. Sometimes things that are called bullying are not really bullying at all. The national definition of bullying for Australian schools is the first place to look. Including the definition of bullying in the relevant school policy helps to ensure shared understanding within the whole school community.",
+    "[p_8a2d6c768e74f5c3b0fd]\nPage Content. Bullying is repeated verbal, physical, social or psychological aggressive behaviour by a person or group directed towards a less powerful person or group that is intended to cause harm, distress or fear. Types of bullying behaviour. There are some specific types of bullying behaviour:",
+    "[p_9a87f31a0c52d0a80ebd]\nBullying is the use of force, threat, or coercion to abuse, intimidate, or aggressively dominate others. The behavior is often repeated and habitual. One essential prerequisite is the perception, by the bully or by others, of an imbalance of social or physical power, which distinguishes bullying from conflict. Behaviors used to assert such domination can include verbal harassment or threat, physical assault or coercion, and such acts may be directed repeatedly towards particular targets. Rationa",
+    "[p_e81117ca913ba73d84af]\nThe report sought to address the extent to which states' bullying laws and model policies contained the key components identified in the December guidance. A follow-up study will aim to identify how state laws translate into practice at the school level.",
+    "[p_7a926df67e43d0dbec52]\nA shared understanding of bullying is the starting point for effectively preventing and responding to bullying in your school. Preventing bullying involves everyone talking together openly and respectfully."
+  ],
+  "context_passage_ids": [
+    "p_58baf7d680bec212a031",
+    "p_8a2d6c768e74f5c3b0fd",
+    "p_9a87f31a0c52d0a80ebd",
+    "p_e81117ca913ba73d84af",
+    "p_7a926df67e43d0dbec52"
+  ],
+  "context_sha256": "d83b465f83ece43f3036042991e7ea77c3aa0484ecb0e1c8fb3a50487cc83761",
+  "reference_answers": [
+    "Bullying is the use of force, threat, or coercion to abuse, intimidate, or aggressively dominate others. The behavior is often repeated and habitual. One essential prerequisite is the perception, by the bully or by others, of an imbalance of social or physical power, which distinguishes bullying from conflict."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 1.0,
+  "existing_token_f1_0_1": 0.23529411764705882,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 105,
+  "completion_tokens": 200,
+  "request_sha256": "05451f1f94b91815c4a489c65589cf21a96965747289c47e409c5da0c33012c1",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

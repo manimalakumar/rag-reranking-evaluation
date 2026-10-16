@@ -1,0 +1,37 @@
+{
+  "query_id": "205107",
+  "question": "honesty or integrity definition",
+  "arm": "evidence_check",
+  "path": "evidence_check",
+  "subgroup": "opportunity_loss",
+  "answer": "Honesty is the quality of being truthful, trustworthy, loyal, fair, and sincere, and involves the absence of lying, cheating, or theft. It is a facet of moral character that connotes integrity, truthfulness, straightforwardness, and upstandingness [p_be52225f9a4768822722][p_c2c1a296355d52224373][p_c85c17eb5c81d8e140ba]. Integrity, in turn, refers to consistency in actions, values, principles, and outcomes, and is regarded as honesty and truthfulness or accuracy in one's actions [p_b936efbe04350647d99b]. Together, honesty and integrity represent a consistent regard for the highest standards of behavior and a refusal to violate personal and professional codes [p_64609af4a614accf4b04].",
+  "context": "[p_64609af4a614accf4b04]\nOne must seek to learn from errors and aspire to excellence through self-evaluation and acceptance of the critiques of others. Honesty and Integrity are the consistent regard for the highest standards of behavior and the refusal to violate one’s personal and professional codes.\n\n[p_be52225f9a4768822722]\nhonesty. 1. The quality of being honest: honor, honorableness, incorruptibility, integrity, upstandingness. 2.\n\n[p_b936efbe04350647d99b]\nThe Wikipedia page about integrity is useful here. It defines the word this way: a concept of consistency of actions, values, methods, measures, principles, expectations, and outcomes. In ethics, integrity is regarded as the honesty and truthfulness or accuracy of one's actions.\n\n[p_c2c1a296355d52224373]\nFreebase (5.00 / 1 vote) Rate this definition: Honesty. Honesty refers to a facet of moral character and connotes positive and virtuous attributes such as integrity, truthfulness and straightforwardness along with the absence of lying, cheating or theft. Honesty is revered in many cultures and religions.\n\n[p_c85c17eb5c81d8e140ba]\nFreebase(5.00 / 1 vote)Rate this definition: Honesty. Honesty refers to a facet of moral character and connotes positive and virtuous attributes such as integrity, truthfulness and straightforwardness along with the absence of lying, cheating or theft. Honesty is revered in many cultures and religions. Honesty means being truthful, trustworthy, loyal, fair and sincere. Honesty also means straight forward conduct. Honesty is the best policy is a proverb of unknown origin. Honesty is the first chapter in the book of wisdom.- Thomas Jefferson.",
+  "retrieved_contexts": [
+    "[p_64609af4a614accf4b04]\nOne must seek to learn from errors and aspire to excellence through self-evaluation and acceptance of the critiques of others. Honesty and Integrity are the consistent regard for the highest standards of behavior and the refusal to violate one’s personal and professional codes.",
+    "[p_be52225f9a4768822722]\nhonesty. 1. The quality of being honest: honor, honorableness, incorruptibility, integrity, upstandingness. 2.",
+    "[p_b936efbe04350647d99b]\nThe Wikipedia page about integrity is useful here. It defines the word this way: a concept of consistency of actions, values, methods, measures, principles, expectations, and outcomes. In ethics, integrity is regarded as the honesty and truthfulness or accuracy of one's actions.",
+    "[p_c2c1a296355d52224373]\nFreebase (5.00 / 1 vote) Rate this definition: Honesty. Honesty refers to a facet of moral character and connotes positive and virtuous attributes such as integrity, truthfulness and straightforwardness along with the absence of lying, cheating or theft. Honesty is revered in many cultures and religions.",
+    "[p_c85c17eb5c81d8e140ba]\nFreebase(5.00 / 1 vote)Rate this definition: Honesty. Honesty refers to a facet of moral character and connotes positive and virtuous attributes such as integrity, truthfulness and straightforwardness along with the absence of lying, cheating or theft. Honesty is revered in many cultures and religions. Honesty means being truthful, trustworthy, loyal, fair and sincere. Honesty also means straight forward conduct. Honesty is the best policy is a proverb of unknown origin. Honesty is the first chapter in the book of wisdom.- Thomas Jefferson."
+  ],
+  "context_passage_ids": [
+    "p_64609af4a614accf4b04",
+    "p_be52225f9a4768822722",
+    "p_b936efbe04350647d99b",
+    "p_c2c1a296355d52224373",
+    "p_c85c17eb5c81d8e140ba"
+  ],
+  "context_sha256": "c560cbd825251febc9dd650c7a66f23fa784a6682365f610355ef843b464549a",
+  "reference_answers": [
+    "Honesty: The condition of being honest. \nIntegrity: The value and morals of a individual in relation or in addition to honesty."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 0.0,
+  "existing_token_f1_0_1": 0.23404255319148937,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 85,
+  "completion_tokens": 216,
+  "request_sha256": "941ebe4259ee141da6f541640ce73c7f3c640f3817542cfa8a20609f944c47c4",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

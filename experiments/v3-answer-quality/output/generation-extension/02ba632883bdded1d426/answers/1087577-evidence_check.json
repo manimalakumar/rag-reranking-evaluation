@@ -1,0 +1,37 @@
+{
+  "query_id": "1087577",
+  "question": "what are government budget deficits",
+  "arm": "evidence_check",
+  "path": "evidence_check",
+  "subgroup": "opportunity_unchanged",
+  "answer": "A government budget deficit occurs when government expenditures exceed its revenue in a given period, typically a year. It is an indicator of financial health and represents the amount by which spending surpasses income. Deficits contribute to the accumulation of national debt over time [p_0171189e1bd2219c9a49][p_d9f3b9ffb6e1eaf64770][p_16e67b7d9c06f8067729][p_9fe60323a156d35e15c9].",
+  "context": "[p_0171189e1bd2219c9a49]\nA deficit occurs when the government spends more than it taxes; and a surplus occurs when a government taxes more than it spends. Sectoral balances analysis shows that as a matter of accounting, government budget deficits add net financial assets to the private sector.\n\n[p_d9f3b9ffb6e1eaf64770]\nBudget Deficit. What is a 'Budget Deficit'. A budget deficit is an indicator of financial health in which expenditures exceed revenue. The term budget deficit is most commonly used to refer to government spending rather than business or individual spending, but can be applied to all of these entities.\n\n[p_16e67b7d9c06f8067729]\nWhat is a 'Budget Deficit'? A budget deficit occurs when expenditures exceed revenue, and it is an indicator of financial health. The term is typically used to refer to government spending rather than business or individual spending. When referring to accrued government deficits, the deficits form the national debt. BREAKING DOWN 'Budget Deficit'\n\n[p_9fe60323a156d35e15c9]\nPrimary deficit, total deficit, and debt. The meaning of deficit differs from that of debt, which is an accumulation of yearly deficits. Deficits occur when a government's expenditures exceed the revenue that it generates. The deficit can be measured with or without including the interest payments on the debt as expenditures.\n\n[p_1c47f8ec0ed1ac8354c7]\nThat is, a deficit occurs when a government, company, or individual spends more than he/she/it receives in a given period of time, usually a year. One's deficit adds to one's debt, and, therefore, many analysts believe that deficits are unsustainable over the long-term.",
+  "retrieved_contexts": [
+    "[p_0171189e1bd2219c9a49]\nA deficit occurs when the government spends more than it taxes; and a surplus occurs when a government taxes more than it spends. Sectoral balances analysis shows that as a matter of accounting, government budget deficits add net financial assets to the private sector.",
+    "[p_d9f3b9ffb6e1eaf64770]\nBudget Deficit. What is a 'Budget Deficit'. A budget deficit is an indicator of financial health in which expenditures exceed revenue. The term budget deficit is most commonly used to refer to government spending rather than business or individual spending, but can be applied to all of these entities.",
+    "[p_16e67b7d9c06f8067729]\nWhat is a 'Budget Deficit'? A budget deficit occurs when expenditures exceed revenue, and it is an indicator of financial health. The term is typically used to refer to government spending rather than business or individual spending. When referring to accrued government deficits, the deficits form the national debt. BREAKING DOWN 'Budget Deficit'",
+    "[p_9fe60323a156d35e15c9]\nPrimary deficit, total deficit, and debt. The meaning of deficit differs from that of debt, which is an accumulation of yearly deficits. Deficits occur when a government's expenditures exceed the revenue that it generates. The deficit can be measured with or without including the interest payments on the debt as expenditures.",
+    "[p_1c47f8ec0ed1ac8354c7]\nThat is, a deficit occurs when a government, company, or individual spends more than he/she/it receives in a given period of time, usually a year. One's deficit adds to one's debt, and, therefore, many analysts believe that deficits are unsustainable over the long-term."
+  ],
+  "context_passage_ids": [
+    "p_0171189e1bd2219c9a49",
+    "p_d9f3b9ffb6e1eaf64770",
+    "p_16e67b7d9c06f8067729",
+    "p_9fe60323a156d35e15c9",
+    "p_1c47f8ec0ed1ac8354c7"
+  ],
+  "context_sha256": "a73a6d984d55a86b36027ac16163752898dc50a2bafc052f25eec296669cce49",
+  "reference_answers": [
+    "The deficit is the difference between the money Government takes in, called receipts, and what the Government spends, called outlays, each year."
+  ],
+  "finish_reason": "stop",
+  "truncated": false,
+  "provider": "Nebius",
+  "annotated_support_recall_at_5": 0.0,
+  "existing_token_f1_0_1": 0.25,
+  "existing_normalized_em_0_1": 0.0,
+  "answer_words": 45,
+  "completion_tokens": 137,
+  "request_sha256": "22c8334af8cb2e5a1ffba81e0f58e1891c5d9e5a341ff774065e56e409ed0f1f",
+  "frozen_contract_sha256": "fa50f05673f79b65c698a944d45de4bdd7825c0e1ad0ecbe331a3c24560eed2f"
+}

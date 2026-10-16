@@ -36,3 +36,8 @@ requirements-lock.txt.tmp
 # Detailed generated embedding coverage records
 reports/embedding-coverage-*/embedded-passages.jsonl
 reports/embedding-coverage-*/question-coverage.jsonl
+
+# Keep compact extension results; exclude caches and raw request logs.
+/experiments/v3-answer-quality/output/**/metric-cache/
+/experiments/v3-answer-quality/output/**/requests/
+/experiments/v3-answer-quality/output/**/judge_requests/

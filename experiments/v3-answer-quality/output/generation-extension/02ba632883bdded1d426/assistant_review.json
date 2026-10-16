@@ -1,0 +1,76 @@
+{
+  "reviewed_utc": "2026-10-16T21:01:55.625454+00:00",
+  "reviewer": "Assistant",
+  "human_labels": false,
+  "examples": [
+    "1053665",
+    "1075969",
+    "1087577"
+  ],
+  "checks": [
+    {
+      "query_id": "1053665",
+      "version": "original",
+      "support": "Core definition and locations are supported. The acronym expansion is not stated in any supplied passage.",
+      "completeness": "Answers both what IMEI is and where to find it.",
+      "abstention": "Core evidence is sufficient; omit or qualify the unsupported acronym expansion."
+    },
+    {
+      "query_id": "1053665",
+      "version": "evidence_check",
+      "support": "Adds the About menu label, absent from the passages, and broadens the back-of-device IMEI claim to iPod touch; the passage discusses its serial number.",
+      "completeness": "Covers both parts, but adds unasked blocking-purpose detail; 126 versus 80 words.",
+      "abstention": "Does not identify the evidence gaps in its added specifics."
+    },
+    {
+      "query_id": "1053665",
+      "version": "concise",
+      "support": "Core facts supported, but the IMEI-on-iPod-touch claim and acronym expansion are not established by these passages.",
+      "completeness": "Covers both requested parts in 73 words versus 80.",
+      "abstention": "Answer the supported parts; omit unsupported extra device generalizations."
+    },
+    {
+      "query_id": "1075969",
+      "version": "original",
+      "support": "The bullying definition and need for shared understanding are supported. Specific procedural contents of a policy are inferred rather than supplied.",
+      "completeness": "Provides an overview, but cannot verify actual reporting, enforcement or response procedures from this evidence.",
+      "abstention": "Should distinguish supported principles from missing policy procedures."
+    },
+    {
+      "query_id": "1075969",
+      "version": "evidence_check",
+      "support": "Adds behavior expectations and formal procedural claims without identifying a passage that establishes those policy details.",
+      "completeness": "Longer overview, not a more verified account of policy procedures; F1 and judged faithfulness regress.",
+      "abstention": "Despite the instruction, it does not explicitly identify the missing procedural information."
+    },
+    {
+      "query_id": "1075969",
+      "version": "concise",
+      "support": "Links specific policy components to guidance that the retrieved report only mentions, without enumerating those components.",
+      "completeness": "105 versus 76 words; repeats broad assertions instead of becoming more direct. F1 falls 32.73% to 23.53%.",
+      "abstention": "Should state that exact policy components/procedures are absent rather than present inferred details as established."
+    },
+    {
+      "query_id": "1087577",
+      "version": "original",
+      "support": "Spending exceeding revenue, the annual period and national-debt connection are supported by the five passages.",
+      "completeness": "Directly provides the requested definition.",
+      "abstention": "No abstention needed for this supported definition."
+    },
+    {
+      "query_id": "1087577",
+      "version": "evidence_check",
+      "support": "The definition and debt connection are supported. The year detail is in the fifth passage, which is omitted from its citation list.",
+      "completeness": "Covers the definition, with additional repetition; 45 versus 35 words.",
+      "abstention": "No missing definition needs abstention; citations could point more precisely to each supporting passage."
+    },
+    {
+      "query_id": "1087577",
+      "version": "concise",
+      "support": "Definition, annual period and debt connection are supported and cited.",
+      "completeness": "Covers essentially the same facts in 34 versus 35 words. F1 rises 21.28% to 30.43%, mainly a wording/overlap improvement.",
+      "abstention": "No abstention needed for this supported definition."
+    }
+  ],
+  "interpretation": "On this frozen 12-question subset, neither instruction produced a consistent improvement across metrics and examples. The concise prompt has small mean F1, faithfulness and relevancy gains, but is not shorter on average. The evidence-check prompt is longer, with lower mean F1 and relevancy and a very small mean faithfulness gain. IMEI and bullying-policy cases demonstrate regressions and unsupported additions. The budget-deficit F1 improvement largely reflects wording: the original already covers the supported definition. Some unsupported specifics remain even when the automated faithfulness score is 1.0. Use these scores together with evidence inspection; this assistant review is not a human correctness annotation or evidence of a population-wide effect."
+}

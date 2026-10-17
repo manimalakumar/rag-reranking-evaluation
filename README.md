@@ -95,3 +95,9 @@ Hosted artifacts are stored locally under the ignored `.cache/qwen-runs/`. Match
 | RAGAS | 3 HTTP attempts per logical request, 1 structured-output attempt and 1 metric execution |
 
 The SDK retry layer is disabled. Successful answers remain fixed for matching requests. Offline tests use isolated ledgers and do not consume live allowance. Review the current configuration before enabling paid work.
+
+## Saved outputs and rebuilding
+
+The notebooks include recorded outputs for inspection without model calls. Runtime datasets, embeddings, indexes and model-response caches are excluded from this repository. To rebuild, obtain the source dataset under its applicable terms, configure your own API key, and follow the rebuild instructions. The workflow will create the required runtime artifacts locally and incur API usage costs. Results may differ from the recorded run. Offline replay of the original run requires its saved artifacts. 
+
+The recorded exercise cost approximately US$1.20 in OpenRouter API usage, including building the embedding cache for 152,576 passages covering 15,585 question IDs, then reusing those embeddings across the experiments. This covered a subset of the validation split’s roughly 980,000 passages; downstream experiments used smaller question samples. Costs vary with scope, model/provider pricing, retries and judging calls.

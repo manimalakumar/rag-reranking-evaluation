@@ -1,0 +1,46 @@
+{
+  "fixture_kind": "synthetic API-shaped fixture",
+  "stage": "query_embedding",
+  "url": "https://openrouter.ai/api/v1/embeddings",
+  "request_body": {
+    "model": "qwen/qwen3-embedding-4b",
+    "input": [
+      "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery: Where is the fictional Luma sensor's reset button?",
+      "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery: Where is the fictional Vela sensor reset button?"
+    ],
+    "dimensions": 4,
+    "encoding_format": "float"
+  },
+  "http_status": 200,
+  "raw_response_text": "{\"object\": \"list\", \"model\": \"qwen/qwen3-embedding-4b\", \"data\": [{\"object\": \"embedding\", \"index\": 1, \"embedding\": [0.0, 1.0, 0.0, 0.0]}, {\"object\": \"embedding\", \"index\": 0, \"embedding\": [1.0, 0.0, 0.0, 0.0]}], \"usage\": {\"prompt_tokens\": 20, \"total_tokens\": 20}}",
+  "raw_response_json": {
+    "object": "list",
+    "model": "qwen/qwen3-embedding-4b",
+    "data": [
+      {
+        "object": "embedding",
+        "index": 1,
+        "embedding": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "object": "embedding",
+        "index": 0,
+        "embedding": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 20,
+      "total_tokens": 20
+    }
+  }
+}

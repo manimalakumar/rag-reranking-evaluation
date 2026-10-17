@@ -17,6 +17,8 @@ from shared_scoring.fresh_baseline import build_baseline_run, prepare_baseline_s
 from shared_scoring.fresh_retrieval import RecordedOpenRouterClient, execution_settings
 from shared_scoring.io import write_json
 from test_fresh_execution import Session
+from fixture_studies import imei_project
+from shared_scoring import imei_diagnostic
 
 PROJECT = Path(__file__).resolve().parents[1]
 
@@ -87,13 +89,16 @@ class NotebookTests(unittest.TestCase):
             with patch.dict(os.environ, {'OPENROUTER_API_KEY': 'test', 'ALLOW_MODEL_CALLS': '1'}):
                 fresh = build_baseline_run(config, PROJECT, folder / 'run', client)
             prepare_baseline_scores(fresh)
+            diagnostic_project = imei_project(folder / "diagnostic-fixture")
+            diagnostic_paths = imei_diagnostic.paths(diagnostic_project)
             before = len(transport.calls)
             namespace = {'__name__': '__main__'}
             path = original / 'Experiment-1-Baseline.ipynb'
             previous = Path.cwd()
             try:
                 os.chdir(PROJECT)
-                with patch('shared_scoring.execution.ensure_baseline_study', return_value=fresh), \
+                with patch('shared_scoring.imei_diagnostic.paths', return_value=diagnostic_paths), \
+                     patch('shared_scoring.execution.ensure_baseline_study', return_value=fresh), \
                      patch('shared_scoring.notebook_runtime.NotebookSession.saved_configuration', return_value=fresh), \
                      patch('IPython.display.display', lambda *args, **kwargs: None), \
                      patch('requests.Session.post', side_effect=AssertionError('Replay made a hosted call')), \

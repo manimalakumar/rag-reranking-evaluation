@@ -7,13 +7,19 @@ from unittest.mock import patch,MagicMock
 import pandas as pd
 from shared_scoring import generation_extension as extension
 from shared_scoring.judge import create_ragas_metrics
+from fixture_studies import extension_project
 
 PROJECT=Path(__file__).resolve().parents[1]
 
 class GenerationExtensionTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        self.project = extension_project(temporary.name)
+
     def test_frozen_subset_and_only_instruction_changes(self):
-        frozen=extension.freeze(PROJECT)
-        _,plan,_,_=extension.location(PROJECT)
+        frozen=extension.freeze(self.project)
+        _,plan,_,_=extension.location(self.project)
         questions=frozen['contract']['questions']
         self.assertEqual(len(questions),12)
         self.assertEqual(len({r['query_id'] for r in questions}),12)
@@ -30,9 +36,17 @@ class GenerationExtensionTests(unittest.TestCase):
             self.assertEqual(actual['provider']['only'],['nebius/fp8'])
             self.assertFalse(actual['provider']['allow_fallbacks'])
         self.assertEqual(q,before)
+        repeated = extension.freeze(self.project)
+        self.assertEqual(frozen, repeated)
+        _, _, parent, _ = extension.location(self.project)
+        changed = pd.read_parquet(parent['questions_file'])
+        changed.loc[0, 'question'] = 'Changed after answers were recorded'
+        changed.to_parquet(parent['questions_file'])
+        with self.assertRaisesRegex(ValueError, 'saved generation inputs/settings differ'):
+            extension.freeze(self.project)
 
     def test_optional_judge_routing_keeps_legacy_behavior(self):
-        _,plan,parent,_=extension.location(PROJECT)
+        _,plan,parent,_=extension.location(self.project)
         settings=deepcopy(parent['judge'])
         with patch('ragas.llms.llm_factory') as factory,patch('ragas.metrics.collections.Faithfulness'),patch('ragas.metrics.collections.AnswerRelevancy'):
             create_ragas_metrics(MagicMock(),MagicMock(),settings)
@@ -63,5 +77,5 @@ class GenerationExtensionTests(unittest.TestCase):
                 if variant=='concise' and q=='gain':f1=80.
                 rows.append(dict(query_id=q,arm=variant,squad_token_f1_pct=f1,faithfulness_0_1=1.))
         with patch.object(extension,'summary',return_value=(pd.DataFrame(),pd.DataFrame(rows))):
-            chosen=extension.examples(PROJECT)
+            chosen=extension.examples(self.project)
         self.assertEqual(chosen,['1053665','regression','gain'])

@@ -1,0 +1,44 @@
+{
+  "fixture_kind": "synthetic API-shaped fixture",
+  "stage": "generation",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "request_body": {
+    "model": "qwen/qwen3-30b-a3b-instruct-2507",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Answer only from the fictional passages. Cite supporting passage IDs."
+      },
+      {
+        "role": "user",
+        "content": "Question: Where is the fictional Luma sensor's reset button?\n\nPassages:\n[p_vela]\nThe fictional Vela sensor's reset button is beside its display.\n\n[p_luma]\nThe Luma sensor's reset button is beneath its battery cover.\n\n[p_neri]\nThe fictional Neri sensor uses a magnetic reset wand.\n\nAnswer:"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 100,
+    "stream": false
+  },
+  "http_status": 200,
+  "raw_response_text": "{\"id\": \"synthetic-luma-completion\", \"object\": \"chat.completion\", \"created\": 0, \"model\": \"qwen/qwen3-30b-a3b-instruct-2507\", \"choices\": [{\"index\": 0, \"message\": {\"role\": \"assistant\", \"content\": \"The Luma sensor's reset button is beneath its battery cover. [p_luma]\"}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 80, \"completion_tokens\": 16, \"total_tokens\": 96}}",
+  "raw_response_json": {
+    "id": "synthetic-luma-completion",
+    "object": "chat.completion",
+    "created": 0,
+    "model": "qwen/qwen3-30b-a3b-instruct-2507",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The Luma sensor's reset button is beneath its battery cover. [p_luma]"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 80,
+      "completion_tokens": 16,
+      "total_tokens": 96
+    }
+  }
+}

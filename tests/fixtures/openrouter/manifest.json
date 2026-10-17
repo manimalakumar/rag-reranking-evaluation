@@ -1,0 +1,19 @@
+{
+  "fixture_kind": "synthetic API-shaped fixtures",
+  "description": "Entirely invented fictional sensor text, vectors, ranking scores and answers. Authored locally; no provider recordings or model calls.",
+  "limitations": "Exercises adapter behavior only; does not establish exact historical-response compatibility or live endpoint availability.",
+  "fixtures": [
+    {
+      "fixture": "query_embedding.json",
+      "fixture_sha256": "f20382321c1c3200298204047fa292d697b64f72b70b7939d6b20f7eaf599152"
+    },
+    {
+      "fixture": "reranking.json",
+      "fixture_sha256": "fa255ba0a8bdb55903ffd08c71bf29a884c266d2d5b577617d971e2dbd19354d"
+    },
+    {
+      "fixture": "generation.json",
+      "fixture_sha256": "b0c813b1c69e7332cd07a2a449978fac3fa1da718106454100391391ceb06d20"
+    }
+  ]
+}

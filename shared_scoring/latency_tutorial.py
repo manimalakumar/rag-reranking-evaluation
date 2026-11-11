@@ -25,7 +25,7 @@ def show_latency_settings(study):
     config, manifest = study['config'], study['manifest']
     _table(pd.DataFrame([
         ('Study', config['experiment_name']),
-        ('Historical benchmark', config['run_id']),
+        ('Benchmark run ID', config['run_id']),
         ('Corpus passages', manifest['corpus_version']['unique_passages']),
         ('Query embedding', f"{manifest['embedding_settings']['model']} · {manifest['embedding_settings']['dimensions']} dimensions"),
         ('Reranker', manifest['reranker_settings']['model']),
@@ -37,7 +37,7 @@ def show_latency_settings(study):
         ('Attempt timeout', f"{manifest['execution_settings']['timeout_seconds']} seconds"),
     ], columns=['Setting', 'Recorded value']))
     _details('Exact portable configuration', read_json(config['configuration_file']))
-    _details('Original corpus, retrieval, generation and retry settings', manifest)
+    _details('Corpus, retrieval, generation and retry settings', manifest)
 
 
 def show_latency_sample(study):
@@ -47,7 +47,7 @@ def show_latency_sample(study):
     _table(pd.DataFrame({'Stratum': counts.index.map(config['stratum_labels']), 'Saved pairs': counts.values}))
     table = questions[['latency_sample_order', 'query_id', 'generation_stratum', 'question']].copy()
     table['First path'] = [config['arms'][list(value)[0]] for value in questions.arm_order]
-    _details('All ten fixed questions and counterbalanced run order', table)
+    _details(f'All {len(questions)} fixed questions and run order', table)
     _details('Exact sampling settings', config['sampling'])
 
 
@@ -97,9 +97,9 @@ def show_latency_results(study):
         ('Successful path', len(paired), paired.successful_path_seconds_added_by_reranking.median()),
         ('Total wall time', len(paired), paired.total_end_to_end_seconds_added_by_reranking.median()),
     ], columns=['Timing scope', 'Matching pairs', 'Median paired added time (s)']))
-    _details('All original medians and p95 values (seconds)', study['latency']['summary'])
-    _details('Every original within-question latency difference (seconds)', paired)
-    _details('Every original complete-path measurement', study['latency']['results'])
+    _details('Medians and p95 values (seconds)', study['latency']['summary'])
+    _details('Within-question latency differences (seconds)', paired)
+    _details('Complete-path measurements', study['latency']['results'])
 
 
 def show_latency_stages(study):
@@ -111,7 +111,7 @@ def show_latency_stages(study):
     table['Median (ms)'] = table.median_stage_seconds * 1000
     table['p95 (ms)'] = table.p95_stage_seconds * 1000
     _table(table[['Path', 'Stage', 'calls', 'Median (ms)', 'p95 (ms)', 'retries']])
-    _details('All 90 original stage measurements, with exact seconds', study['latency']['stages'])
+    _details(f"All {len(study['latency']['stages'])} hosted stage measurements (seconds)", study['latency']['stages'])
 
 
 def show_latency_failures(study):
@@ -121,7 +121,7 @@ def show_latency_failures(study):
     _table(failed[['query_id', 'arm', 'stage', 'attempt', 'elapsed_seconds', 'backoff_after_seconds']])
     _details('All timed request attempts, errors, actual backoff and status', attempts)
     _details('The two excluded setup/implementation failure records', study['latency']['preflight_failures'])
-    _details('Original recorded run metadata', study['latency']['run_metadata'])
+    _details('Run metadata', study['latency']['run_metadata'])
 
 
 def paired_quality_latency_table(study):

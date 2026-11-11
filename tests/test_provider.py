@@ -97,9 +97,16 @@ class ProviderTests(unittest.TestCase):
                     source = ''.join(cell['source'])
                     self.assertNotIn('recorded_pairs =', source)
                     self.assertNotIn("'truncate': 'NONE'", source)
-            introduction = ''.join(nb['cells'][0]['source'])
-            self.assertIn('NOTEBOOK_MODE=replay', introduction, str(path))
-            self.assertIn('NOTEBOOK_ALLOW_MODEL_CALLS', introduction, str(path))
+            if nb.get('metadata', {}).get('live_tutorial'):
+                self.assertEqual(nb['metadata']['live_tutorial']['default_mode'], 'live')
+                active = '\n'.join(''.join(c['source']) for c in nb['cells']
+                                   if c['cell_type'] == 'code' and c['metadata'].get('live_tutorial'))
+                self.assertIn('MODE =', active, str(path))
+                self.assertIn('TutorialRun(', active, str(path))
+            else:
+                introduction = ''.join(nb['cells'][0]['source'])
+                self.assertIn('NOTEBOOK_MODE=replay', introduction, str(path))
+                self.assertIn('NOTEBOOK_ALLOW_MODEL_CALLS', introduction, str(path))
 
     def test_real_ragas_components_construct_without_network(self):
         from openai import AsyncOpenAI

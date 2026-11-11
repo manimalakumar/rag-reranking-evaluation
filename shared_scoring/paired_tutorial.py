@@ -6,6 +6,7 @@ from html import escape
 import pandas as pd
 
 from .io import read_json
+from .notebook_display import display_table, details_html
 from .opportunity_study import (
     load_opportunity_population, load_opportunity_configuration,
     refresh_opportunity_results, summarize_opportunity_scores,
@@ -43,19 +44,12 @@ def verify_answer_quality_sample(study):
 
 
 def _table(frame):
-    from IPython.display import display, HTML
-    display(HTML(frame.to_html(index=False, escape=True, na_rep='Pending',
-                              float_format=lambda value: f'{value:.2f}')))
+    display_table(frame)
 
 
 def _details(label, value):
     from IPython.display import display, HTML
-    if isinstance(value, pd.DataFrame):
-        body = value.to_html(index=False, escape=True, na_rep='Pending')
-    else:
-        text = value if isinstance(value, str) else json.dumps(value, indent=2, ensure_ascii=False)
-        body = '<pre style="white-space:pre-wrap">' + escape(text) + '</pre>'
-    display(HTML('<details><summary>' + escape(label) + '</summary>' + body + '</details>'))
+    display(HTML(details_html(label, value)))
 
 
 def _note(text):
@@ -74,10 +68,10 @@ def show_answer_quality_settings(study):
     generation, judge = config['generation'], config['judge']
     _table(pd.DataFrame([
         ('Study', config['experiment_name']),
-        ('Historical run ID', config['run_id']),
-        ('Saved generator', generation['model']),
+        ('Run ID', config['run_id']),
+        ('Generator', generation['model']),
         ('Passages per answer', config['context_passage_count']),
-        ('Saved generation limit', f"{generation['max_tokens']} tokens"),
+        ('Generation limit', f"{generation['max_tokens']} tokens"),
         ('Retrieval embeddings (already saved)',
          f"{parent['embedding_model']} · {parent['retrieval_settings']['embedding_dimensions']} dimensions"),
         ('RAGAS judge (explicit action)', judge['judge_model']),
@@ -124,19 +118,21 @@ def show_generation_coverage(study):
         ('Saved questions', len(study['population'])),
         ('Complete answer pairs', len(study['complete_ids'])),
         ('Current successful answers', sum(row['status'] == 'ok' for row in current.values())),
-        ('Historical attempts', len(records)),
-        ('Historical failed attempts', sum(row['status'] != 'ok' for row in records)),
+        ('Generation attempts', len(records)),
+        ('Failed generation attempts', sum(row['status'] != 'ok' for row in records)),
         ('Current failed arms', len(study['failures'])),
         ('Retained truncated answers', sum(row['truncated'] for row in current.values())),
     ], columns=['Coverage', 'Count']))
     columns = ['attempt_id', 'query_id', 'source_arm', 'source_status', 'error',
                'elapsed_seconds', 'execution_workers', 'finish_reason', 'truncated']
-    _details('All historical attempts, failures and generation timings',
+    _details('Generation attempts, failures and timing',
              pd.DataFrame(records)[columns])
-    _details('All retained truncated answers', pd.DataFrame([
+    truncated = pd.DataFrame([
         {'query_id': row['query_id'], 'Path': study['config']['arms'][row['arm']],
          'finish_reason': row['finish_reason'], 'answer': row['answer']}
-        for row in current.values() if row['truncated']]))
+        for row in current.values() if row['truncated']])
+    if not truncated.empty:
+        _details('Truncated answers', truncated)
 
 
 def show_answer_metrics(study):

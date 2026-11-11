@@ -41,6 +41,12 @@ Generation and both RAGAS metrics are complete for the saved 79-question answer-
 
 Both answer-quality arms requested the same generator model and settings, but OpenRouter could route them to different serving providers. One recorded pair uses SiliconFlow and Nebius. Backend variation is a limitation; a future controlled run can pin a common provider and fallback policy. The deliberately stratified samples do not represent overall question traffic, and the eight-pair latency benchmark is descriptive rather than a production latency guarantee.
 
+## Live tutorial notebooks
+
+The main notebooks now use **Live / Replay / Plan**, with **Live as the default**: a new run creates new model responses, while same-run cache reuse requires explicit resume. The model API calls are visible in staged cells rather than hidden inside setup. Prepared passage embeddings/indexes and frozen candidates/contexts remain declared upstream inputs; missing assets stop execution with preparation instructions.
+
+**The revised Live cells have not yet been executed against hosted models.** The October 15–16, 2026 model answers, scores and timings are preserved; presentation changes and local display-only executions are recorded in cell metadata. Revised hosted-model cells remain unexecuted against the service. The original sections now contain the active implementation, without disabled wrappers or a parallel reference walkthrough. See [setup.md](setup.md) for installation, credentials, kernel, prerequisites and launch commands; run `.venv/bin/python tools/verify_tutorial.py` for hermetic offline checks. The older cached-study CLI below remains legacy functionality, not the new Live tutorial entry point.
+
 ## Viewing and reproducing results
 
 **To inspect the study:** open the notebooks and read their saved outputs. No rebuild, API key or notebook execution is required. Saved outputs preserve the recorded execution; a later replay may load matching artifacts instead of making the original calls.
@@ -56,7 +62,7 @@ python3.14 -m venv .venv
 .venv/bin/python tools/verify_offline.py
 ```
 
-Select `.venv/bin/python` as the notebook interpreter. For deliberate notebook replay, set `NOTEBOOK_MODE=replay` before starting the kernel; the matching saved artifacts must exist. The notebooks describe their execute-mode action controls. For a deliberate hosted rebuild, use the entry point below after reviewing the configuration and scope.
+Select `.venv/bin/python` as the notebook interpreter. Follow [setup.md](setup.md) for Live, explicit-run Replay and Plan modes. The commands below are the separate checkpointed rebuild entry point; review its configuration and scope before enabling hosted calls.
 
 ```sh
 # Verification only; no credentials needed.

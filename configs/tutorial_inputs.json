@@ -1,0 +1,32 @@
+{
+  "reference_date": "2026-10-15/16",
+  "prepared_retrieval": ".cache/qwen-runs/cached-subset/84556ae3e8e650a930be",
+  "baseline": ".cache/qwen-runs/baseline/5413aa92e9c1375fa06f",
+  "targeted": ".cache/qwen-runs/targeted-reranking/e27113d6ccebbf8a88ad",
+  "answers": ".cache/qwen-runs/answer-quality/8d072cc0a7b92478a716",
+  "latency": ".cache/qwen-runs/latency-tradeoff/a8ff6898f0612c5123ef",
+  "diagnostic_query_id": "1053665",
+  "document_embedding_policy": "Prepared input only; never rebuild passages implicitly.",
+  "tutorial_run_directory": ".cache/tutorial-runs",
+  "question_counts": {
+    "demo": 1,
+    "baseline": 32,
+    "diagnosis": 15585,
+    "targeted": 700,
+    "answers": 79,
+    "latency": 8
+  },
+  "demo_question": {
+    "query_id": "demo-covid19",
+    "question": "What is the cause of COVID-19?",
+    "reference_answers": [
+      "SARS-CoV-2"
+    ],
+    "known_supporting_passage_ids": [],
+    "cohort": "warmup"
+  },
+  "targeted_answer_examples": [
+    "1053665",
+    "1031584"
+  ]
+}

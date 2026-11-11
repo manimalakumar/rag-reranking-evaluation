@@ -1,8 +1,14 @@
-"""Explicit notebook execution/replay policy; never silently resume stopped embedding."""
+"""Legacy cached-study compatibility; new tutorials use TutorialRun Live/Replay/Plan.
+
+NotebookSession retains the old execute/replay semantics for old CLI consumers.
+It is not the default runtime of the main tutorial notebooks.
+"""
 import os
 from pathlib import Path
 import subprocess
 import sys
+
+from .live_tutorial import TutorialRun
 
 from .fresh_retrieval import execution_settings, fingerprint
 from .io import load_configuration, read_json, sha256_file

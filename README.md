@@ -36,7 +36,7 @@ The full route rebuilds **152,576 document embeddings** and the index from the p
 
 | Step | Notebook | What Live executes |
 | --- | --- | --- |
-| Warm-up | [Two RAG paths](demos/00-rag-with-and-without-reranking/RAG-Retriever-Embedding-Reranker.ipynb) | Query embedding, retrieval, reranking, two answers and local scoring |
+| 0 | [Two RAG paths](demos/00-rag-with-and-without-reranking/RAG-Retriever-Embedding-Reranker.ipynb) | Query embedding, retrieval, reranking, two answers and local scoring |
 | 1 | [Baseline](experiments/v1-baseline/Experiment-1-Baseline.ipynb) | Both paths for 31 questions plus the separate IMEI diagnostic |
 | 2 | [Diagnosis](diagnosis-retrieval-opportunity/Diagnosis-Retrieval-Opportunity.ipynb) | Query retrieval and opportunity analysis on the frozen eligible subset |
 | 3 | [Targeted reranking](experiments/v2-targeted-reranking/Experiment-2-Targeted-Reranking.ipynb) | Rerank 500 opportunities + 200 controls; generate and score two worked-example pairs |

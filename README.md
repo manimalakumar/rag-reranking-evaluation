@@ -59,10 +59,10 @@ Main-study requests may use different serving providers. The three-prompt extens
 
 ## Recorded outputs and reproducibility
 
-Open the notebooks without executing cells to read their **Recorded reference run** outputs. Numerical findings in reference prose belong to that recorded execution; a new Live run's tables are authoritative for its new results. [The execution report](reports/tutorial-live-execution-20261110.json) records completion and the partial extension honestly: its main 79-pair study completed, but its extension stopped at 33/36 answers and has no extension judge results for that run.
+Open the notebooks without executing cells to read their recorded reference run outputs. Numerical findings in reference prose belong to that recorded execution; a new Live run's tables are authoritative for its new results. [The execution report](reports/tutorial-live-execution-20261110.json) records completion and the extension. its main 79-pair study completed, but its extension stopped at 33/36 answers and has no extension judge results for that run.
 
-A fresh clone supports reading outputs and running offline tests. **Full offline Replay needs the matching run artifacts**, which are excluded from Git. Public input preparation supplies upstream inputs for new Live experiments; it does not recreate earlier model responses. Replay requires an explicit completed run ID; Plan makes no model calls. See [setup.md](setup.md#4-execution-modes-and-request-caps).
+A fresh clone supports reading outputs and running offline tests. Full offline Replay needs the matching run artifacts, which are excluded from Git. Public input preparation supplies upstream inputs for new Live experiments; it does not recreate earlier model responses. Replay requires an explicit completed run ID; Plan makes no model calls. See [setup.md](setup.md#4-execution-modes-and-request-caps).
 
-Datasets, vectors, indexes and request traces stay under ignored `.cache/`. The committed input recipe is approximately **485 KiB**; preparation does not add gigabytes to Git. Keep prior run folders and the persistent request ledger when resuming.
+Datasets, vectors, indexes and request traces stay under ignored `.cache/`. The committed input recipe is approximately **485 KiB**; preparation does not add gigabytes to Git.
 
 Older checkpointed rebuild commands and artifact details are documented separately in [Advanced workflows](docs/advanced-workflows.md).

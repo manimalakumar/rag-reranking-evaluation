@@ -38,8 +38,8 @@ class LiveTutorialTests(unittest.TestCase):
         self.env=patch.dict(os.environ,{'MODEL_BUDGET_PATH':str(self.root/'budget.sqlite'),'TUTORIAL_TESTS_PASSED':'1','OPENROUTER_API_KEY':'unit-test-secret'})
         self.env.start()
     def tearDown(self):self.env.stop();self.temp.cleanup()
-    def client(self,run_id,resume=False,wire=None):
-        transport=TutorialTransport(self.root/'runs'/run_id/'requests',run_id,resume=resume,inner=httpx.MockTransport(wire or self.wire))
+    def client(self,run_id,resume=False,wire=None,retry_in_flight=False,retry_authorizations=None):
+        transport=TutorialTransport(self.root/'runs'/run_id/'requests',run_id,resume=resume,retry_in_flight=retry_in_flight,retry_authorizations=retry_authorizations,inner=httpx.MockTransport(wire or self.wire))
         return OpenAI(api_key='unit-test-secret',base_url='https://openrouter.ai/api/v1',max_retries=0,http_client=httpx.Client(transport=transport))
     def test_default_live_is_new_identity_not_cached_execute(self):
         a=TutorialRun(self.root,'answers');b=TutorialRun(self.root,'answers')
@@ -63,6 +63,20 @@ class LiveTutorialTests(unittest.TestCase):
         replay=TutorialRun(self.root,'answers','replay',original.run_id)
         with self.assertRaises(FileNotFoundError):
             replay.generate(lambda *args:self.fail('Replay invoked model'))
+    def test_replay_reads_saved_questions_and_rejects_a_different_input_profile(self):
+        from shared_scoring.io import sha256_file
+        run=TutorialRun(self.root,'demo')
+        saved=[dict(query_id='saved-id',question='the saved question',reference_answers=['answer'],gold_ids=[],subgroup='warmup',diagnostic=False)]
+        write_json(run.folder/'questions.json',saved)
+        write_json(run.folder/'manifest.json',{'contract':{'tutorial_inputs':sha256_file(run.input_configuration)}})
+        alternate=read_json(run.input_configuration);alternate['demo_question']['question']='a different active question'
+        write_json(self.root/'alternate-inputs.json',alternate)
+        with patch.dict(os.environ,{'TUTORIAL_INPUTS':str(self.root/'alternate-inputs.json'),'OPENROUTER_API_KEY':''}):
+            replay=TutorialRun(self.root,'demo',mode='replay',run_id=run.run_id)
+            with patch('pandas.read_parquet',side_effect=AssertionError('Replay must not read upstream questions')):
+                self.assertEqual(replay.questions(),saved)
+            with self.assertRaisesRegex(ValueError,'input profile'):replay.preflight()
+        self.assertFalse(self.calls)
     def test_real_sdk_fresh_runs_make_new_embedding_calls(self):
         for name in ['first','second']:
             with self.client(name) as client,request_scope('query_embedding','q'):
@@ -98,6 +112,71 @@ class LiveTutorialTests(unittest.TestCase):
         with self.client('retry',wire=unavailable) as client,request_scope('query_embedding','q',max_attempts=3),patch('shared_scoring.live_client.time.sleep'):
             with self.assertRaises(Exception):client.embeddings.create(model='m',input=['q'])
         self.assertEqual(len(attempts),3)
+    def test_temporary_in_flight_402_honors_cooldown_and_existing_cap(self):
+        calls=[]
+        def blocked(request):
+            calls.append(1)
+            return httpx.Response(402,json={'error':{'metadata':{'reason':'in_flight_budget_exhausted','headers':{'Retry-After':'120'}}}},request=request)
+        with self.client('inflight',wire=blocked) as client,request_scope('reranking','q',max_attempts=3),patch('shared_scoring.live_client.time.sleep') as sleep:
+            with self.assertRaises(Exception):client.post('/rerank',cast_to=dict[str,object],body={'query':'q'})
+            self.assertEqual([c.args[0] for c in sleep.call_args_list],[120.,120.])
+        with self.client('inflight',resume=True,wire=blocked,retry_in_flight=True) as client,request_scope('reranking','q',max_attempts=3):
+            with self.assertRaises(Exception):client.post('/rerank',cast_to=dict[str,object],body={'query':'q'})
+        self.assertEqual(len(calls),3)
+        self.assertEqual(len(list((self.root/'runs/inflight/requests').glob('*/attempt-*.json'))),3)
+    def test_generic_credit_402_is_not_retried(self):
+        calls=[]
+        def credits(request):
+            calls.append(1);return httpx.Response(402,json={'error':{'message':'Insufficient credits'}},request=request)
+        with self.client('credits',wire=credits) as client,request_scope('reranking','q'),patch('shared_scoring.live_client.time.sleep') as sleep:
+            with self.assertRaises(Exception):client.post('/rerank',cast_to=dict[str,object],body={'query':'q'})
+            sleep.assert_not_called()
+        self.assertEqual(len(calls),1)
+    def test_inspected_resume_keeps_failed_attempt_and_reuses_success_afterward(self):
+        def blocked(request):
+            return httpx.Response(402,json={'error':{'metadata':{'reason':'in_flight_budget_exhausted','headers':{'Retry-After':'120'}}}},request=request)
+        with self.client('resume402',wire=blocked) as client,request_scope('reranking','q'),patch.object(TutorialTransport,'in_flight_delay',return_value=None):
+            with self.assertRaises(Exception):client.post('/rerank',cast_to=dict[str,object],body={'query':'q'})
+        old=next((self.root/'runs/resume402/requests').glob('*/attempt-01.json'))
+        before=read_json(old)['raw_response_text']
+        with self.client('resume402',resume=True,retry_in_flight=True) as client,request_scope('reranking','q'),patch('shared_scoring.live_client.time.sleep'):
+            client.post('/rerank',cast_to=dict[str,object],body={'query':'q'})
+        self.assertEqual(read_json(old)['raw_response_text'],before)
+        self.assertEqual(len(list(old.parent.glob('attempt-*.json'))),2)
+        with self.client('resume402',resume=True) as client,request_scope('reranking','q'):
+            client.post('/rerank',cast_to=dict[str,object],body={'query':'q'})
+        self.assertEqual(len(self.calls),1)
+    def test_one_request_retry_authorization_preserves_identity_and_counter(self):
+        import sqlite3
+        def reset(request):raise httpx.ReadError('simulated connection reset',request=request)
+        def call(client):return client.chat.completions.create(model='m',messages=[dict(role='user',content='q')])
+        with self.client('grant',wire=reset) as client,request_scope('generation','q','baseline',1):
+            with self.assertRaises(Exception):call(client)
+        old=next((self.root/'runs/grant/requests').glob('*/attempt-01.json'));before=old.read_bytes()
+        with self.client('grant',resume=True) as client,request_scope('generation','q','baseline',1):
+            with self.assertRaises(Exception):call(client)
+        grant={old.parent.name:{'max_total_attempts':2,'reason':'Unit-test approval of exactly one extra attempt'}}
+        with self.client('grant',resume=True,retry_authorizations=grant) as client,request_scope('generation','q','baseline',1):call(client)
+        self.assertEqual(old.read_bytes(),before)
+        self.assertEqual(len(list(old.parent.glob('attempt-*.json'))),2)
+        self.assertEqual(len(self.calls),1)
+        with sqlite3.connect(self.root/'budget.sqlite') as db:
+            self.assertEqual(db.execute('SELECT COUNT(*),SUM(count) FROM attempts').fetchone(),(1,2))
+    def test_one_request_retry_grant_cannot_repeat_or_affect_other_requests(self):
+        calls=[]
+        def reset(request):calls.append(1);raise httpx.ReadError('simulated connection reset',request=request)
+        def call(client):return client.chat.completions.create(model='m',messages=[dict(role='user',content='q')])
+        with self.client('grant-cap',wire=reset) as client,request_scope('generation','q','baseline',1):
+            with self.assertRaises(Exception):call(client)
+        old=next((self.root/'runs/grant-cap/requests').glob('*/attempt-01.json'))
+        grant={old.parent.name:{'max_total_attempts':2,'reason':'Unit-test single exception'}}
+        for _ in range(2):
+            with self.client('grant-cap',resume=True,wire=reset,retry_authorizations=grant) as client,request_scope('generation','q','baseline',1):
+                with self.assertRaises(Exception):call(client)
+        self.assertEqual(len(calls),2)
+        with self.client('grant-cap',resume=True,wire=reset,retry_authorizations=grant) as client,request_scope('generation','different','baseline',1):
+            with self.assertRaises(Exception):call(client)
+        self.assertEqual(len(calls),3)
     def test_targeted_stage_uses_frozen_candidates_but_new_ranks(self):
         declared=read_json(self.root/'configs/tutorial_inputs.json');declared['question_counts']['targeted']=1;declared['targeted_answer_examples']=['q']
         write_json(self.root/'configs/tutorial_inputs.json',declared)
@@ -166,6 +245,22 @@ class LiveTutorialTests(unittest.TestCase):
         scores=pd.read_csv(run.folder/'scores/per_answer_scores.csv')
         self.assertEqual(scores.squad_token_f1_pct.tolist(),[100.,100.])
         self.assertTrue(all(r['run_id']==run.run_id for r in read_json(run.folder/'generate_inputs.json')))
+        # Exercise the actual warm-up pipeline cells in Replay, in memory only.
+        # No private cache, credentials, upstream query reads, or hosted client.
+        previous=Path.cwd()
+        try:
+            os.chdir(self.root)
+            namespace={'__name__':'__main__'}
+            with patch.dict(os.environ,{'NOTEBOOK_MODE':'replay','TUTORIAL_RUN_ID':run.run_id,
+                    'TUTORIAL_RESUME':'0','TUTORIAL_INPUTS':'','OPENROUTER_API_KEY':''}),patch('IPython.display.display'):
+                for cell in read_json(PROJECT/NOTEBOOKS['demo'])['cells']:
+                    if cell['cell_type']!='code':continue
+                    result=eval(compile(''.join(cell['source']),'warmup-replay','exec',flags=ast.PyCF_ALLOW_TOP_LEVEL_AWAIT),namespace)
+                    if __import__('inspect').isawaitable(result):asyncio.run(result)
+            self.assertEqual(namespace['question'],read_json(run.folder/'questions.json')[0]['question'])
+            self.assertIsNone(namespace['client'])
+            self.assertEqual(len(self.calls),4)
+        finally:os.chdir(previous)
     def test_baseline_uses_declared_max_output_tokens_and_separate_diagnostic(self):
         run=TutorialRun(self.root,'baseline')
         source=run.upstream('baseline')/'runs/baseline-fresh-5413aa92e9c1375fa06f'

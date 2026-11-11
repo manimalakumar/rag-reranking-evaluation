@@ -23,7 +23,12 @@ def main():
     parser.add_argument('--mode',choices=['live','replay','plan'],default='live')
     parser.add_argument('--run-id',help='Explicit tutorial run ID for Replay or same-run resume')
     parser.add_argument('--resume',action='store_true',help='Explicitly reuse only the named Live run')
+    parser.add_argument('--inputs',help='Prepared tutorial_inputs.json; otherwise use TUTORIAL_INPUTS or the recorded reference profile')
+    parser.add_argument('--retry-in-flight',action='store_true',help='After inspection, retry a temporary in-flight-budget 402 within the existing attempt cap; requires --resume')
     args=parser.parse_args()
+    if args.inputs:os.environ['TUTORIAL_INPUTS']=args.inputs
+    if args.retry_in_flight and (not args.resume or args.mode!='live'):
+        parser.error('--retry-in-flight requires --mode live and --resume')
     run_id=args.run_id
     run=TutorialRun(PROJECT,args.study,args.mode,run_id,resume=args.resume)
     if args.mode=='live':
@@ -37,6 +42,7 @@ def main():
     (kernel/'kernel.json').write_text(__import__('json').dumps(dict(argv=[sys.executable,'-m','ipykernel_launcher','-f','{connection_file}'],display_name='Qwen RAG tutorials',language='python')))
     os.environ.update(JUPYTER_PATH=str(cache),JUPYTER_RUNTIME_DIR=str(cache/'runtime'),IPYTHONDIR=str(cache/'ipython'),
         NOTEBOOK_MODE=args.mode,TUTORIAL_RUN_ID=run.run_id,TUTORIAL_RESUME='1' if args.resume else '0',
+        TUTORIAL_RETRY_IN_FLIGHT='1' if args.retry_in_flight else '0',
         TUTORIAL_TESTS_PASSED='1',HAYSTACK_TELEMETRY_ENABLED='False',RAGAS_DO_NOT_TRACK='true')
     path=PROJECT/NOTEBOOKS[args.study];nb=nbformat.read(path,as_version=4)
     for c in nb.cells:

@@ -280,7 +280,8 @@ class TutorialViews:
             return
         if section == 'configuration':
             generation = run.generation or {}
-            settings = [('Embedding model', run.retrieval['embedding_model']),
+            settings = [('Input profile', run.declarations.get('profile','recorded reference inputs')),
+                        ('Embedding model', run.retrieval['embedding_model']),
                         ('Embedding dimensions', run.retrieval['dimensions']),
                         ('Reranker model', run.retrieval['reranker_model']),
                         ('Generator model', generation.get('model', 'Not used in this stage') if run.study not in {'diagnosis'} else 'Not used in this stage'),
@@ -296,7 +297,10 @@ class TutorialViews:
                 docs = read_json(run.upstream('baseline') / 'input/corpus.json')
                 display({'passages': len(docs), 'passage_embedding_calls': 0}); display(pd.DataFrame(docs).head(3))
             else:
-                display(read_json(run.upstream('prepared_retrieval') / 'assets_manifest.json'))
+                assets=read_json(run.upstream('prepared_retrieval') / 'assets_manifest.json')
+                display({'profile':run.declarations.get('profile','recorded reference inputs'),
+                         'passages':assets.get('corpus_rows'),'dimensions':assets.get('dimensions',run.retrieval['dimensions']),
+                         'new_document_embedding_calls':0,'index_nprobe':assets['nprobe']})
         elif section == 'document_embeddings':
             matrix = np.load(run.upstream('baseline') / 'document_embeddings.npy', mmap_mode='r')
             display({'matrix_shape': matrix.shape, 'dtype': str(matrix.dtype), 'new_document_embedding_calls': 0})

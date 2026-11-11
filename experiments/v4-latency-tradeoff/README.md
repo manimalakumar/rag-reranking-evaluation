@@ -1,13 +1,10 @@
 # Experiment 4: Latency Tradeoff
 
-Measure the operational cost of adding reranking to the complete online RAG path. The saved benchmark contains **eight paired questions / sixteen answers**: two questions from each of the four populated answer-quality subgroups, selected with seed 43. The fifth planned subgroup has no eligible cases.
+Use the reference profile. Live times eight question pairs, two per populated subgroup, and scores those exact sixteen answers. Each arm embeds its own query, retrieves thirty passages and generates from five; the reranked arm also reranks. Document/index preparation is outside the timed paths. Failed attempts and backoff remain in wall time. Use the current measurements for retries and latency findings; neither IMEI nor effervescent is in this sample.
 
-Each arm makes its own query-embedding request, retrieves thirty passages, selects five contexts and generates an answer. The reranked arm also reranks its thirty candidates. **Precomputed document embeddings and initial corpus/index loading are outside the timed path.** Generation is non-streaming, so measurements describe completion time rather than time to first token.
+1. Follow [setup](../../setup.md#1-install-the-environment-and-kernel).
+2. Prepare the required public [input profile](../../setup.md#2-prepare-the-prerequisites) and export `TUTORIAL_INPUTS` and your API key before launching the kernel.
+3. Open [the notebook](Experiment-4-Latency-Tradeoff.ipynb), select the project kernel and keep Live mode with a new run ID.
+4. **Restart Kernel → Run All → Save.** The main notebook retains its actual execution outputs.
 
-[The notebook](Experiment-4-Latency-Tradeoff.ipynb) preserves **sixteen successful paths, forty hosted stages and forty-one timed attempts**, including one failed attempt and its retry. Total wall time includes attempts, backoff, local work and client overhead; successful-request timing is reported separately. No setup records are excluded and no answers are truncated.
-
-Generation, deterministic answer scoring and both RAGAS metrics are complete. Quality scores refer to the benchmark's own answers, not substituted Experiment 3 answers. Neither IMEI (1053665) nor effervescent (1100870) is in this sample. Human answer review remains pending.
-
-Eight pairs provide a descriptive operational check, not a stable population or production-latency estimate. Network and serving-provider variation affect the observations. The saved plot is unavailable in this snapshot; the numeric comparisons remain readable. Some original captions mention ten questions, but the saved eight-row sample defines the actual scope.
-
-**Read the saved outputs without rerunning.** See the [project README](../../README.md) for setup and deliberate rebuild instructions. A new execution creates new timing observations; it does not reproduce the original network and backend conditions.
+Saved displays and numerical prose labeled **Recorded reference run** describe that execution; a new Live run’s computed tables supply its findings. Opening a notebook without executing it makes no calls. Exact offline Replay requires that selected run’s artifacts; public preparation rebuilds inputs, not prior model responses. See the [project guide](../../README.md) for modes, scope and recorded completion status.

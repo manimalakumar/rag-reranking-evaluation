@@ -50,7 +50,12 @@ class TutorialRun:
         if self.mode not in {'live','replay','plan'}:raise ValueError('MODE must be live, replay or plan')
         if resume and (self.mode!='live' or not run_id):raise ValueError('Resume needs MODE=live and an explicit existing RUN_ID')
         if self.mode=='replay' and (not run_id or run_id=='reference'):raise ValueError('Replay needs an explicit tutorial RUN_ID; read notebook outputs directly without executing to inspect them.')
-        self.declarations=read_json(self.project/'configs/tutorial_inputs.json')
+        declaration_path=Path(os.environ.get('TUTORIAL_INPUTS') or 'configs/tutorial_inputs.json')
+        self.input_configuration=(self.project/declaration_path).resolve()
+        self.declarations=read_json(self.input_configuration)
+        if study not in self.declarations.get('allowed_studies',STAGES):
+            raise ValueError('This input profile supports only '+', '.join(self.declarations['allowed_studies'])+
+                '. Prepare --profile reference for the full six-notebook study; see setup.md.')
         self.settings=execution_settings(self.project,include_scope=True)
         self.root=self.project/self.declarations['tutorial_run_directory']/study
         self.run_id=run_id or datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ-')+uuid.uuid4().hex[:12]
@@ -95,6 +100,10 @@ class TutorialRun:
 
     def preflight(self,create_client=True):
         self.plan=self.describe()
+        if self.mode=='replay':
+            expected=read_json(self.folder/'manifest.json').get('contract',{}).get('tutorial_inputs')
+            if expected and expected!=sha256_file(self.input_configuration):
+                raise ValueError('Replay requires the input profile used by the selected run; set --inputs or TUTORIAL_INPUTS to that declaration file.')
         if self.mode!='live':return self.plan
         if self.plan['missing_inputs']:
             raise FileNotFoundError('Missing frozen upstream inputs:\n'+'\n'.join(self.plan['missing_inputs'])+
@@ -111,7 +120,7 @@ class TutorialRun:
         import httpx
         identity={'study':self.study,'upstream':{str(p.relative_to(self.project)):sha256_file(p) for p in self.requirements()},
                   'retrieval':self.retrieval,'generation':self.generation,
-                  'tutorial_inputs':sha256_file(self.project/'configs/tutorial_inputs.json'),
+                  'tutorial_inputs':sha256_file(self.input_configuration),
                   'scoring':sha256_file(self.project/'experiments/v3-answer-quality/config.json'),
                   'extension':sha256_file(self.project/'configs/generation_extension.json') if self.study=='answers' else None}
         manifest=self.folder/'manifest.json'
@@ -129,7 +138,11 @@ class TutorialRun:
     def transport(self):
         if self.mode!='live' or not (self.folder/'manifest.json').is_file():
             raise RuntimeError('A hosted SDK transport requires a preflighted Live run.')
-        return TutorialTransport(self.folder/'requests',self.run_id,resume=self.resume,backoff=self.retrieval['backoff_seconds'])
+        return TutorialTransport(self.folder/'requests',self.run_id,resume=self.resume,
+            retry_in_flight=self.resume and os.environ.get('TUTORIAL_RETRY_IN_FLIGHT')=='1',
+            retry_authorizations=read_json(self.folder/'retry-authorizations.json')
+                if self.resume and (self.folder/'retry-authorizations.json').is_file() else {},
+            backoff=self.retrieval['backoff_seconds'])
 
     def bind_client(self,client):
         if self.mode!='live':raise RuntimeError('Plan/Replay never bind a hosted model client')
@@ -154,8 +167,11 @@ class TutorialRun:
 
     def questions(self,persist=True):
         if self._questions is not None:return self._questions
+        if self.mode=='replay':
+            self._questions=read_json(self.folder/'questions.json')
+            return self._questions
         if self.mode!='live':
-            raise RuntimeError('Only Live stages resolve upstream questions; Replay reads the selected run and Plan does not load results.')
+            raise RuntimeError('Plan does not load results; Replay reads the selected run’s questions.')
         if self.study=='baseline':
             base=self.upstream('baseline');run=base/'runs/baseline-fresh-5413aa92e9c1375fa06f'
             settings=read_json(run/'config.json');cfg=settings['models_and_dataset']

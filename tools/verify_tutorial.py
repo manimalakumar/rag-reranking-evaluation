@@ -7,7 +7,7 @@ sys.path[:0]=[str(PROJECT),str(PROJECT/'tests')]
 
 def main():
     os.environ.update(HAYSTACK_TELEMETRY_ENABLED='False',RAGAS_DO_NOT_TRACK='true')
-    suite=unittest.defaultTestLoader.loadTestsFromNames(['test_live_tutorial','test_tutorial_views','test_notebook_display','test_notebooks','test_budget'])
+    suite=unittest.defaultTestLoader.loadTestsFromNames(['test_input_preparation','test_live_tutorial','test_tutorial_views','test_notebook_display','test_notebooks','test_budget'])
     with tempfile.TemporaryDirectory() as tmp,patch.dict(os.environ,{'MODEL_BUDGET_PATH':str(Path(tmp)/'budget.sqlite')}),patch.object(socket.socket,'connect',side_effect=AssertionError('Offline tests forbid network')):
         class Isolated(unittest.TextTestResult):
             def startTest(self,test):

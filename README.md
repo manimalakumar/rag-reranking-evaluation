@@ -1,109 +1,68 @@
 # Evaluate Retrieval to Generation
 
-Does better retrieval lead to better answers and what does reranking cost in latency? This project compares embedding-based RAG with embedding + reranking RAG, following evidence from retrieval into generated answers. Four experiments examine the baseline, where reranking can help, whether retrieval gains carry into answer quality, and the response-time tradeoff.
-
-The notebooks contain saved Qwen/OpenRouter executions. A fresh clone supports reading saved notebook outputs, but not full offline replay. Reading the recorded results requires no cell execution or model calls; executing cells in replay mode additionally requires matching local artifacts that are excluded from Git. See each folder's README and notebook for technical details.
+Does better retrieval lead to better answers, and what does reranking cost in latency? This tutorial compares embedding RAG with embedding + reranking RAG. **Live is the default:** each new run makes the model calls shown in the notebook cells and saves its own answers, scores and timings.
 
 ## Start here
 
-| Step | Notebook | Purpose |
+1. **Set up Python and the notebook kernel.** Follow [setup.md](setup.md#1-install-the-environment-and-kernel), then export your own `OPENROUTER_API_KEY`.
+2. **Prepare the prerequisites.** Start with the small public-data profile below. Preparation embeds documents once; subsequent notebook runs reuse those document vectors.
+3. **Open the warm-up notebook.** Launch Jupyter from the configured shell and select the project kernel.
+4. **Restart Kernel → Run All → Save.** Keep `MODE="live"`, `RUN_ID=None`, and `RESUME=False` for a new experiment. Live execution incurs API usage.
+
+```bash
+# Inspect the preparation plan: no download, model calls or writes.
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile small
+
+# Explicitly prepare 512 passages from the pinned public dataset.
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile small --allow-model-calls
+export TUTORIAL_INPUTS=.cache/tutorial-inputs/small/tutorial_inputs.json
+.venv/bin/python -m jupyterlab
+```
+
+Open [RAG with and without reranking](demos/00-rag-with-and-without-reranking/RAG-Retriever-Embedding-Reranker.ipynb). The small profile uses a labeled question covered by its corpus. It supports the warm-up only; its results are a separate exercise, not a reproduction of the larger study.
+
+For **all six notebooks**, prepare the reference inputs instead:
+
+```bash
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile reference
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile reference --allow-model-calls
+export TUTORIAL_INPUTS=.cache/tutorial-inputs/reference/tutorial_inputs.json
+.venv/bin/python -m jupyterlab
+```
+
+The full route rebuilds **152,576 document embeddings** and the index from the pinned public MS MARCO dataset. A compact committed recipe reconstructs the frozen question membership, candidate ranks, baseline corpus and answer contexts. **No private artifact backup is required.** New embedding responses and subsequent results can differ from the recorded run. Preparation validates the passage IDs/text against the recipe before calling the embedding model. See [setup.md](setup.md#2-prepare-the-prerequisites) for costs, storage, resumption and input checks.
+
+## Notebook sequence
+
+| Step | Notebook | What Live executes |
 | --- | --- | --- |
-| Optional demo | [RAG with and without reranking](demos/00-rag-with-and-without-reranking/RAG-Retriever-Embedding-Reranker.ipynb) | Inspect two answers and their exact supporting contexts. |
-| 1. Baseline | [Experiment 1](experiments/v1-baseline/Experiment-1-Baseline.ipynb) | Compare both RAG paths on 31 questions and a smaller fixed corpus. |
-| 2. Diagnosis | [Retrieval opportunity](diagnosis-retrieval-opportunity/Diagnosis-Retrieval-Opportunity.ipynb) | Find questions with annotated support below the first five results but within the first thirty. |
-| 3. Targeted reranking | [Experiment 2](experiments/v2-targeted-reranking/Experiment-2-Targeted-Reranking.ipynb) | Rerank the same thirty candidates for 500 opportunities and 200 controls. |
-| 4. Answer quality | [Experiment 3](experiments/v3-answer-quality/Experiment-3-Answer-Quality.ipynb) | Compare 79 saved answer pairs using reference overlap and LLM-based evaluation. |
-| 5. Latency | [Experiment 4](experiments/v4-latency-tradeoff/Experiment-4-Latency-Tradeoff.ipynb) | Compare complete online paths on eight question pairs. |
+| Warm-up | [Two RAG paths](demos/00-rag-with-and-without-reranking/RAG-Retriever-Embedding-Reranker.ipynb) | Query embedding, retrieval, reranking, two answers and local scoring |
+| 1 | [Baseline](experiments/v1-baseline/Experiment-1-Baseline.ipynb) | Both paths for 31 questions plus the separate IMEI diagnostic |
+| 2 | [Diagnosis](diagnosis-retrieval-opportunity/Diagnosis-Retrieval-Opportunity.ipynb) | Query retrieval and opportunity analysis on the frozen eligible subset |
+| 3 | [Targeted reranking](experiments/v2-targeted-reranking/Experiment-2-Targeted-Reranking.ipynb) | Rerank 500 opportunities + 200 controls; generate and score two worked-example pairs |
+| 4 | [Answer quality](experiments/v3-answer-quality/Experiment-3-Answer-Quality.ipynb) | Generate and score 79 pairs; separately compare three prompts on 12 questions |
+| 5 | [Latency](experiments/v4-latency-tradeoff/Experiment-4-Latency-Tradeoff.ipynb) | Time eight paired online paths and score those exact answers |
 
-## Study scope
-
-The dataset is MS MARCO v2.1 validation, using the pinned revision and recorded seeds. The larger frozen corpus contains **152,576 passage embeddings**, covering all associated passages for **15,585 question IDs**. Of those questions, **10,242 have annotated support labels**; diagnosis identifies **1,085 reranking opportunities**. This is a subset, not the full validation split. Embedding stopped at this snapshot to limit runtime, cost and storage.
-
-The baseline uses a separate **10,210-passage corpus** built from 31 baseline questions and 1,000 additional distractor questions sampled with seed 42. Experiment 2 samples 500 opportunities and 200 controls from the larger study. Experiment 3 samples up to 25 per resulting subgroup, yielding **79 questions / 158 answers**. Experiment 4 uses **eight questions / sixteen answers**, two per populated subgroup.
-
-The continuous IMEI walkthrough (**1053665**) shows the distinction between corpus coverage and ranking: neither annotated support is in the baseline corpus; both are in the larger corpus, where reranking moves one from rank 6 to rank 3 and increases Recall@5 from 0.5 to 1.0. IMEI is separate from the 31 baseline averages and already included in Experiments 2 and 3. It is not in the latency sample. Original effervescent diagnostic records remain preserved separately.
+The reference profile contains a **152,576-passage corpus** and **15,585 fully covered question IDs**, a subset of MS MARCO v2.1 validation. Baseline uses a separate **10,210-passage corpus**. Answer-quality contexts and subgroup assignments are frozen inputs; they are not resampled from a new targeted-reranking run. IMEI **1053665** is excluded from the 31 baseline averages and already included in the targeted and answer-quality samples.
 
 ## Models and evaluation
 
 | Role | OpenRouter model ID |
 | --- | --- |
-| Embedding | `qwen/qwen3-embedding-4b` — 2,560 dimensions in the saved study |
+| Embedding | `qwen/qwen3-embedding-4b`, 2,560 dimensions |
 | Reranking | `qwen/qwen3-reranker-8b` |
 | Generation and RAGAS judge | `qwen/qwen3-30b-a3b-instruct-2507` |
 
-Each RAG path supplies five passages to the generator; reranking reorders thirty retrieved candidates rather than searching for new passages.  
+The client uses OpenRouter's OpenAI-compatible API. Each answer receives five passages; reranking reorders thirty candidates. Annotated-support Recall@5 measures evidence coverage. SQuAD-style Token F1 and exact match measure reference overlap. RAGAS faithfulness assesses support in the supplied evidence; answer relevancy assesses alignment with the question. Judge estimates do not replace human correctness review.
 
-We use **MS MARCO v2.1 Dataset** for its questions, passages, support annotations and reference answers. Retrieval metrics measure annotated-support coverage and ranking. **SQuAD-style Token F1 and exact match** provide reproducible reference-overlap scores without additional model calls; these scoring methods can be applied beyond the SQuAD dataset.
+Main-study requests may use different serving providers. The three-prompt extension pins Nebius with fallbacks disabled. Small, deliberately stratified samples describe these experiments rather than overall traffic or production latency.
 
-**RAGAS** complements reference overlap with LLM-based evaluation: faithfulness assesses whether answer claims are supported by the supplied passages, while answer relevancy assesses how well the answer addresses the question. This study uses the Qwen generator model as the evaluator. Higher Token F1 alone does not establish a supported or correct answer.
+## Recorded outputs and reproducibility
 
-Generation and both RAGAS metrics are complete for the saved 79-question answer-quality study and eight-pair latency benchmark. Human answer review remains pending.
+Open the notebooks without executing cells to read their **Recorded reference run** outputs. Numerical findings in reference prose belong to that recorded execution; a new Live run's tables are authoritative for its new results. [The execution report](reports/tutorial-live-execution-20261110.json) records completion and the partial extension honestly: its main 79-pair study completed, but its extension stopped at 33/36 answers and has no extension judge results for that run.
 
-Both answer-quality arms requested the same generator model and settings, but OpenRouter could route them to different serving providers. One recorded pair uses SiliconFlow and Nebius. Backend variation is a limitation; a future controlled run can pin a common provider and fallback policy. The deliberately stratified samples do not represent overall question traffic, and the eight-pair latency benchmark is descriptive rather than a production latency guarantee.
+A fresh clone supports reading outputs and running offline tests. **Full offline Replay needs the matching run artifacts**, which are excluded from Git. Public input preparation supplies upstream inputs for new Live experiments; it does not recreate earlier model responses. Replay requires an explicit completed run ID; Plan makes no model calls. See [setup.md](setup.md#4-execution-modes-and-request-caps).
 
-## Live tutorial notebooks
+Datasets, vectors, indexes and request traces stay under ignored `.cache/`. The committed input recipe is approximately **485 KiB**; preparation does not add gigabytes to Git. Keep prior run folders and the persistent request ledger when resuming.
 
-The main notebooks now use **Live / Replay / Plan**, with **Live as the default**: a new run creates new model responses, while same-run cache reuse requires explicit resume. The model API calls are visible in staged cells rather than hidden inside setup. Prepared passage embeddings/indexes and frozen candidates/contexts remain declared upstream inputs; missing assets stop execution with preparation instructions.
-
-**The revised Live cells have not yet been executed against hosted models.** The October 15–16, 2026 model answers, scores and timings are preserved; presentation changes and local display-only executions are recorded in cell metadata. Revised hosted-model cells remain unexecuted against the service. The original sections now contain the active implementation, without disabled wrappers or a parallel reference walkthrough. See [setup.md](setup.md) for installation, credentials, kernel, prerequisites and launch commands; run `.venv/bin/python tools/verify_tutorial.py` for hermetic offline checks. The older cached-study CLI below remains legacy functionality, not the new Live tutorial entry point.
-
-## Viewing and reproducing results
-
-**To inspect the study:** open the notebooks and read their saved outputs. No rebuild, API key or notebook execution is required. Saved outputs preserve the recorded execution; a later replay may load matching artifacts instead of making the original calls.
-
-**To execute or rebuild:** install the pinned environment and provide the required data and artifacts. Large caches, indexes, downloads and hosted-run artifacts are excluded from Git. For full offline replay, restore the matching ignored artifacts from a separate backup; the committed notebooks and compact extension results alone are insufficient. Rebuilding missing artifacts with hosted calls explicitly enabled can incur model-call costs and may produce different results.
-
-The recorded environment uses Python **3.14.6**, Haystack **3.4.0**, OpenAI SDK **2.54.0** and RAGAS **0.4.3**. `requirements-lock.txt` records the tested macOS arm64 environment; `requirements-runtime.txt` lists direct runtime requirements. Other platforms may require dependency adjustments. This is a tested configuration, not a claim about the latest available versions.
-
-```sh
-python3.14 -m venv .venv
-.venv/bin/python -m pip install -r requirements-lock.txt
-.venv/bin/python -m pip check
-.venv/bin/python tools/verify_offline.py
-```
-
-Select `.venv/bin/python` as the notebook interpreter. Follow [setup.md](setup.md) for Live, explicit-run Replay and Plan modes. The commands below are the separate checkpointed rebuild entry point; review its configuration and scope before enabling hosted calls.
-
-```sh
-# Verification only; no credentials needed.
-.venv/bin/python tools/rebuild_results.py
-
-# Set your own key in the shell; do not commit it.
-export OPENROUTER_API_KEY='your-key'
-
-# Deliberately rebuild/resume a stage with hosted calls enabled.
-.venv/bin/python tools/rebuild_results.py --study baseline --allow-model-calls
-
-# Optional: rebuild/resume the configured stages and explicitly request judging.
-.venv/bin/python tools/rebuild_results.py --study all --allow-model-calls --judge
-```
-
-`--study` accepts `baseline`, `diagnosis`, `targeted`, `answers`, `latency`, or `all`. Higher stages prepare or resume required parents. **Review corpus scope and configuration before a rebuild; these commands are not needed to view the saved study and do not promise to reproduce its frozen snapshot automatically.** Full-cohort generation in Experiment 2 remains optional; Experiment 3 generates its own sampled answer pairs.
-
-## Configuration and request records
-
-Settings live in `configs/execution.json`, `configs/experiment1.json`, `configs/retrieval_scope.json`, and the experiment-specific `config.json` files. The root `.env.example` documents `OPENROUTER_API_KEY` with a placeholder. Helpers do not automatically load `.env` files. Changing hosting providers may require changing endpoints, credentials and request/response adapters, not only model IDs.
-
-The study uses OpenRouter's embedding, reranking and OpenAI-compatible chat endpoints. Qwen query embeddings use the configured `Instruct: ...\nQuery: ...` format. The saved study uses 2,560 dimensions consistently; changing dimensions or preprocessing requires compatible document and query vectors and new evaluation results.
-
-Hosted artifacts are stored locally under the ignored `.cache/qwen-runs/`. Matching successful requests can be reused. Request fingerprints include model, endpoint, inputs, dimensions and query preprocessing; changed settings require a separate output identity. Saved request and response records support inspection of contexts, provider information, attempts and failures. `tools/live_status.py` reports local run status when those artifacts exist.
-
-## Request and retry caps
-
-`configs/model_limits.json` configures a project-wide cap of **10,000 outbound hosted attempts**, including retries, timeouts and failures. Matching cached successes consume no new attempt. The persistent ledger is `.cache/model-request-budget.sqlite`; retain it when resuming so accounting is not reset. The cap limits request count, not dollars or tokens.
-
-| Stage | Configured attempt cap |
-| --- | --- |
-| Retrieval embeddings and reranking | 3 lifetime attempts per identical logical request |
-| Baseline answer generation | 1 attempt |
-| Other answer generation | 1 initial attempt plus at most 1 explicitly requested retry |
-| Latency benchmark | 2 lifetime attempts per hosted stage and arm |
-| RAGAS | 3 HTTP attempts per logical request, 1 structured-output attempt and 1 metric execution |
-
-The SDK retry layer is disabled. Successful answers remain fixed for matching requests. Offline tests use isolated ledgers and do not consume live allowance. Review the current configuration before enabling paid work.
-
-## Saved outputs and rebuilding
-
-The notebooks include recorded outputs for inspection without model calls. Runtime datasets, embeddings, indexes and model-response caches are excluded from this repository. To rebuild, obtain the source dataset under its applicable terms, configure your own API key, and follow the rebuild instructions. The workflow will create the required runtime artifacts locally and incur API usage costs. Results may differ from the recorded run. Offline replay of the original run requires its saved artifacts. 
-
-The recorded exercise cost approximately US$1.20 in OpenRouter API usage, including building the embedding cache for 152,576 passages covering 15,585 question IDs, then reusing those embeddings across the experiments. This covered a subset of the validation split’s roughly 980,000 passages; downstream experiments used smaller question samples. Costs vary with scope, model/provider pricing, retries and judging calls.
+Older checkpointed rebuild commands and artifact details are documented separately in [Advanced workflows](docs/advanced-workflows.md).

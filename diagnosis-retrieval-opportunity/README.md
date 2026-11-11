@@ -1,9 +1,10 @@
 # Diagnosis: Where could reranking help?
 
-Identify questions where annotated supporting passages are retrieved in the first thirty results but some are absent from the first five: **Recall@30 > Recall@5**. This separates a ranking opportunity from evidence that was never retrieved.
+Use the reference profile. Live embeds the frozen eligible questions, retrieves thirty candidates and measures where Recall@30 exceeds Recall@5. It does not rerank or generate answers.
 
-The saved study covers a frozen **152,576-passage corpus** associated with **15,585 question IDs**. Of these questions, **10,242 have annotated support labels**, and **1,085 meet the opportunity condition**. These counts describe the frozen subset, not the full validation split. Annotations are known support labels, not exhaustive judgments of every relevant passage.
+1. Follow [setup](../setup.md#1-install-the-environment-and-kernel).
+2. Prepare the required public [input profile](../setup.md#2-prepare-the-prerequisites) and export `TUTORIAL_INPUTS` and your API key before launching the kernel.
+3. Open [the notebook](Diagnosis-Retrieval-Opportunity.ipynb), select the project kernel and keep Live mode with a new run ID.
+4. **Restart Kernel → Run All → Save.** The main notebook retains its actual execution outputs.
 
-[The notebook](Diagnosis-Retrieval-Opportunity.ipynb) inspects saved coverage, support IDs and candidate ranks. Experiment 2 samples 500 opportunities and 200 no-gap controls before reranking, retaining each question's exact thirty candidates.
-
-**Read the saved outputs without rerunning.** For setup, artifact requirements and deliberate rebuilds, see the [project README](../README.md). Some preserved filenames and output captions say “full validation”; their scope here is the frozen subset.
+Saved displays and numerical prose labeled **Recorded reference run** describe that execution; a new Live run’s computed tables supply its findings. Opening a notebook without executing it makes no calls. Exact offline Replay requires that selected run’s artifacts; public preparation rebuilds inputs, not prior model responses. See the [project guide](../README.md) for modes, scope and recorded completion status.

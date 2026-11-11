@@ -1,1 +1,1 @@
-See ../README.md for Qwen/OpenRouter setup and offline verification before rebuilding results.
+Start at ../setup.md: install, prepare public inputs, export the selected input profile and API key, open a notebook, then Restart Kernel / Run All / Save.

@@ -1,108 +1,98 @@
 # Setup: live RAG tutorials
 
-The main notebooks use **Live / Replay / Plan**, with **Live as the default**. Opening a notebook does not execute it. Selecting Live and executing its cells authorizes the declared hosted stages; there is no second `NOTEBOOK_ALLOW_MODEL_CALLS` switch in this tutorial path.
+Follow **install → prepare prerequisites → open a notebook → Restart Kernel / Run All / Save**. The small profile is the quickest fresh-clone entry point. No private backup is needed to prepare either profile.
 
-The revised code has not yet been executed against hosted models. Original outputs remain in their original cells for review. Cell metadata marks the changed source as unexecuted; these outputs do not validate the revised code. There are no disabled reference sections or parallel notebook implementations.
+## 1. Install the environment and kernel
 
-## Install the environment and kernel
-
-The recorded/tested environment is Python **3.14.6**, Haystack **3.4.0**, OpenAI SDK **2.54.0**, RAGAS **0.4.3**, FAISS, NumPy, pandas and PyArrow. No model, Python or dependency upgrade is required for this tutorial change. `requirements-lock.txt` is the recorded macOS arm64 environment; other platforms may need adjusted compatible packages.
+The tested environment uses Python **3.14.6**, Haystack **3.4.0**, OpenAI SDK **2.54.0**, RAGAS **0.4.3**, FAISS, NumPy, pandas and PyArrow. The lockfile records macOS arm64 packages; other platforms may need compatible package adjustments.
 
 From the project root:
 
 ```bash
 python3.14 -m venv .venv
 .venv/bin/python -m pip install -r requirements-lock.txt
+.venv/bin/python -m pip install jupyterlab ipywidgets
 .venv/bin/python -m pip check
 .venv/bin/python -m ipykernel install --user --name qwen-rag-tutorial --display-name "Python — Qwen RAG tutorial"
-.venv/bin/python tools/verify_tutorial.py
-```
-
-Select that interpreter/kernel in your notebook editor. The new hermetic tutorial tests use tiny synthetic inputs, the real SDK with a mocked HTTP transport, and isolated request ledgers. They do not need `.cache/qwen-runs/`, credentials, downloads or model calls. `tools/verify_offline.py` runs the broader offline suite with isolated synthetic fixtures and blocked network access.
-
-## Service, models and credentials
-
-The model service is OpenRouter's OpenAI-compatible API, `https://openrouter.ai/api/v1`; no local model server is needed. Models stay unchanged:
-
-- Embedding: `qwen/qwen3-embedding-4b`, 2,560 dimensions; questions use the recorded instruction prefix.
-- Reranking: `qwen/qwen3-reranker-8b`, via `client.post("/rerank", ...)`.
-- Generation and RAGAS judge: `qwen/qwen3-30b-a3b-instruct-2507`, via the OpenAI-compatible chat API.
-
-Set your own credential in the environment **before launching the notebook editor/kernel**:
-
-```bash
+.venv/bin/python tools/verify_offline.py
 export OPENROUTER_API_KEY='your-own-key'
 ```
 
-Do not put credentials in source cells or commit them. `.env.example` contains only the variable name; these helpers do not automatically load `.env`. An already-running kernel may not inherit a later shell export: restart it from the configured environment. The tutorial validates credentials and inputs before any request.
+Set the credential **before launching Jupyter or your editor's kernel**. Do not put it in a notebook or commit it. Helpers do not automatically load `.env`; already-running kernels do not inherit a later shell export. `ipywidgets` supplies notebook progress widgets.
 
-For a browser notebook interface, install JupyterLab in this environment if absent and launch it from the project root after exporting the credential:
+The service is OpenRouter at `https://openrouter.ai/api/v1`; no local model server is needed. Models are `qwen/qwen3-embedding-4b` (2,560 dimensions), `qwen/qwen3-reranker-8b`, and `qwen/qwen3-30b-a3b-instruct-2507` for generation and judging. Calls use the OpenAI SDK: embeddings, generic POST `/rerank`, and chat completions.
+
+## 2. Prepare the prerequisites
+
+### Small warm-up profile
 
 ```bash
-.venv/bin/python -m pip install jupyterlab ipywidgets
+# Default is a plan: no network, writes or model calls.
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile small
+
+# Explicitly download/stream public data and create document vectors + index.
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile small --allow-model-calls
+export TUTORIAL_INPUTS=.cache/tutorial-inputs/small/tutorial_inputs.json
+```
+
+This profile keeps **512 unique passages** in pinned dataset order and chooses a fully covered labeled question. It supports the warm-up notebook only. Use `--passages N` (at least 30) and a new `--output .cache/tutorial-inputs/NAME` for another size. It is a different corpus/question from the recorded larger-corpus warm-up.
+
+At 512 × 2,560 float32 values, the document matrix is about **5 MiB**; index vectors add about another **5 MiB**. Dataset streaming/cache files, metadata and response traces add local storage. Dataset transport can fetch/cache more than the retained passage prefix; the passage limit is not a network-byte limit.
+
+### Reference profile for all six notebooks
+
+```bash
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile reference
+.venv/bin/python tools/prepare_tutorial_inputs.py --profile reference --allow-model-calls
+export TUTORIAL_INPUTS=.cache/tutorial-inputs/reference/tutorial_inputs.json
+```
+
+This route streams `microsoft/ms_marco`, configuration `v2.1`, validation split, pinned revision `a47ee7aae8d7d466ba15f9f0bfac3b3681087b3a`. It reconstructs the first **152,576 unique passages** and verifies a canonical ID/text digest and all **15,585 eligible questions' full passage coverage** before sending embedding requests.
+
+The compact `configs/reference_input_recipe.json.gz` fixes question IDs/references, the 10,210-passage baseline membership, the targeted 700 × 30 candidate IDs and orders, the 79-question answer-quality sample, and eight latency assignments. The command joins those IDs to public dataset text. It creates **no generated answers, judge scores or timings**. Baseline vectors are selected from the larger document matrix, without another embedding call. The index uses exhaustive normalized inner-product search (cosine), with one inverted list.
+
+**Full preparation is a paid document-embedding job**, not a small download: matrix and index vectors together are about 2.91 GiB before request traces and dataset files. Review the plan before enabling it. Both profiles run offline tests first and use the existing persistent request budget. Successful embedding batches are checkpointed; rerunning the identical preparation command reuses them. Changed settings require a new output directory. Failed request traces remain for inspection; do not delete the request ledger to reset a cap.
+
+Prepared vectors, indexes, input tables and request traces stay under ignored `.cache/tutorial-inputs/`. Hugging Face may also use its normal user-level metadata cache; neither location enters Git. Neither command overwrites `configs/tutorial_inputs.json`, prior study artifacts, nor notebook outputs. Local readers with an existing prepared snapshot may omit `TUTORIAL_INPUTS` to use the original declared profile. No preparation command has been run against hosted models as part of adding this route.
+
+## 3. Open a notebook and Run All
+
+From the same shell after exporting the key and chosen `TUTORIAL_INPUTS`:
+
+```bash
 .venv/bin/python -m jupyterlab
 ```
 
-`ipywidgets` is optional for progress display, not model correctness. A VS Code notebook interface can instead use the selected `.venv` interpreter; ensure its kernel receives the environment variable.
-
-## Prepare or restore the declared inputs
-
-`configs/tutorial_inputs.json` explicitly names the frozen upstream inputs. They are **inputs**, not previous answers adopted as current results:
-
-| Notebook | Prepared inputs | What Live executes |
-| --- | --- | --- |
-| Warm-up | Larger corpus/index; COVID-19 question declared in configuration | Question embedding, retrieval, reranking, two answers, local scoring |
-| Baseline | 10,210-passage corpus/matrix; 31 question IDs plus separate IMEI diagnostic | Fresh question embeddings, Haystack cosine retrieval, reranking, 64 answers, scoring/judging |
-| Diagnosis | 152,576-passage corpus/index; 15,585 frozen eligible queries | Fresh query embeddings, retrieval and opportunity analysis; no reranking or generation |
-| Targeted reranking | Frozen 700 questions and their exact 30 candidates | 700 fresh reranker calls, evidence-coverage comparison, and two worked answer pairs with SQuAD/RAGAS scoring |
-| Answer quality | Frozen 79 questions, each arm's five passages; 12-question prompt subset | 158 new main answers plus 36 new prompt-extension answers, local scoring and judging |
-| Latency | Frozen 8-question assignments and larger corpus/index | Fresh serial online paths, embeddings, retrieval, reranking where applicable, generation, retries and scoring |
-
-Large original assets are ignored by Git. A fresh clone supports reading recorded notebook outputs and running the hermetic tutorial tests, but does not include every input needed to execute Live or replay a historical cache. Restore the matching upstream files from your local artifact backup, preserving their project-relative structure, or perform a separate deliberate preparation run and update `configs/tutorial_inputs.json` to the compatible corpus, questions and contexts.
-
-**Passage embedding remains stopped.** The tutorial never downloads a dataset, embeds passages, constructs a missing index, runs a missing parent study, or changes the frozen scope implicitly. Missing assets cause a clear error listing the files and referring here. Merely setting an API key does not prepare missing inputs. The legacy checkpointed configuration is not an automatic fresh-clone dataset builder.
-
-## Choose a mode
-
-Each main notebook's first code cell exposes `MODE`, `RUN_ID` and `RESUME`:
+Open the [warm-up notebook](demos/00-rag-with-and-without-reranking/RAG-Retriever-Embedding-Reranker.ipynb), select **Python — Qwen RAG tutorial**, and leave the first cell in Live mode with a new run identity:
 
 ```python
-MODE = "live"       # new hosted inference; new identity by default
-RUN_ID = None
-RESUME = False
+MODE = os.environ.get("NOTEBOOK_MODE", "live").lower()
+RUN_ID = os.environ.get("TUTORIAL_RUN_ID") or None
+RESUME = os.environ.get("TUTORIAL_RESUME") == "1"
 ```
 
-- **Live:** creates a new `.cache/tutorial-runs/<study>/<run-id>/` and produces new responses for the declared stages. Completed older studies never substitute for current answers, scores or timings. Even if a notebook has recorded outputs, a new Live execution is new work.
-- **Replay:** set `MODE="replay"` and an explicit completed tutorial `RUN_ID`. It reads only that run’s files and never fills missing stages with model calls. To read the committed outputs, simply open the notebook without executing it; `RUN_ID="reference"` is not an execution mode.
-- **Plan:** set `MODE="plan"`; it reports stages, scope, caps and missing inputs without credentials, network access, downloads, inference or loading old answers.
-- **Explicit resume:** choose `MODE="live"`, set an existing `RUN_ID`, and set `RESUME=True`. Only successes from that exact run may be reused, with matching inputs/settings. Failed/interrupted requests remain retained for inspection; caps are not reset. A partial latency benchmark cannot use cached HTTP responses as new timings; start a fresh benchmark ID instead. Completed benchmark timings can be replayed unchanged.
+For a fresh experiment, unset `TUTORIAL_RUN_ID` / `TUTORIAL_RESUME`, or set `RUN_ID=None`, `RESUME=False` directly. Choose **Restart Kernel → Run All**, then **Save**. All actual outputs stay in the main notebook. Continue through the [notebook sequence](README.md#notebook-sequence) with the reference profile. The 512-passage profile cannot satisfy the full study's frozen inputs.
 
-Environment equivalents are `NOTEBOOK_MODE`, `TUTORIAL_RUN_ID` and `TUTORIAL_RESUME=1`. Setting `MODE` directly in a notebook overrides its environment default once you edit that assignment.
+Each notebook validates its own prerequisites and makes only its declared calls. It never silently rebuilds missing document embeddings or starts a parent study. Prepared document vectors are reusable inputs; Live question embeddings, reranking, answers, judging and benchmark timings belong to the new run. Recorded numerical prose is labeled **Recorded reference run**; inspect the new results tables for current findings.
 
-## Launch and save in the main notebook
-
-Use the main notebook, execute its original sections in order, and save it. Setup only validates prerequisites; each subsequent cell performs the visible experimental stage. The model calls shown are real `client.embeddings.create`, `client.chat.completions.create`, and the client's generic POST for reranking. The callbacks are invoked by the stage loops, not merely displayed as unused examples.
-
-The supplied runner selects the kernel, executes all code cells in section order and saves actual outputs in the **same main notebook**. Live and Replay replace displayed outputs with the selected run’s results. Plan only prints the workflow and leaves the notebook untouched:
+The same workflow can run from the terminal, saving in the main notebook:
 
 ```bash
-# No model calls or notebook writes; inspect prerequisites and the workflow.
-.venv/bin/python tools/run_tutorial.py --study baseline --mode plan
-
-# Live is the default. This spends the configured model requests.
-.venv/bin/python tools/run_tutorial.py --study baseline
-
-# Replay or resume a named new tutorial run.
-.venv/bin/python tools/run_tutorial.py --study answers --mode replay --run-id YOUR_RUN_ID
-.venv/bin/python tools/run_tutorial.py --study answers --mode live --run-id YOUR_RUN_ID --resume
+.venv/bin/python tools/run_tutorial.py --study demo --mode plan --inputs .cache/tutorial-inputs/small/tutorial_inputs.json
+.venv/bin/python tools/run_tutorial.py --study demo --inputs .cache/tutorial-inputs/small/tutorial_inputs.json
 ```
 
-`--study` accepts `demo`, `baseline`, `diagnosis`, `targeted`, `answers` or `latency`. The runner never skips a fresh Live run because the notebook was previously completed. No separate executed notebook is created. Manual Run All executes the same active stage cells; Live makes new model calls. Do not execute merely to inspect the existing outputs.
+`--study` accepts `demo`, `baseline`, `diagnosis`, `targeted`, `answers`, `latency`. `--inputs` and `TUTORIAL_INPUTS` select the same declaration file; paths are resolved from the project root, including when the kernel starts in a notebook subfolder.
 
-## Scope, scoring and accounting
+## 4. Execution modes and request caps
 
-The 31 baseline averages exclude IMEI. IMEI remains part of the original frozen targeted and 79-question answer-quality cohorts and is not counted twice by its walkthrough. The 12-question generation extension stays separate from the 79-pair aggregates and uses the declared pinned provider/fallback policy. A new run's extension results require new qualitative inspection; old review notes do not judge new answers.
+- **Live (default):** a new ID creates fresh inference under `.cache/tutorial-runs/<study>/<run-id>/`. Selecting Live authorizes the declared notebook calls; there is no additional paid-call switch.
+- **Replay:** set `NOTEBOOK_MODE=replay` and an explicit completed `TUTORIAL_RUN_ID`. It reads that run's saved questions/results and makes no hosted calls. Matching input/run artifacts are required locally; input preparation alone cannot recreate old answers. To read committed displays, just open the notebook without executing it.
+- **Plan:** reports the workflow without credentials, downloads, inference or notebook writes.
+- **Resume:** set Live, the existing run ID, and `TUTORIAL_RESUME=1`. Only successes from that exact run are reused. A partial latency benchmark requires a fresh run ID to avoid treating cached HTTP responses as new timings.
 
-RAGAS belongs to the declared Live baseline, two targeted worked examples, answer-quality and latency workflows. There is no additional generation/judge switch silently leaving those stages pending. Judge metrics may involve multiple chat calls and evaluation-only question embeddings; these do not re-embed the passage corpus. Failed metrics are retained and reported as failures/missing, not as valid zero scores. Current-run reports never load historical scores as replacements.
+The project-wide ledger remains `.cache/model-request-budget.sqlite` with a **10,000-attempt cap**, including failures/retries. Ordinary retrieval embeddings and reranking have up to 3 attempts, initial generation 1, and latency up to 2. Existing RAGAS caps remain in force; failed/missing metrics are reported separately, never as valid zero scores. SDK automatic retries are disabled. Caps count requests, not dollars.
 
-The project-wide persistent 10,000-attempt ledger remains in force, as do per-request caps: normal question embeddings/reranking up to 3 HTTP attempts, first generation 1, latency stages up to 2, and the existing RAGAS transport/metric limits. OpenAI SDK automatic retries are disabled. Never delete the ledger to resume. Plan counts are workflow sizes, not dollar estimates or upper bounds on all judge HTTP requests.
+The tutorial SDK transport honors the cooldown for a temporary OpenRouter 402 explicitly marked `in_flight_budget_exhausted`, within the existing attempt cap. Generic insufficient-credit 402 responses are not retried. After inspecting a stopped temporary response, `--resume --retry-in-flight` may use remaining attempts. A separate request-specific retry authorization requires explicit approval and retains the same request identity and counter; it does not reset global accounting.
+
+For checkpointed legacy helpers, raw artifacts and prior-run reproduction, see [Advanced workflows](docs/advanced-workflows.md).

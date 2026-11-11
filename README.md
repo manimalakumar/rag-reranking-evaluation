@@ -2,6 +2,16 @@
 
 Does better retrieval lead to better answers, and what does reranking cost in latency? This tutorial compares embedding RAG with embedding + reranking RAG. **Live is the default:** each new run makes the model calls shown in the notebook cells and saves its own answers, scores and timings.
 
+
+## What you will learn
+
+- Build and compare embedding-only and reranked RAG paths using OpenAI-compatible model calls.
+- Diagnose when annotated supporting passages are missing from retrieval or ranked below the top K.
+- Test whether reranking recovers evidence, using opportunity and control groups to measure gains and regressions.
+- Evaluate whether better evidence produces better answers with Token F1, faithfulness, answer relevancy and passage inspection.
+- Explore generation prompts while keeping the model and retrieved contexts fixed.
+- Measure the answer-quality and latency trade-off, including hosted calls and retries.
+
 ## Start here
 
 1. **Set up Python and the notebook kernel.** Follow [setup.md](setup.md#1-install-the-environment-and-kernel), then export your own `OPENROUTER_API_KEY`.
